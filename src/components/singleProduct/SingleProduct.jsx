@@ -18,7 +18,7 @@ function SingleProduct() {
       try {
         // TODO: Sustituir por variables de entorno.
         const response = await axios.get(
-          `http://localhost:3001/api/product/${params.id}`
+          `${process.env.REACT_APP_BACKEND_URL}/api/product/${params.id}`
         );
         setProduct(response.data);
       } catch (error) {
@@ -35,7 +35,7 @@ function SingleProduct() {
           {/* TODO: Sustituir por variables de entorno. */}
           <img
             className="image"
-            src={`http://localhost:3001/images/${product.image}`}
+            src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
             alt={product.name}
           />
         </Col>
