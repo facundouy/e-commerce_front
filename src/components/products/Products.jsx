@@ -21,37 +21,38 @@ function Products() {
   }, []);
   return (
     <>
-      <div className="side-container"></div>
       <div className="products-container">
         <ul className="products-list">
           {productList &&
             productList.map((product) => {
               return (
-                <div className="card">
+                <div className="card-product">
                   <img
                     src={`http://localhost:3001/images/${product.image}`}
                     alt="cake cover"
                   />
-                  <div className="movie-info">
-                    {product.name}
-                    {product.description}
+                  <div className="product-info">
+                    <h6>{product.name.toUpperCase()}</h6>
+                    <span className="product-category">
+                      {product.category.name}
+                    </span>
+                    <span className="product-price">${product.price}</span>
                   </div>
                 </div>
-                // <ListGroup.Item key={product.id}>
-                //   <Card style={{ width: "18rem" }}>
-                //     <Card.Img
-                //       variant="top"
-                //       src={`http://localhost:3001/images/${product.image}`}
-                //     />
-                //     <Card.Body>
-                //       <Card.Title>{product.name}</Card.Title>
-                //       <Card.Text>{product.description}</Card.Text>
-                //     </Card.Body>
-                //   </Card>
-                // </ListGroup.Item>
               );
             })}
         </ul>
+      </div>
+      <div className="side-container">
+        <div className="side-price-filter">
+          <h6>PRICE FILTER</h6>
+        </div>
+        <div className="side-categories">
+          <h6>CATEGORIES</h6>
+        </div>
+        <div className="side-instagram">
+          <h6>INSTRAGRAM</h6>
+        </div>
       </div>
     </>
   );
