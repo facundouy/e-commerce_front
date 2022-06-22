@@ -1,0 +1,33 @@
+.side-container {
+}
+
+.products-container {
+  display: flex;
+  max-width: 900px;
+}
+
+.products-list{
+  display: flex;
+}
+
+.card {
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px;
+  color: navy;
+  font-family: sans-serif;
+  font-size: 30px;
+  margin-right: 50px;
+  text-align: center;
+  width: 400px;
+}
+
+.card img {
+  display: block;
+  height: 370px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.movie-info {
+  color: black;
+  padding: 1rem;
+}
