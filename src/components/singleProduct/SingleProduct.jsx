@@ -7,7 +7,7 @@ import ReactStars from "react-rating-stars-component";
 import "./singleProduct.css";
 
 function SingleProduct() {
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState(null);
   const params = useParams();
   const ratingChanged = (newRating) => {
     console.log(newRating);
@@ -28,7 +28,7 @@ function SingleProduct() {
     getProduct();
   }, []);
 
-  return (
+  return product ? (
     <Container>
       <Row>
         <Col className="">
@@ -54,6 +54,8 @@ function SingleProduct() {
         </Col>
       </Row>
     </Container>
+  ) : (
+    <p>Loading...</p>
   );
 }
 
