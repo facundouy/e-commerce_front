@@ -3,31 +3,60 @@
 
 .products-container {
   display: flex;
-  max-width: 900px;
+
+  margin-left: 18rem;
 }
 
-.products-list{
-  display: flex;
+.products-list {
+  display: grid;
+  margin-top: 5rem;
+  grid-template-columns: 500px 480px;
+  grid-template-rows: 580px 580px;
 }
 
-.card {
-  box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px;
-  color: navy;
-  font-family: sans-serif;
-  font-size: 30px;
-  margin-right: 50px;
+.card-product {
   text-align: center;
-  width: 400px;
-}
-
-.card img {
-  display: block;
-  height: 370px;
-  object-fit: cover;
   width: 100%;
 }
 
-.movie-info {
-  color: black;
+.card-product img {
+  display: block;
+  height: 470px;
+  object-fit: cover;
+  width: 470px;
+}
+
+.card-product img:hover {
+  color: #c19d56;
+  cursor: pointer;
+  opacity: 0.1;
+  transition: 0.4s;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
+}
+
+.product-info h6 {
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+
+}
+
+.product-info h6:hover {
+  color: #c19d56;
+  transition: 0.4s;
+}
+
+.product-category {
+  font-family: "Cormorant", cursive;
+  font-size: 21px;
+}
+
+.product-price {
+  font-family: "Cormorant", serif;
+  font-size: 24px;
 }
