@@ -7,10 +7,6 @@ p {
   font-family: "Cormorant", serif;
   font-weight: 400;
 }
-/* 
-.row {
-  justify-content
-} */
 
 .column {
   max-width: 400px;
@@ -23,7 +19,6 @@ p {
   font-size: 1.5rem;
 }
 
-/* TODO: centrar la imagen */
 .image-container {
   max-width: 420px;
 }

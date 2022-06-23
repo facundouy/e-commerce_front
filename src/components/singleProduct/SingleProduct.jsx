@@ -11,8 +11,19 @@ import BeatLoader from "react-spinners/BeatLoader";
 function SingleProduct() {
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [quantity, setQuantity] = useState(1);
   const params = useParams();
   const ratingChanged = (newRating) => {};
+
+  function increaseOne() {
+    setQuantity(parseInt(quantity) + 1);
+  }
+
+  function decreaseOne() {
+    setQuantity(quantity - 1);
+  }
+
+  console.log(quantity);
 
   useEffect(() => {
     async function getProduct() {
@@ -59,8 +70,33 @@ function SingleProduct() {
                 />
                 <small className="pt-1 ms-1">(Based on 38 reviews)</small>
               </div>
-
               <p className="mt-3">{product.description}</p>
+              <div>
+                <form action="">
+                  <input
+                    type="number"
+                    value={quantity}
+                    onChange={(event) => setQuantity(event.target.value)}
+                    className=""
+                  />
+                  <div>
+                    {/* +
+                    +
+                    +
+                    +
+                    +
+                    +
+                    +
+                    + */}
+                    <button type="button" onClick={increaseOne}>
+                      +
+                    </button>
+                    <button type="button" onClick={decreaseOne}>
+                      -
+                    </button>
+                  </div>
+                </form>
+              </div>
             </Col>
           </Row>
         </Container>
