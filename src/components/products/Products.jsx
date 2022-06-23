@@ -9,7 +9,9 @@ function Products() {
 	useEffect(() => {
 		const getProducts = async () => {
 			try {
-				const response = await Axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/products`);
+				const response = await Axios.get(
+					`${process.env.REACT_APP_BACKEND_URL}/api/products`
+				);
 				setProductList(response.data);
 			} catch (error) {
 				console.log(error);
@@ -20,6 +22,11 @@ function Products() {
 	return (
 		<>
 			<div className='products-container'>
+				<div>
+					Tú13:03 Linkear la shop arreglar los iconos de la nav empezar el
+					carrito?????? home con solo productos destacados Tú13:05 hacer el
+					foooter reiniciar compu
+				</div>
 				<ul className='products-list'>
 					{productList &&
 						productList.map((product) => {
