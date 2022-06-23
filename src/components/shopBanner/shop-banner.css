@@ -1,0 +1,20 @@
+.shop-banner {
+  align-items: center;
+  background-attachment: fixed;
+  background-image: url(https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/shop-title-img-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  height: 300px;
+  position: relative;
+  width: 100vw;
+}
+
+.shop-banner h2 {
+  font-family: "Montserrat", serif;
+  font-size: 70px;
+  letter-spacing: 8.4px;
+  margin: 0 0 0 19rem;
+  padding: 0;
+  position: absolute;
+}
