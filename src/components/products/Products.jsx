@@ -6,11 +6,10 @@ import { RangeSlider } from "@appbaseio/reactivesearch";
 
 function Products() {
 	const [productList, setProductList] = useState([]);
-
 	useEffect(() => {
 		const getProducts = async () => {
 			try {
-				const response = await Axios.get("http://localhost:3001/api/products");
+				const response = await Axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/products`);
 				setProductList(response.data);
 			} catch (error) {
 				console.log(error);
