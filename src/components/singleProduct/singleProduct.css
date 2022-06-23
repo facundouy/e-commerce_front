@@ -88,6 +88,20 @@ input {
   font-family: "Montserrat", serif;
 }
 
+.list {
+  font-family: "Cormorant", serif;
+  margin-top: 0.5rem;
+}
+
+.category {
+  text-decoration: none;
+  color: #787878;
+}
+
+.category:hover {
+  color: #c19d56;
+}
+
 @media only screen and (max-width: 767px) {
   .product-details {
     margin-top: 2rem;

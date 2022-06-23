@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import ReactStars from "react-rating-stars-component";
 import "./singleProduct.css";
@@ -71,7 +71,7 @@ function SingleProduct() {
                 />
                 <small className="pt-1 ms-1">(Based on 38 reviews)</small>
               </div>
-              <p className="mt-3">{product.description}</p>
+              <p className="mt-2">{product.description}</p>
               <div>
                 <form action="" className="count-container">
                   <input
@@ -107,6 +107,15 @@ function SingleProduct() {
                   <button className="add-button">ADD TO CART</button>
                 </form>
               </div>
+              <ul className="list-unstyled list">
+                <li>Stock: {product.stock}</li>
+                <li>
+                  Category:{" "}
+                  <Link to={"#"} className="category">
+                    {product.category.name}
+                  </Link>
+                </li>
+              </ul>
             </Col>
           </Row>
         </Container>
