@@ -21,9 +21,10 @@ function SingleProduct() {
 
   function decreaseOne() {
     setQuantity(quantity - 1);
+    if (quantity < 1) {
+      setQuantity(0);
+    }
   }
-
-  console.log(quantity);
 
   useEffect(() => {
     async function getProduct() {
@@ -72,21 +73,30 @@ function SingleProduct() {
               </div>
               <p className="mt-3">{product.description}</p>
               <div>
-                <form action="">
+                <form action="" className="count-container">
                   <input
-                    type="number"
+                    className="count"
+                    // type="number"
                     value={quantity}
                     onChange={(event) => setQuantity(event.target.value)}
-                    className=""
                   />
-                  <div>
-                    <button type="button" onClick={increaseOne}>
+                  <div className="buttons-container">
+                    <button
+                      className="count-buttons"
+                      type="button"
+                      onClick={increaseOne}
+                    >
                       +
                     </button>
-                    <button type="button" onClick={decreaseOne}>
+                    <button
+                      className="count-buttons"
+                      type="button"
+                      onClick={decreaseOne}
+                    >
                       -
                     </button>
                   </div>
+                  <button className="add-button">ADD TO CART</button>
                 </form>
               </div>
             </Col>

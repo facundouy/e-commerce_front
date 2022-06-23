@@ -8,6 +8,13 @@ p {
   font-weight: 400;
 }
 
+input {
+  width: 4rem;
+  height: 3.5rem;
+  border: 1px solid #c19d56;
+  text-align: center;
+}
+
 .column {
   max-width: 400px;
   justify-content: center;
@@ -42,6 +49,43 @@ p {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.count-container {
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+
+.buttons-container {
+  width: 1.5rem;
+}
+
+.count-buttons {
+  width: 1.5rem;
+  /* height: 50%; */
+  border: 1px solid #c19d56;
+  background-color: white;
+}
+
+.add-button {
+  width: 10rem;
+  height: 2.5rem;
+  margin-left: 3rem;
+  background-color: #c19d56;
+  color: white;
+  border: 3px double white;
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.15rem;
+}
+
+.add-button:hover {
+  background: white;
+  color: #c19d56;
+  border: 3px double #c19d56;
+  font-family: "Montserrat", serif;
 }
 
 @media only screen and (max-width: 767px) {
