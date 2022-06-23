@@ -1,7 +1,51 @@
+small {
+  font-family: "Cormorant", serif;
+  font-weight: 400;
+}
+
+p {
+  font-family: "Cormorant", serif;
+  font-weight: 400;
+}
+
+.column {
+  max-width: 400px;
+  justify-content: center;
+}
+
+.price {
+  font-family: "Cormorant", serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.image-container {
+  max-width: 420px;
+}
+
 .image {
   width: 100%;
 }
 
 .product-container {
   margin: 3rem;
+}
+
+.product-name {
+  font-family: "Montserrat", serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 767px) {
+  .product-details {
+    margin-top: 2rem;
+  }
 }

@@ -11,8 +11,19 @@ import BeatLoader from "react-spinners/BeatLoader";
 function SingleProduct() {
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [quantity, setQuantity] = useState(1);
   const params = useParams();
   const ratingChanged = (newRating) => {};
+
+  function increaseOne() {
+    setQuantity(parseInt(quantity) + 1);
+  }
+
+  function decreaseOne() {
+    setQuantity(quantity - 1);
+  }
+
+  console.log(quantity);
 
   useEffect(() => {
     async function getProduct() {
@@ -33,31 +44,63 @@ function SingleProduct() {
   return product ? (
     <>
       <ShopBanner />
-
-      <Container className="product-container">
-        <Row>
-          <Col className="">
-            <img
-              className="image"
-              src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
-              alt={product.name}
-            />
-          </Col>
-          <Col className="">
-            <h2>{product.name}</h2>
-            <small>${product.price}</small>
-            <ReactStars
-              count={5}
-              onChange={ratingChanged}
-              size={24}
-              value={5}
-              activeColor="#c19d56"
-            />
-            <small>(Based on 38 reviews)</small>
-            <p>{product.description}</p>
-          </Col>
-        </Row>
-      </Container>
+      <div className="product-container">
+        {" "}
+        <Container>
+          <Row className="justify-content-center">
+            <Col xs={12} md={6} className="column">
+              <div className="image-container">
+                <img
+                  className="image"
+                  src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
+                  alt={product.name}
+                />
+              </div>
+            </Col>
+            <Col xs={12} md={6} className="column product-details">
+              <h1 className="product-name">{product.name.toUpperCase()}</h1>
+              <div className="price">${product.price}</div>
+              <div className="rating-container">
+                <ReactStars
+                  count={5}
+                  onChange={ratingChanged}
+                  size={24}
+                  value={5}
+                  activeColor="#c19d56"
+                />
+                <small className="pt-1 ms-1">(Based on 38 reviews)</small>
+              </div>
+              <p className="mt-3">{product.description}</p>
+              <div>
+                <form action="">
+                  <input
+                    type="number"
+                    value={quantity}
+                    onChange={(event) => setQuantity(event.target.value)}
+                    className=""
+                  />
+                  <div>
+                    {/* +
+                    +
+                    +
+                    +
+                    +
+                    +
+                    +
+                    + */}
+                    <button type="button" onClick={increaseOne}>
+                      +
+                    </button>
+                    <button type="button" onClick={decreaseOne}>
+                      -
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </>
   ) : (
     <BeatLoader color="#c19d56" loading={isLoading} size={15} />
