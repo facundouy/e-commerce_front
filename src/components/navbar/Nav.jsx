@@ -1,16 +1,17 @@
 import "./nav.css";
 
 import {
-  Navbar,
-  Nav,
-  Form,
-  NavDropdown,
-  Container,
-  FormControl,
-  Button,
+	Navbar,
+	Nav,
+	Form,
+	NavDropdown,
+	Container,
+	FormControl,
+	Button,
 } from "react-bootstrap";
 
 function NavComp() {
+
   return (
     <Navbar bg="light" className="nav-container" sticky="top">
       <Container fluid>
