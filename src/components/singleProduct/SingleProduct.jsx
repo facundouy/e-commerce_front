@@ -81,14 +81,6 @@ function SingleProduct() {
                     onChange={(event) => setQuantity(event.target.value)}
                   />
                   <div className="buttons-container">
-                    {/* +
-                    +
-                    +
-                    +
-                    +
-                    +
-                    +
-                    + */}
                     <button
                       className="count-buttons"
                       type="button"
