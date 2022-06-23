@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import ReactStars from "react-rating-stars-component";
 import "./singleProduct.css";
+import ShopBanner from "../shopBanner/ShopBanner";
 
 function SingleProduct() {
   const [product, setProduct] = useState(null);
@@ -26,30 +27,34 @@ function SingleProduct() {
   }, [params.id]);
 
   return product ? (
-    <Container>
-      <Row>
-        <Col className="">
-          <img
-            className="image"
-            src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
-            alt={product.name}
-          />
-        </Col>
-        <Col className="">
-          <h2>{product.name}</h2>
-          <small>${product.price}</small>
-          <ReactStars
-            count={5}
-            onChange={ratingChanged}
-            size={24}
-            value={5}
-            activeColor="#c19d56"
-          />
-          <small>(Based on 38 reviews)</small>
-          <p>{product.description}</p>
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <ShopBanner />
+
+      <Container>
+        <Row>
+          <Col className="">
+            <img
+              className="image"
+              src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
+              alt={product.name}
+            />
+          </Col>
+          <Col className="">
+            <h2>{product.name}</h2>
+            <small>${product.price}</small>
+            <ReactStars
+              count={5}
+              onChange={ratingChanged}
+              size={24}
+              value={5}
+              activeColor="#c19d56"
+            />
+            <small>(Based on 38 reviews)</small>
+            <p>{product.description}</p>
+          </Col>
+        </Row>
+      </Container>
+    </>
   ) : (
     <p>Loading...</p>
   );
