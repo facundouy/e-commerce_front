@@ -1,26 +1,34 @@
 .nav-container {
-  background-color: white;
-  overflow: hidden;
-  padding: 3rem 0;
-  position: fixed;
-  width: 100%;
+	background-color: white;
+	overflow: hidden;
+	padding: 3rem 0;
+	position: fixed;
+	width: 100%;
 }
 .nav-container ul {
-  display: flex;
-  list-style: none;
+	display: flex;
+	list-style: none;
 }
 
 .item-nav-bar {
-  color: black;
-  font-family: "Montserrat", serif;
-  font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 2.47px;
-  padding: 0 14px;
-  text-decoration: none;
+	color: black;
+	font-family: "Montserrat", serif;
+	font-weight: 500;
+	font-size: 13px;
+	letter-spacing: 2.47px;
+	padding: 0 14px;
+	text-decoration: none;
 }
 
 .item-nav-bar:hover {
-  color: #c19d56;
-  text-decoration: none;
+	color: #c19d56;
+	text-decoration: none;
+}
+.nav-link {
+	padding: 0;
+	color: black !important;
+}
+
+.nav-link:hover {
+	color: #c19d56 !important;
 }
