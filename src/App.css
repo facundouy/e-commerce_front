@@ -2,3 +2,8 @@ body {
 	font-family: "Montserrat", sans-serif;
 	box-sizing: border-box;
 }
+
+*::selection{
+	background-color: #c19d56;
+  color: white;	
+}

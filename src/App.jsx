@@ -5,6 +5,7 @@ import NavComp from "./components/navbar/Nav";
 import Products from "./components/products/Products";
 import SingleProduct from "./components/singleProduct/SingleProduct";
 import { Routes, Route } from "react-router-dom";
+import ShopBanner from "./components/shopBanner/ShopBanner";
 
 function App() {
   return (
@@ -16,6 +17,16 @@ function App() {
             <>
               <NavComp />
               <Banner />
+              <Products />
+            </>
+          }
+        />
+        <Route
+          path="/shop"
+          element={
+            <>
+              <NavComp />
+              <ShopBanner />
               <Products />
             </>
           }
