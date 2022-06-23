@@ -1,0 +1,47 @@
+.footer-container {
+  align-items: center;
+  background-color: black;
+  color: white;
+  display: flex;
+  height: 550px;
+  justify-content: space-between;
+  padding: 75 196 60 196;
+}
+
+.contact-container {
+  margin-left: 11rem;
+}
+
+.center-container {
+  text-align: center;
+}
+
+.logo-center-footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.logo {
+  font-size: 50px;
+  margin-bottom: 1rem;
+}
+
+.logo-center-footer span {
+  color: #c19d56;
+  font-family: "Great Vibes", cursive;
+  font-size: 30px;
+}
+
+.logo-center-footer h4 {
+  font-family: "Montserrat", serif;
+  font-size: 24px;
+  letter-spacing: 1.68px;
+}
+
+.logo-center-footer p {
+  color: #c8c8c8;
+  font-size: 21px;
+  font-family: "Cormorant", cursive;
+}

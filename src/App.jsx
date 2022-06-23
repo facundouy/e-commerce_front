@@ -6,6 +6,7 @@ import Products from "./components/products/Products";
 import SingleProduct from "./components/singleProduct/SingleProduct";
 import { Routes, Route } from "react-router-dom";
 import ShopBanner from "./components/shopBanner/ShopBanner";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <NavComp />
               <Banner />
               <Products />
+              <Footer />
             </>
           }
         />
@@ -28,6 +30,7 @@ function App() {
               <NavComp />
               <ShopBanner />
               <Products />
+              <Footer />
             </>
           }
         />
@@ -37,6 +40,7 @@ function App() {
             <>
               <NavComp />
               <SingleProduct />
+              <Footer />
             </>
           }
         />
