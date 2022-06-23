@@ -80,14 +80,6 @@ function SingleProduct() {
                     className=""
                   />
                   <div>
-                    {/* +
-                    +
-                    +
-                    +
-                    +
-                    +
-                    +
-                    + */}
                     <button type="button" onClick={increaseOne}>
                       +
                     </button>
