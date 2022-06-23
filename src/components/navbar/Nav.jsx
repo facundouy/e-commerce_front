@@ -9,7 +9,7 @@ function NavComp() {
   return (
     <Navbar bg="light" className="nav-container navbar-me-auto " sticky="top">
       <Container fluid className="d-flex justify-content-between">
-        <div>
+        <div className="logo-container">
           <Link to="/" className="item-nav-bar">
             <Navbar.Brand href="#">
               <GiCupcake />
@@ -51,8 +51,8 @@ function NavComp() {
                   CONTACT
                 </Nav.Item>
               </Link>
-              <FaRegUser />
-              <AiOutlineShopping />
+              <FaRegUser  className="item-nav-login" href="/login" />
+              <AiOutlineShopping  className="item-nav-cart" href="/cart" />
             </Nav>
           </Navbar.Collapse>
         </div>

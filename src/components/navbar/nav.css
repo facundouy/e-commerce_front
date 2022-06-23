@@ -1,38 +1,58 @@
 .nav-container {
-	background-color: white;
-	overflow: hidden;
-	padding: 3rem 0;
-	position: fixed;
-	width: 100%;
+  background-color: white;
+  overflow: hidden;
+  padding: 3rem 0;
+  position: fixed;
+  width: 100%;
 }
 .nav-container ul {
-	display: flex;
-	list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 .item-nav-bar {
-	color: black;
-	font-family: "Montserrat", serif;
-	font-weight: 500;
-	font-size: 13px;
-	letter-spacing: 2.47px;
-	padding: 0 14px;
-	text-decoration: none;
+  color: black;
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+  line-height: 23px;
+  font-size: 13px;
+  letter-spacing: 2.47px;
+  padding: 0 14px;
+  text-decoration: none;
 }
 
 .item-nav-bar:hover {
-	color: #c19d56;
-	text-decoration: none;
+  color: #c19d56;
+  text-decoration: none;
 }
+
+.item-nav-login {
+  color: #c19d56;
+  font-family: "Cormorant", serif;
+  font-size: 18px;
+  margin-right: 2rem;
+}
+
+.item-nav-cart {
+  color: #c19d56;
+  font-family: "Cormorant", serif;
+  font-size: 21px;
+  margin-right: 2rem;
+}
+
 .nav-link {
-	padding: 0;
-	color: black !important;
+  padding: 0;
+  color: black !important;
 }
 
 .nav-link:hover {
-	color: #c19d56 !important;
+  color: #c19d56 !important;
 }
 
-/* .container-nav-items{
-  display: flex;
-} */
+.container-nav-items {
+  margin-right: 10rem;
+}
+
+.logo-container {
+  margin-left: 10rem;
+}
