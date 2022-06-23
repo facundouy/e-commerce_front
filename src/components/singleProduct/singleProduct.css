@@ -1,3 +1,7 @@
 .image {
   width: 100%;
 }
+
+.product-container {
+  margin: 3rem;
+}

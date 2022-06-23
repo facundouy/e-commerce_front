@@ -21,7 +21,7 @@ function App() {
             </>
           }
         />
-         <Route
+        <Route
           path="/shop"
           element={
             <>
