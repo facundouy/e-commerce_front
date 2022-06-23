@@ -6,19 +6,23 @@ import axios from "axios";
 import ReactStars from "react-rating-stars-component";
 import "./singleProduct.css";
 import ShopBanner from "../shopBanner/ShopBanner";
+import BeatLoader from "react-spinners/BeatLoader";
 
 function SingleProduct() {
   const [product, setProduct] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
   const params = useParams();
   const ratingChanged = (newRating) => {};
 
   useEffect(() => {
     async function getProduct() {
       try {
+        setIsLoading(true);
         const response = await axios.get(
           `${process.env.REACT_APP_BACKEND_URL}/api/product/${params.id}`
         );
         setProduct(response.data);
+        setIsLoading(false);
       } catch (error) {
         console.error("Error cuando trae de la API:", error);
       }
@@ -30,7 +34,7 @@ function SingleProduct() {
     <>
       <ShopBanner />
 
-      <Container>
+      <Container className="product-container">
         <Row>
           <Col className="">
             <img
@@ -56,7 +60,7 @@ function SingleProduct() {
       </Container>
     </>
   ) : (
-    <p>Loading...</p>
+    <BeatLoader color="#c19d56" loading={isLoading} size={15} />
   );
 }
 
