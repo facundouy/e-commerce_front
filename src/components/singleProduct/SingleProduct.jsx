@@ -99,8 +99,7 @@ function SingleProduct() {
                   <button className="add-button">ADD TO CART</button>
                 </form>
               </div>
-              <ul className="list-unstyled list">
-                <li>Stock: {product.stock}</li>
+              <ul className="list-unstyled list mt-3">
                 <li>
                   Category:{" "}
                   <Link to={"#"} className="category">
