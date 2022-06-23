@@ -9,7 +9,9 @@ function Products() {
 	useEffect(() => {
 		const getProducts = async () => {
 			try {
-				const response = await Axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/products`);
+				const response = await Axios.get(
+					`${process.env.REACT_APP_BACKEND_URL}/api/products`
+				);
 				setProductList(response.data);
 			} catch (error) {
 				console.log(error);
