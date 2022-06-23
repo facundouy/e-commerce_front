@@ -2,6 +2,8 @@ import "./nav.css";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import { GiCupcake } from "react-icons/gi";
+import { AiOutlineShopping } from "react-icons/ai";
+import { FaRegUser } from "react-icons/fa";
 
 function NavComp() {
 	return (
@@ -41,6 +43,8 @@ function NavComp() {
 							<Nav.Item className='item-nav-bar' href='/contact'>
 								CONTACT
 							</Nav.Item>
+							<FaRegUser />
+							<AiOutlineShopping />
 						</Nav>
 					</Navbar.Collapse>
 				</div>
