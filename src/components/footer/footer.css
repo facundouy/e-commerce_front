@@ -3,14 +3,12 @@
   background-color: black;
   color: white;
   display: flex;
-  height: 400px;
   justify-content: space-between;
-  padding: 75 196 60 196;
+  padding: 3rem 11.75rem;
 }
 
 /* CONTACT CONTAINER */
 .contact-container {
-  margin-left: 11rem;
 }
 
 .contact-container h5 {
@@ -71,12 +69,13 @@
 /* MAP CONTAINER */
 
 .map-container-footer {
-  margin-right: 11rem;
 }
 
 .map-container-footer img {
   height: 190px;
 }
+
+/* BOTTOM */
 
 .footer-bottom {
   background-color: black;

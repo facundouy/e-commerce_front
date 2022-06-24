@@ -1,83 +1,88 @@
 .products-container {
-	display: flex;
+  display: flex;
 }
 
 .products-list {
-	display: grid;
-	margin-top: 5rem;
-	grid-template-columns: 30rem 30rem;
-	grid-template-rows: 24rem 24rem;
-	width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5rem;
+  width: 70%;
 }
 
 .card-product {
-	text-align: center;
-	width: 100%;
+  margin: 0 2rem 2rem;
+  text-align: center;
+  width: 400px;
 }
 
 .card-product img {
-	display: block;
-	height: 250px;
-	object-fit: cover;
-	transition: all 0.4s;
-	width: 470px;
+  display: block;
+  object-fit: contain;
+  transition: all 0.4s;
+  width: 100%;
 }
 
 .card-product img:hover {
-	color: #c19d56;
-	cursor: pointer;
-	opacity: 0.4;
+  color: #c19d56;
+  cursor: pointer;
+  opacity: 0.4;
 }
 
 .product-info {
-	display: flex;
-	flex-direction: column;
-	padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 .title-product {
-	color: black;
-	cursor: pointer;
-	text-decoration: none;
-	font-size: 18px;
-	letter-spacing: 0.06em;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 0.06em;
 }
 
 .title-product h6:hover {
-	color: #c19d56;
-	transition: 0.4s;
+  color: #c19d56;
+  transition: 0.4s;
 }
 
 .title-product a:focus {
-	color: #c19d56;
-	transition: 0.4s;
+  color: #c19d56;
+  transition: 0.4s;
 }
 
 .product-category {
-	font-family: "Cormorant", cursive;
-	font-size: 21px;
+  font-family: "Cormorant", cursive;
+  font-size: 21px;
 }
 
 .product-price {
-	font-family: "Cormorant", serif;
-	font-size: 24px;
+  font-family: "Cormorant", serif;
+  font-size: 24px;
+}
+
+.dummy-view {
+	height: 0;
+  width: 400px;
 }
 
 .side-container {
-	width: 30%;
-	display: flex;
-	flex-direction: column;
-	margin-top: 5rem;
-	margin-left: 4rem;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  margin-left: 4rem;
 }
 
 .side-container h6 {
-	font-size: 18px;
-	letter-spacing: 1.08px;
-	font-family: "Montserrat", serif;
-	margin: 0;
+  font-size: 18px;
+  letter-spacing: 1.08px;
+  font-family: "Montserrat", serif;
+  margin: 0;
 }
 
 .side-container img {
-	margin: 1.5rem 0;
+  margin: 1.5rem 0;
 }

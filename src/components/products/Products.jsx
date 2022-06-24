@@ -50,6 +50,8 @@ function Products() {
                 </div>
               );
             })}
+            <div className="dummy-view" />
+            <div className="dummy-view" />
         </ul>
         <div className="side-container">
           <div className="side-price-filter">
