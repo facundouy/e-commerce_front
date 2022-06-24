@@ -21,7 +21,7 @@ function Banner() {
           <a className="a-discover" href="/">
             Discover
           </a>
-          <Link to="/shop">
+          <Link to="/shop" className="text-decoration-none">
             <div className="a-shop">Shop now</div>
           </Link>
         </div>
