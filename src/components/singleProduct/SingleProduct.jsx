@@ -11,118 +11,122 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../../redux/cartSlice";
 
 function SingleProduct() {
-	const [product, setProduct] = useState(null);
-	const [isLoading, setIsLoading] = useState(false);
-	const [quantity, setQuantity] = useState(1);
-	const params = useParams();
-	const dispatch = useDispatch();
-	const cart = useSelector((state) => state.cart);
-	const ratingChanged = (newRating) => {};
+  const [product, setProduct] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+  const params = useParams();
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart);
+  console.log(cart);
+  const ratingChanged = (newRating) => {};
 
-	function increaseOne() {
-		setQuantity(parseInt(quantity) + 1);
-	}
+  function increaseOne() {
+    setQuantity(parseInt(quantity) + 1);
+  }
 
-	function decreaseOne() {
-		setQuantity(quantity - 1);
-		if (quantity < 1) {
-			setQuantity(0);
-		}
-	}
+  function decreaseOne() {
+    setQuantity(quantity - 1);
+    if (quantity < 1) {
+      setQuantity(0);
+    }
+  }
 
-	useEffect(() => {
-		async function getProduct() {
-			try {
-				setIsLoading(true);
-				const response = await axios.get(
-					`${process.env.REACT_APP_BACKEND_URL}/api/product/${params.id}`
-				);
-				setProduct(response.data);
-				setIsLoading(false);
-			} catch (error) {
-				console.error("Error cuando trae de la API:", error);
-			}
-		}
-		getProduct();
-	}, [params.id]);
+  useEffect(() => {
+    async function getProduct() {
+      try {
+        setIsLoading(true);
+        const response = await axios.get(
+          `${process.env.REACT_APP_BACKEND_URL}/api/product/${params.id}`
+        );
+        setProduct(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error cuando trae de la API:", error);
+      }
+    }
+    getProduct();
+  }, [params.id]);
 
-	return product ? (
-		<>
-			<ShopBanner />
-			<div className='product-container'>
-				{" "}
-				<Container>
-					<Row className='justify-content-center'>
-						<Col xs={12} md={6} className='column'>
-							<div className='image-container'>
-								<img
-									className='image'
-									src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
-									alt={product.name}
-								/>
-							</div>
-						</Col>
-						<Col xs={12} md={6} className='column product-details'>
-							<h1 className='product-name'>{product.name.toUpperCase()}</h1>
-							<div className='price'>${product.price}</div>
-							<div className='rating-container'>
-								<ReactStars
-									count={5}
-									onChange={ratingChanged}
-									size={24}
-									value={5}
-									activeColor='#c19d56'
-								/>
-								<small className='pt-1 ms-1'>(Based on 38 reviews)</small>
-							</div>
-							<p className='mt-2'>{product.description}</p>
-							<div>
-								<form
-									onSubmit={(e) => {
-										e.preventDefault();
-										dispatch(addToCart({ product, qty: quantity }));
-										setQuantity(1);
-									}}
-									className='count-container'>
-									<input
-										className='count'
-										// type="number"
-										value={quantity}
-										onChange={(event) => setQuantity(event.target.value)}
-									/>
-									<div className='buttons-container'>
-										<button
-											className='count-buttons'
-											type='button'
-											onClick={increaseOne}>
-											+
-										</button>
-										<button
-											className='count-buttons'
-											type='button'
-											onClick={decreaseOne}>
-											-
-										</button>
-									</div>
-									<button className='add-button'>ADD TO CART</button>
-								</form>
-							</div>
-							<ul className='list-unstyled list mt-3'>
-								<li>
-									Category:{" "}
-									<Link to={"#"} className='category'>
-										{product.category.name}
-									</Link>
-								</li>
-							</ul>
-						</Col>
-					</Row>
-				</Container>
-			</div>
-		</>
-	) : (
-		<BeatLoader color='#c19d56' loading={isLoading} size={15} />
-	);
+  return product ? (
+    <>
+      <ShopBanner />
+      <div className="product-container">
+        {" "}
+        <Container>
+          <Row className="justify-content-center">
+            <Col xs={12} md={6} className="column">
+              <div className="image-container">
+                <img
+                  className="image"
+                  src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
+                  alt={product.name}
+                />
+              </div>
+            </Col>
+            <Col xs={12} md={6} className="column product-details">
+              <h1 className="product-name">{product.name.toUpperCase()}</h1>
+              <div className="price">${product.price}</div>
+              <div className="rating-container">
+                <ReactStars
+                  count={5}
+                  onChange={ratingChanged}
+                  size={24}
+                  value={5}
+                  activeColor="#c19d56"
+                />
+                <small className="pt-1 ms-1">(Based on 38 reviews)</small>
+              </div>
+              <p className="mt-2">{product.description}</p>
+              <div>
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    dispatch(addToCart({ product, qty: quantity }));
+                    setQuantity(1);
+                  }}
+                  className="count-container"
+                >
+                  <input
+                    className="count"
+                    // type="number"
+                    value={quantity}
+                    onChange={(event) => setQuantity(event.target.value)}
+                  />
+                  <div className="buttons-container">
+                    <button
+                      className="count-buttons"
+                      type="button"
+                      onClick={increaseOne}
+                    >
+                      +
+                    </button>
+                    <button
+                      className="count-buttons"
+                      type="button"
+                      onClick={decreaseOne}
+                    >
+                      -
+                    </button>
+                  </div>
+                  <button className="add-button">ADD TO CART</button>
+                </form>
+              </div>
+              <ul className="list-unstyled list mt-3">
+                <li>
+                  Category:{" "}
+                  <Link to={"#"} className="category">
+                    {product.category.name}
+                  </Link>
+                </li>
+              </ul>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </>
+  ) : (
+    <BeatLoader color="#c19d56" loading={isLoading} size={15} />
+  );
 }
 
 export default SingleProduct;
