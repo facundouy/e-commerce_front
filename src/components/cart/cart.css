@@ -1,3 +1,14 @@
 .table {
-  color: #c19d56;
+	color: #c19d56;
+	margin-bottom: 10rem;
+}
+
+.table td {
+	font-family: "Cormorant", cursive;
+	vertical-align: middle;
+}
+
+.image-item-cart {
+	height: 70px;
+	margin-right: 1rem;
 }
