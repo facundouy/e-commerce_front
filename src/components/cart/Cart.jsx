@@ -22,11 +22,11 @@ function Cart() {
           <tbody>
             {cart.map((product) => {
               return (
-                <tr>
-                  <td>{product.product.name}</td>
-                  <td>{product.product.price}</td>
-                  <td>{product.qty}</td>
-                  <td>{product.product.price * product.qty}</td>
+                <tr key={product._id}>
+                  <td>{product.name}</td>
+                  <td>{product.price}</td>
+                  <td>{product.quantity}</td>
+                  <td>{product.price * product.quantity}</td>
                 </tr>
               );
             })}
