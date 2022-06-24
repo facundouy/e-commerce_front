@@ -2,6 +2,7 @@ import ShopBanner from "../shopBanner/ShopBanner";
 import SingleProduct from "../singleProduct/SingleProduct";
 import { useSelector } from "react-redux";
 import Table from "react-bootstrap/Table";
+import "./cart.css";
 
 function Cart() {
   const cart = useSelector((state) => state.cart);
@@ -9,7 +10,7 @@ function Cart() {
     <div>
       <ShopBanner />
       <div className="container">
-        <Table striped bordered hover>
+        <Table bordered hover className="table">
           <thead>
             <tr>
               <th>PRODUCT</th>

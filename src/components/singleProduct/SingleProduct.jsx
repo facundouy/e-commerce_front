@@ -81,7 +81,12 @@ function SingleProduct() {
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
-                    dispatch(addToCart({ product, qty: quantity }));
+                    dispatch(
+                      addToCart({
+                        product: product,
+                        qty: quantity,
+                      })
+                    );
                     setQuantity(1);
                   }}
                   className="count-container"

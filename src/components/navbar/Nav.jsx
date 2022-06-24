@@ -11,7 +11,7 @@ function NavComp() {
       <Container fluid className="d-flex justify-content-between">
         <div className="logo-container">
           <Link to="/">
-            <Navbar.Brand href="/">
+            <Navbar.Brand>
               <GiCupcake className="logo" />
             </Navbar.Brand>
           </Link>
@@ -25,12 +25,10 @@ function NavComp() {
               navbarScroll
             >
               <Link to="/" className="item-nav-bar">
-                <Nav.Item href="/">HOME</Nav.Item>
+                <Nav.Item>HOME</Nav.Item>
               </Link>
               <Link to="/about" className="item-nav-bar">
-                <Nav.Item className="item-nav-bar" href="#action2">
-                  ABOUT
-                </Nav.Item>
+                <Nav.Item className="item-nav-bar">ABOUT</Nav.Item>
               </Link>
               <NavDropdown
                 className="item-nav-bar"
@@ -42,21 +40,17 @@ function NavComp() {
                 <NavDropdown.Item href="#action5">Truffles</NavDropdown.Item>
               </NavDropdown>
               <Link to="/shop" className="item-nav-bar">
-                <Nav.Item className="item-nav-bar" href="/shop">
-                  SHOP
-                </Nav.Item>
+                <Nav.Item className="item-nav-bar">SHOP</Nav.Item>
               </Link>
               <Link to="/contact" className="item-nav-bar">
-                <Nav.Item className="item-nav-bar" href="/contact">
-                  CONTACT
-                </Nav.Item>
+                <Nav.Item className="item-nav-bar">CONTACT</Nav.Item>
               </Link>
               <div className="d-flex">
                 <Link to="/login" className="item-nav-bar">
-                  <FaRegUser className="item-nav-login" href="/login" />
+                  <FaRegUser className="item-nav-login" />
                 </Link>
                 <Link to="/cart" className="item-nav-bar">
-                  <AiOutlineShopping className="item-nav-cart" href="/cart" />
+                  <AiOutlineShopping className="item-nav-cart" />
                 </Link>
               </div>
             </Nav>
