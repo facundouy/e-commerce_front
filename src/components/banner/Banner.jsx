@@ -22,9 +22,7 @@ function Banner() {
             Discover
           </a>
           <Link to="/shop">
-            <a className="a-shop" href="/shop">
-              Shop now
-            </a>
+            <div className="a-shop">Shop now</div>
           </Link>
         </div>
       </div>

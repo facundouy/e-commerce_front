@@ -5,6 +5,11 @@ const cartSlice = createSlice({
   initialState: [],
   reducers: {
     addToCart(state, action) {
+      state.map((product) => {
+        console.log(product);
+        // if (product._id === action.payload.productId) {
+        // }
+      });
       state.push(action.payload);
     },
     removeFromCart(state, action) {
