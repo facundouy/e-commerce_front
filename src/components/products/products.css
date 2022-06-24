@@ -1,34 +1,13 @@
-.side-container {
-	width: 20%;
-	display: flex;
-	flex-direction: column;
-	margin-top: 5rem;
-	margin-left: 4rem;
-	text-align: center;
-}
-
-.side-container h6 {
-	font-size: 18px;
-	letter-spacing: 1.08px;
-	font-family: "Montserrat", serif;
-	margin: 0;
-}
-
-.side-container img {
-	margin: 1.5rem 0;
-}
-
 .products-container {
 	display: flex;
-
-	margin-left: 10rem;
 }
 
 .products-list {
 	display: grid;
 	margin-top: 5rem;
-	grid-template-columns: 500px 480px;
-	grid-template-rows: 580px 580px;
+	grid-template-columns: 30rem 30rem;
+	grid-template-rows: 24rem 24rem;
+	width: 70%;
 }
 
 .card-product {
@@ -39,7 +18,6 @@
 .card-product img {
 	display: block;
 	height: 250px;
-
 	object-fit: cover;
 	transition: all 0.4s;
 	width: 470px;
@@ -83,4 +61,23 @@
 .product-price {
 	font-family: "Cormorant", serif;
 	font-size: 24px;
+}
+
+.side-container {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	margin-top: 5rem;
+	margin-left: 4rem;
+}
+
+.side-container h6 {
+	font-size: 18px;
+	letter-spacing: 1.08px;
+	font-family: "Montserrat", serif;
+	margin: 0;
+}
+
+.side-container img {
+	margin: 1.5rem 0;
 }
