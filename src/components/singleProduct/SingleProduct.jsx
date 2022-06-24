@@ -78,7 +78,11 @@ function SingleProduct() {
 							<p className='mt-2'>{product.description}</p>
 							<div>
 								<form
-									onSubmit={(e) => e.preventDefault()}
+									onSubmit={(e) => {
+										e.preventDefault();
+										dispatch(addToCart({ product, qty: quantity }));
+										setQuantity(1);
+									}}
 									className='count-container'>
 									<input
 										className='count'
@@ -90,19 +94,13 @@ function SingleProduct() {
 										<button
 											className='count-buttons'
 											type='button'
-											onClick={() => {
-												increaseOne();
-												dispatch(addToCart({ product }));
-											}}>
+											onClick={increaseOne}>
 											+
 										</button>
 										<button
 											className='count-buttons'
 											type='button'
-											onClick={() => {
-												decreaseOne();
-												dispatch(removeFromCart({ product }));
-											}}>
+											onClick={decreaseOne}>
 											-
 										</button>
 									</div>
