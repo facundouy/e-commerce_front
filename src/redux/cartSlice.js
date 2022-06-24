@@ -22,17 +22,13 @@ const cartSlice = createSlice({
       const product = state.find(
         (item) => item._id === action.payload.product._id
       );
-      if (product) {
-        product.quantity = product.quantity + 1;
-      }
+      product.quantity += 1;
     },
     decrementQuantity(state, action) {
       const product = state.find(
         (item) => item._id === action.payload.product._id
       );
-      if (product) {
-        product.quantity = product.quantity - 1;
-      }
+      product.quantity -= 1;
     },
     hola(state, action) {
       return state.filter((item) => item.quantity > 0);
