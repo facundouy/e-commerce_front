@@ -47,9 +47,15 @@ function Products() {
                         {product.name.toUpperCase()}
                       </h6>
                     </Link>
-                    <span className="product-category">
-                      {product.category.name}
-                    </span>
+                    <Link
+                      className="text-decoration-none text-dark"
+                      to={`category/${product.category.name}`}
+                    >
+                      <span className="product-category">
+                        {product.category.name}
+                      </span>
+                    </Link>
+
                     <span className="product-price">${product.price}</span>
                   </div>
                 </div>
@@ -64,27 +70,40 @@ function Products() {
           </div>
           <div className="side-categories">
             <h6>CATEGORIES</h6>
+            <div className="image-separator">
+              <img
+                src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-slide-1-img-1.png"
+                alt="Separador"
+              />
+            </div>
+
             {categoriesList.map((item) => {
               return (
-                <ul>
-                  <Link to={`/category/${item.name}`}>
-                    <li className="list-unstyled">{item.name}</li>
+                <ul className="mx-0 px-0">
+                  <Link
+                    to={`/category/${item.name}`}
+                    className="text-decoration-none"
+                  >
+                    <li className="list-unstyled categories">{item.name}</li>
                   </Link>
                 </ul>
               );
             })}
-
-            <img
-              src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-slide-1-img-1.png"
-              alt="Separador"
-            />
+            <div className="image-separator">
+              <img
+                src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-slide-1-img-1.png"
+                alt="Separador"
+              />
+            </div>
           </div>
           <div className="side-instagram">
             <h6>INSTRAGRAM</h6>
-            <img
-              src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-slide-1-img-1.png"
-              alt="Separador"
-            />
+            <div className="image-separator">
+              <img
+                src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-slide-1-img-1.png"
+                alt="Separador"
+              />
+            </div>
           </div>
         </div>
       </div>

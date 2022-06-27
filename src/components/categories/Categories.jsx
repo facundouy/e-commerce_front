@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import { useParams } from "react-router-dom";
+import "./categories.css";
 
 function Categories() {
   const [products, setProducts] = useState([]);
