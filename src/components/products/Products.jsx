@@ -5,13 +5,18 @@ import { Link } from "react-router-dom";
 
 function Products() {
   const [productList, setProductList] = useState([]);
+  const [categoriesList, setCategoriesList] = useState([]);
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const response = await Axios.get(
+        const productsResponse = await Axios.get(
           `${process.env.REACT_APP_BACKEND_URL}/api/products`
         );
-        setProductList(response.data);
+        const categoriesResponse = await Axios.get(
+          `${process.env.REACT_APP_BACKEND_URL}/api/categories`
+        );
+        setProductList(productsResponse.data);
+        setCategoriesList(categoriesResponse.data);
       } catch (error) {
         console.log(error);
       }
@@ -36,7 +41,7 @@ function Products() {
                   <div className="product-info">
                     <Link
                       className="title-product"
-                      to={`/product/${product.id}`}
+                      to={`/product/${product._id}`}
                     >
                       <h6 className="title-product">
                         {product.name.toUpperCase()}
@@ -50,8 +55,8 @@ function Products() {
                 </div>
               );
             })}
-            <div className="dummy-view" />
-            <div className="dummy-view" />
+          <div className="dummy-view" />
+          <div className="dummy-view" />
         </ul>
         <div className="side-container">
           <div className="side-price-filter">
@@ -59,6 +64,16 @@ function Products() {
           </div>
           <div className="side-categories">
             <h6>CATEGORIES</h6>
+            {categoriesList.map((item) => {
+              return (
+                <ul>
+                  <Link to={`/category/${item.name}`}>
+                    <li className="list-unstyled">{item.name}</li>
+                  </Link>
+                </ul>
+              );
+            })}
+
             <img
               src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-slide-1-img-1.png"
               alt="Separador"
