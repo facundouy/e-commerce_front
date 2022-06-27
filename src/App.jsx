@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router-dom";
 import ShopBanner from "./components/shopBanner/ShopBanner";
 import Footer from "./components/footer/Footer";
 import Cart from "./components/cart/Cart";
+import Categories from "./components/categories/Categories";
 
 function App() {
   return (
@@ -53,6 +54,7 @@ function App() {
           </>
         }
       />
+      <Route path="/category/:name" element={<Categories />} />
       <Route path="*" element={<h2>Page not found</h2>} />
     </Routes>
   );
