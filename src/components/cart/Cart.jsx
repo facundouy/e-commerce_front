@@ -6,7 +6,6 @@ import {
   incrementQuantity,
   decrementQuantity,
   removeFromCart,
-  hola,
 } from "../../redux/cartSlice";
 import Table from "react-bootstrap/Table";
 import "./cart.css";
@@ -15,6 +14,11 @@ function Cart() {
   const cart = useSelector((state) => state.cart);
   console.log(cart);
   const dispatch = useDispatch();
+  const totalPrice = cart.reduce(
+    (accumulator, currentValue) =>
+      accumulator + currentValue.price * currentValue.quantity,
+    0
+  );
   return (
     <div>
       <ShopBanner />
@@ -41,7 +45,7 @@ function Cart() {
                     />
                     {product.name}
                   </td>
-                  <td>{product.price}</td>
+                  <td>${product.price}</td>
                   <td>
                     {product.quantity}{" "}
                     <span
@@ -54,7 +58,6 @@ function Cart() {
                     <span
                       onClick={() => {
                         dispatch(decrementQuantity({ product }));
-                        dispatch(hola());
                       }}
                     >
                       -
@@ -74,6 +77,7 @@ function Cart() {
               );
             })}
           </tbody>
+          <p>Total price: ${totalPrice}</p>
         </Table>
       </div>
     </div>
