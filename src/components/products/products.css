@@ -7,13 +7,12 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 5rem;
-  /* width: 70%; */
 }
 
 .card-product {
   margin: 0 2rem 2rem;
   text-align: center;
-  width: 400px;
+  max-width: 175px;
 }
 
 .card-product img {

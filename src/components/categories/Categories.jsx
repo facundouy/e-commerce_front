@@ -33,21 +33,19 @@ function Categories() {
         <Row>
           {products.map((product) => {
             return (
-              <>
-                <Col xs={12} md={4} className="col">
-                  <img
-                    className="product-image"
-                    src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
-                    alt={`${product.name}`}
-                  ></img>
+              <Col xs={12} md={4} className="col" key={product._id}>
+                <img
+                  className="product-image"
+                  src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
+                  alt={`${product.name}`}
+                ></img>
 
-                  <Link to={`/product/${product.slug}`} className="name">
-                    <h3 className="p-name">{product.name.toUpperCase()}</h3>
-                  </Link>
-                  <p className="details">{product.category.name}</p>
-                  <p className="details mb-3">${product.price}</p>
-                </Col>
-              </>
+                <Link to={`/product/${product.slug}`} className="name">
+                  <h3 className="p-name">{product.name.toUpperCase()}</h3>
+                </Link>
+                <p className="details">{product.category.name}</p>
+                <p className="details mb-3">${product.price}</p>
+              </Col>
             );
           })}
         </Row>
