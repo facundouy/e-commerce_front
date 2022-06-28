@@ -32,7 +32,7 @@ function Products() {
             productList.map((product) => {
               return (
                 <div key={product._id} className="card-product">
-                  <Link to={`/product/${product._id}`}>
+                  <Link to={`/product/${product.slug}`}>
                     <img
                       src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
                       alt="cake cover"
@@ -42,7 +42,7 @@ function Products() {
                   <div className="product-info">
                     <Link
                       className="title-product"
-                      to={`/product/${product._id}`}
+                      to={`/product/${product.slug}`}
                     >
                       <h6 className="title-product">
                         {product.name.toUpperCase()}

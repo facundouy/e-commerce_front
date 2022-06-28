@@ -41,7 +41,7 @@ function Categories() {
                     alt={`${product.name}`}
                   ></img>
 
-                  <Link to={`/product/${product._id}`} className="name">
+                  <Link to={`/product/${product.slug}`} className="name">
                     <h3 className="p-name">{product.name.toUpperCase()}</h3>
                   </Link>
                   <p className="details">{product.category.name}</p>
