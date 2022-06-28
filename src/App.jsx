@@ -9,6 +9,7 @@ import ShopBanner from "./components/shopBanner/ShopBanner";
 import Footer from "./components/footer/Footer";
 import Cart from "./components/cart/Cart";
 import Categories from "./components/categories/Categories";
+import AllProducts from "./components/allproducts/AllProducts.jsx";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
           <>
             <NavComp />
             <ShopBanner />
-            <Products />
+            <AllProducts />
             <Footer />
           </>
         }

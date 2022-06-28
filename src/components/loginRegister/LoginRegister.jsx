@@ -1,6 +1,7 @@
 import "./login-register.css";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Login from "./Login.jsx";
+import Register from "./Register.jsx";
 
 function LoginRegister({ show, setShow }) {
   const handleClose = () => setShow(false);
@@ -10,7 +11,7 @@ function LoginRegister({ show, setShow }) {
         <Offcanvas.Title></Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
-        <Login />
+        <Register />
       </Offcanvas.Body>
     </Offcanvas>
   );
