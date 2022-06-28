@@ -7,12 +7,18 @@ function LoginRegister({ show, setShow }) {
 
   return (
     <Offcanvas show={show} onHide={handleClose} placement="end" name="end">
-      <Offcanvas.Header closeButton>
-        <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+      <Offcanvas.Header closeButton className="close-button">
+        <Offcanvas.Title></Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
-        Some text as placeholder. In real life you can have the elements you
-        have chosen. Like, text, images, lists, etc.
+        <h1>Create an account</h1>
+        <span>Create an account</span>
+        <label htmlFor="">Name</label>
+        <input type="text" />
+        <label htmlFor="">Email</label>
+        <input type="text" />
+        <label htmlFor="">Password</label>
+        <input type="text" />
       </Offcanvas.Body>
     </Offcanvas>
   );
