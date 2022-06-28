@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
+import Nav from "../navbar/Nav";
 import "./categories.css";
 
 function Categories() {
@@ -23,13 +25,33 @@ function Categories() {
 
   return (
     <div>
-      {products.map((product) => {
-        return (
-          <ul key={product.id}>
-            <li>{product.name}</li>
-          </ul>
-        );
-      })}
+      <Nav />
+      <div className="banner">
+        <h2>{params.name}</h2>
+      </div>
+      <Container>
+        <Row>
+          {products.map((product) => {
+            return (
+              <>
+                <Col xs={12} md={4} className="col">
+                  <img
+                    className="product-image"
+                    src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
+                    alt={`${product.name}`}
+                  ></img>
+
+                  <Link to={`/product/${product._id}`} className="name">
+                    <h3 className="p-name">{product.name.toUpperCase()}</h3>
+                  </Link>
+                  <p className="details">{product.category.name}</p>
+                  <p className="details mb-3">${product.price}</p>
+                </Col>
+              </>
+            );
+          })}
+        </Row>
+      </Container>
     </div>
   );
 }
