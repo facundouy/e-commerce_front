@@ -13,7 +13,7 @@
 .card-product {
   margin: 0 2rem 2rem;
   text-align: center;
-  width: 400px;
+  max-width: 150px;
 }
 
 .card-product img {
