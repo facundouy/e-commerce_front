@@ -10,8 +10,7 @@ function Register() {
     <div className="register-container">
       <h1 className="title-offcanvas">REGISTER</h1>
       <p className="subtitle-offcanvas">
-        Welcome to Cakes Shop, please put your login credentials below to start
-        shopping.
+        Welcome to Cakes Shop, please create an account to start shopping.
       </p>
       <div>
         <label htmlFor="">Name</label>
@@ -47,7 +46,7 @@ function Register() {
           onChange={(event) => setInputPassword(event.target.value)}
         />
       </div>
-      <button className="button-login">Register</button>
+      <button className="button-login">Register now</button>
       <small>Alredy have an account?</small>
       <button className="button-signup">Log in.</button>
     </div>
