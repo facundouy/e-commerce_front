@@ -12,65 +12,58 @@ function NavComp() {
 
 	return (
 		<>
-			<Navbar
-				bg='light'
-				className='nav-container navbar-me-auto '
-				sticky='top'
-				expand='md'>
-				<Container fluid className='d-flex justify-content-between'>
-					<div className='logo-container'>
-						<Link to='/'>
-							<Navbar.Brand>
-								<GiCupcake className='logo' />
-							</Navbar.Brand>
-						</Link>
-					</div>
-					<div className='container-nav-items'>
-						<Navbar.Toggle aria-controls='navbarScroll' />
-						<Navbar.Collapse id='navbarScroll'>
-							<Nav
-								className='me-auto my-2 my-lg-0'
-								style={{ maxHeight: "100px" }}
-								navbarScroll>
-								<Link to='/' className='item-nav-bar'>
-									<Nav.Item>HOME</Nav.Item>
+			<Navbar bg='light' expand='lg' fixed='top' className='nav-container'>
+				<Container>
+					<Navbar.Brand>
+						<GiCupcake className='logo' />
+					</Navbar.Brand>
+					<Navbar.Toggle aria-controls='basic-navbar-nav' />
+					<Navbar.Collapse
+						id='basic-navbar-nav'
+						className='justify-content-end'>
+						<Nav className='me-auto'>
+							<Link to='/' className='item-nav-bar'>
+								<Nav.Item>HOME</Nav.Item>
+							</Link>
+							<Link to='/about' className='item-nav-bar'>
+								<Nav.Item className='item-nav-bar'>ABOUT</Nav.Item>
+							</Link>
+							<NavDropdown
+								className='item-nav-bar'
+								title='CATEGORIES'
+								id='basic-nav-dropdown'>
+								<NavDropdown.Item className='dropdown-text' href='#action/3.1'>
+									Cakes
+								</NavDropdown.Item>
+								<NavDropdown.Item className='dropdown-text' href='#action/3.2'>
+									Truffles
+								</NavDropdown.Item>
+								<NavDropdown.Item className='dropdown-text' href='#action/3.3'>
+									Tarts
+								</NavDropdown.Item>
+								<NavDropdown.Item className='dropdown-text' href='#action/3.4'>
+									Cups
+								</NavDropdown.Item>
+							</NavDropdown>
+							<Link to='/shop' className='item-nav-bar'>
+								<Nav.Item className='item-nav-bar'>SHOP</Nav.Item>
+							</Link>
+							<Link to='/contact' className='item-nav-bar'>
+								<Nav.Item className='item-nav-bar'>CONTACT</Nav.Item>
+							</Link>
+							<Nav.Item>
+								<FaRegUser
+									className='item-nav-login'
+									onClick={() => setShowOffCanvas(!showOffCanvas)}
+								/>
+							</Nav.Item>
+							<Nav.Item>
+								<Link to='/cart' className='item-nav-bar'>
+									<AiOutlineShopping className='item-nav-cart' />
 								</Link>
-								<Link to='/about' className='item-nav-bar'>
-									<Nav.Item className='item-nav-bar'>ABOUT</Nav.Item>
-								</Link>
-								<NavDropdown
-									className='item-nav-bar'
-									title='CATEGORIES'
-									id='navbarScrollingDropdown'>
-									<NavDropdown.Item className='dropdown-text' href='#action3'>
-										Cakes
-									</NavDropdown.Item>
-									<NavDropdown.Item className='dropdown-text' href='#action4'>
-										Tarts
-									</NavDropdown.Item>
-									<NavDropdown.Item className='dropdown-text' href='#action5'>
-										Truffles
-									</NavDropdown.Item>
-								</NavDropdown>
-								<Link to='/shop' className='item-nav-bar'>
-									<Nav.Item className='item-nav-bar'>SHOP</Nav.Item>
-								</Link>
-								<Link to='/contact' className='item-nav-bar'>
-									<Nav.Item className='item-nav-bar'>CONTACT</Nav.Item>
-								</Link>
-								<div className='d-flex align-items-center'>
-									<FaRegUser
-										className='item-nav-login'
-										onClick={() => setShowOffCanvas(!showOffCanvas)}
-									/>
-
-									<Link to='/cart' className='item-nav-bar'>
-										<AiOutlineShopping className='item-nav-cart' />
-									</Link>
-								</div>
-							</Nav>
-						</Navbar.Collapse>
-					</div>
+							</Nav.Item>
+						</Nav>
+					</Navbar.Collapse>
 				</Container>
 			</Navbar>
 			<LoginRegister show={showOffCanvas} setShow={setShowOffCanvas} />
