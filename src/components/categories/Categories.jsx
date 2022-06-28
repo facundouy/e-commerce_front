@@ -35,11 +35,13 @@ function Categories() {
             return (
               <>
                 <Col xs={12} md={4} className="col">
-                  <img
-                    className="product-image"
-                    src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
-                    alt={`${product.name}`}
-                  ></img>
+                  <Link to={`/product/${product.slug}`}>
+                    <img
+                      className="product-image"
+                      src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
+                      alt={`${product.name}`}
+                    />
+                  </Link>
 
                   <Link to={`/product/${product.slug}`} className="name">
                     <h3 className="p-name">{product.name.toUpperCase()}</h3>

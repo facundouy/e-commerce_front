@@ -26,8 +26,8 @@ function SingleProduct() {
 
   function decreaseOne() {
     setQuantity(quantity - 1);
-    if (quantity < 1) {
-      setQuantity(0);
+    if (quantity < 2) {
+      setQuantity(1);
     }
   }
 
