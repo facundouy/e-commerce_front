@@ -18,6 +18,7 @@
 	margin: 0 1rem;
 	display: flex;
 	flex-direction: column;
+	margin-left: 5rem;
 }
 
 .logo {
@@ -40,8 +41,7 @@
 
 .logo-center-footer img {
 	margin: 1.5rem 0;
-	width: 80%;
-	height: auto;
+	width: 40%;
 }
 
 .logo-center-footer p {
@@ -54,7 +54,7 @@
 	margin: 0 1rem;
 }
 .map-container-footer img {
-	width: 100%;
+	width: 90%;
 	height: auto;
 }
 .footer-bottom {
