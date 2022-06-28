@@ -12,7 +12,7 @@ function NavComp() {
 
 	return (
 		<>
-			<Navbar bg='light' expand='lg' sticky='top' className='nav-container'>
+			<Navbar bg='light' expand='lg' fixed='top' className='nav-container'>
 				<Container>
 					<Navbar.Brand>
 						<GiCupcake className='logo' />

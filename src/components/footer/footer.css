@@ -6,6 +6,8 @@
 	background-color: black;
 	color: white;
 	padding: 10rem 0;
+	border: 1px solid green;
+	width: 100%;
 }
 
 .contact-container {
