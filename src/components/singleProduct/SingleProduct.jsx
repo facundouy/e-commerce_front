@@ -36,7 +36,7 @@ function SingleProduct() {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          `${process.env.REACT_APP_BACKEND_URL}/api/product/${params.id}`
+          `${process.env.REACT_APP_BACKEND_URL}/api/product/${params.slug}`
         );
         setProduct(response.data);
         setIsLoading(false);
@@ -45,7 +45,7 @@ function SingleProduct() {
       }
     }
     getProduct();
-  }, [params.id]);
+  }, [params.slug]);
 
   return product ? (
     <>
