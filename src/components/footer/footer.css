@@ -13,12 +13,23 @@
 	margin: 0 1rem;
 }
 
+.contact-container h5 {
+	margin-bottom: 2rem;
+	font-family: "Montserrat", serif;
+	font-size: 1.5rem;
+	letter-spacing: 1.68px;
+}
+
+.contact-container p {
+	text-align: left;
+}
+
 .center-container {
 	max-width: 30%;
 	margin: 0 1rem;
 	display: flex;
-	flex-direction: column;
-	margin-left: 5rem;
+	justify-content: center;
+	align-items: center;
 }
 
 .logo {
@@ -50,11 +61,11 @@
 }
 
 .map-container-footer {
-	width: 30%;
+	width: 25%;
 	margin: 0 1rem;
 }
 .map-container-footer img {
-	width: 90%;
+	width: 100%;
 	height: auto;
 }
 .footer-bottom {
