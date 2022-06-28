@@ -1,89 +1,114 @@
 .footer-container {
-  align-items: center;
-  background-color: black;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 3rem 11.75rem;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+	background-color: black;
+	color: white;
+	padding: 10rem 0;
 }
 
-/* CONTACT CONTAINER */
 .contact-container {
+	max-width: 30%;
+	margin: 0 1rem;
 }
 
-.contact-container h5 {
-  font-family: "Montserrat", serif;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 1.08px;
-  margin-bottom: 2rem;
-}
-
-.contact-container p {
-  color: #c8c8c8;
-  font-size: 21px;
-}
-
-/* CENTER CONTAINER */
 .center-container {
-  text-align: center;
-  padding: 0 5rem;
-}
-
-.logo-center-footer {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+	max-width: 30%;
+	margin: 0 1rem;
+	display: flex;
+	flex-direction: column;
 }
 
 .logo {
-  font-size: 50px;
-  margin-bottom: 1rem;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	width: 100%;
 }
 
 .logo-center-footer span {
-  color: #c19d56;
-  font-family: "Great Vibes", cursive;
-  font-size: 30px;
+	color: #c19d56;
+	font-family: "Great Vibes", cursive;
+	font-size: 2rem;
 }
 
 .logo-center-footer h4 {
-  font-family: "Montserrat", serif;
-  font-size: 24px;
-  letter-spacing: 1.68px;
-  margin-bottom: 2rem;
+	font-family: "Montserrat", serif;
+	font-size: 1.5rem;
+	letter-spacing: 1.68px;
 }
 
 .logo-center-footer img {
-  margin-bottom: 2rem;
+	margin: 1.5rem 0;
+	width: 80%;
+	height: auto;
 }
 
 .logo-center-footer p {
-  color: #c8c8c8;
-  font-size: 21px;
-  font-family: "Cormorant", cursive;
-  width: 30rem;
+	color: #c8c8c8;
+	font-family: "Cormorant", cursive;
 }
-
-/* MAP CONTAINER */
 
 .map-container-footer {
+	width: 30%;
+	margin: 0 1rem;
 }
-
 .map-container-footer img {
-  height: 190px;
+	width: 100%;
+	height: auto;
 }
-
-/* BOTTOM */
-
 .footer-bottom {
-  background-color: black;
-  border-top: 3px solid #c19d56;
-  color: #c8c8c8;
-  font-family: "Cormorant", cursive;
-  font-size: 17px;
-  letter-spacing: 1.824;
-  padding: 1rem 0;
-  text-align: center;
+	background-color: black;
+	text-align: center;
+	border-top: 1px solid #c19d56;
+	color: #c8c8c8;
+	font-family: "Cormorant", cursive;
 }
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {
+	.footer-container {
+		flex-wrap: wrap;
+	}
+	.contact-container {
+		width: 100%;
+	}
+	.center-container {
+		width: 100%;
+	}
+	.map-container-footer {
+		width: 100%;
+	}
+} */
+
+/* @media only screen and (min-width: 600px) {
+	.footer-container {
+		flex-wrap: wrap;
+	}
+	.contact-container {
+		width: 100%;
+	}
+	.center-container {
+		width: 100%;
+	}
+	.map-container-footer {
+		width: 100%;
+	}
+}
+
+
+@media only screen and (min-width: 768px) {
+	.footer-container {
+		flex-wrap: wrap;
+	}
+}
+
+
+@media only screen and (min-width: 992px) {
+	.footer-container {
+		flex-wrap: wrap;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+} */
