@@ -2,6 +2,7 @@ import "./products.css";
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 function Products() {
   const [productList, setProductList] = useState([]);
