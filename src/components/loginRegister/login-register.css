@@ -3,7 +3,11 @@
 }
 
 .login-container {
-  padding: 0 1rem;
+  padding: 0 1.2rem;
+}
+
+.register-container {
+  padding: 0 1.2rem;
 }
 
 .title-offcanvas {
@@ -20,11 +24,14 @@
   margin-bottom: 1.5rem;
 }
 
+.register-container form .label {
+  font-family: "Montserrat", serif;
+}
+
 .input {
   border: 1.5px solid #838d9b;
   color: #262626;
   font-family: "Montserrat", serif;
-
   margin-bottom: 1.5rem;
   outline: none;
   padding: 1rem;
@@ -38,24 +45,35 @@
   color: #c19d56;
 }
 
-.button-login {
+/* .button-submit {
   background-color: black;
   border: 1px solid black;
   color: white;
   font-family: "Montserrat", serif;
-
   font-size: 13px;
-  margin-bottom: 1.5rem;
-  padding: 12px 54px;
+  letter-spacing: 0.5px;
+  /* margin-bottom: 1rem; */
+/* padding: 12px 54px;
   text-decoration: none;
   transition: all 0.4s;
+} */
+
+.button-submit {
+  background-color: #c19d56;
+  border: solid 1px transparent;
+  color: #fff;
+  font-family: "Montserrat", serif;
+  margin: 1rem 0 0.3rem;
+  outline: #c19d56 solid 1px;
+  outline-offset: 2px;
+  padding: 8px 46px;
+  transition: all 0.5s;
   width: 100%;
 }
 
-.button-login:hover {
-  background-color: #c19d56;
-  color: white;
-  border: 1px solid #c19d56;
+.button-submit:hover {
+  background-color: white;
+  color: #c19d56;
 }
 
 .login-container small {
@@ -68,10 +86,5 @@
   border: none;
   color: #c19d56;
   font-family: "Montserrat", serif;
-
   font-size: 0.9rem;
-}
-
-.register-container {
-  padding: 0 1rem;
 }

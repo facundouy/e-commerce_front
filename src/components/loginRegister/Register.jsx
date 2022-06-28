@@ -5,6 +5,8 @@ function Register() {
   const [inputName, setInputName] = useState("");
   const [inputLastName, setInputLastName] = useState("");
   const [inputEmail, setInputEmail] = useState("");
+  const [inputPhone, setInputPhone] = useState("");
+  const [inputAddress, setInputAddress] = useState("");
   const [inputPassword, setInputPassword] = useState("");
   return (
     <div className="register-container">
@@ -12,8 +14,10 @@ function Register() {
       <p className="subtitle-offcanvas">
         Welcome to Cakes Shop, please create an account to start shopping.
       </p>
-      <div>
-        <label htmlFor="">Name</label>
+      <form>
+        <label className="label" htmlFor="">
+          Name
+        </label>
         <input
           className="input"
           type="text"
@@ -21,7 +25,9 @@ function Register() {
           placeholder="Jane"
           onChange={(event) => setInputName(event.target.value)}
         />
-        <label htmlFor="">Last Name</label>
+        <label className="label" htmlFor="">
+          Last Name
+        </label>
         <input
           className="input"
           type="text"
@@ -29,7 +35,29 @@ function Register() {
           placeholder="Doe"
           onChange={(event) => setInputLastName(event.target.value)}
         />
-        <label htmlFor="">Email</label>
+        <label className="label" htmlFor="">
+          Address
+        </label>
+        <input
+          className="input"
+          type="text"
+          value={inputAddress}
+          placeholder="Av. Gral. Libertador 0000"
+          onChange={(event) => setInputAddress(event.target.value)}
+        />
+        <label className="label" htmlFor="">
+          Phone number
+        </label>
+        <input
+          className="input"
+          type="number"
+          value={inputPhone}
+          placeholder=" 099 000 000"
+          onChange={(event) => setInputPhone(event.target.value)}
+        />
+        <label className="label" htmlFor="">
+          Email
+        </label>
         <input
           className="input"
           type="text"
@@ -37,7 +65,9 @@ function Register() {
           placeholder="example@example.com"
           onChange={(event) => setInputEmail(event.target.value)}
         />
-        <label htmlFor="">Password</label>
+        <label className="label" htmlFor="">
+          Password
+        </label>
         <input
           className="input"
           type="password"
@@ -45,8 +75,8 @@ function Register() {
           placeholder="Password"
           onChange={(event) => setInputPassword(event.target.value)}
         />
-      </div>
-      <button className="button-login">Register now</button>
+      </form>
+      <button className="button-submit">Register now</button>
       <small>Alredy have an account?</small>
       <button className="button-signup">Log in.</button>
     </div>
