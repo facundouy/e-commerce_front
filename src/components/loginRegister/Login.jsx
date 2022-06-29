@@ -5,17 +5,16 @@ import Axios from "axios";
 function Login({ setIsRegistered }) {
   const [inputEmail, setInputEmail] = useState("");
   const [inputPassword, setInputPassword] = useState("");
+  const handleLogin = async(event) => {
+    event.preventDefault();
 
-  const handleLogin = async () => {
-    try {
-      const login = await Axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/login`
-      );
-      // setProductList(productsResponse.data);
-    } catch (error) {
-      console.log(error);
-    }
+    const response = await Axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/login`, {
+      email: { inputEmail },
+      password: { inputPassword },
+    })
+    console.log(response.data)
   };
+
   return (
     <div className="login-container">
       <h1 className="title-offcanvas">LOG IN</h1>
@@ -40,7 +39,9 @@ function Login({ setIsRegistered }) {
           placeholder="Password"
           onChange={(event) => setInputPassword(event.target.value)}
         />
-        <button className="button-submit">Log in</button>
+        <button className="button-submit" type="submit">
+          Log in
+        </button>
       </form>
       <small>Don't have an account?</small>
       <button
@@ -54,5 +55,4 @@ function Login({ setIsRegistered }) {
     </div>
   );
 }
-
 export default Login;
