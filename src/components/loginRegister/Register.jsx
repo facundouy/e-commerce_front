@@ -1,5 +1,6 @@
 import "./login-register.css";
 import { useState } from "react";
+import Axios from "axios";
 
 function Register({ setIsRegistered }) {
   const [inputName, setInputName] = useState("");
@@ -8,13 +9,31 @@ function Register({ setIsRegistered }) {
   const [inputPhone, setInputPhone] = useState("");
   const [inputAddress, setInputAddress] = useState("");
   const [inputPassword, setInputPassword] = useState("");
+
+  const handleRegister = async (event) => {
+    event.preventDefault();
+    const response = await Axios.post(
+      `${process.env.REACT_APP_BACKEND_URL}/api/user`,
+      {
+        firstname: { inputName },
+        lastname: { inputLastName },
+        email: { inputEmail },
+        tel: { inputPhone },
+        address: { inputAddress },
+        password: { inputPassword },
+      }
+    );
+    setIsRegistered(true);
+    console.log(response.data);
+  };
+
   return (
     <div className="register-container">
       <h1 className="title-offcanvas">REGISTER</h1>
       <p className="subtitle-offcanvas">
         Welcome to Cakes Shop, please create an account to start shopping.
       </p>
-      <form>
+      <form onSubmit={handleRegister}>
         <label className="label" htmlFor="">
           Name
         </label>
@@ -75,17 +94,19 @@ function Register({ setIsRegistered }) {
           placeholder="Password"
           onChange={(event) => setInputPassword(event.target.value)}
         />
+        <button className="button-submit" type="submit">
+          Register now
+        </button>
+        <small>Alredy have an account?</small>
+        <button
+          onClick={() => {
+            setIsRegistered(true);
+          }}
+          className="button-signup"
+        >
+          Log in.
+        </button>
       </form>
-      <button className="button-submit">Register now</button>
-      <small>Alredy have an account?</small>
-      <button
-        onClick={() => {
-          setIsRegistered(true);
-        }}
-        className="button-signup"
-      >
-        Log in.
-      </button>
     </div>
   );
 }

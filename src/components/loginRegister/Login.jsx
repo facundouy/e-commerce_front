@@ -7,7 +7,6 @@ function Login({ setIsRegistered }) {
   const [inputPassword, setInputPassword] = useState("");
   const handleLogin = async(event) => {
     event.preventDefault();
-
     const response = await Axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/login`, {
       email: { inputEmail },
       password: { inputPassword },
