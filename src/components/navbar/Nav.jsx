@@ -14,9 +14,11 @@ function NavComp() {
 		<>
 			<Navbar bg='light' expand='lg' fixed='top' className='nav-container'>
 				<Container>
-					<Navbar.Brand>
-						<GiCupcake className='logo' />
-					</Navbar.Brand>
+					<Link to='/' className='item-nav-bar'>
+						<Navbar.Brand>
+							<GiCupcake className='logo' />
+						</Navbar.Brand>
+					</Link>
 					<Navbar.Toggle aria-controls='basic-navbar-nav' />
 					<Navbar.Collapse
 						id='basic-navbar-nav'

@@ -12,53 +12,36 @@ import Categories from "./components/categories/Categories";
 import AllProducts from "./components/allproducts/AllProducts.jsx";
 
 function App() {
-  return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <>
-            <NavComp />
-            <Banner />
-            <Products />
-            <Footer />
-          </>
-        }
-      />
-      <Route
-        path="/shop"
-        element={
-          <>
-            <NavComp />
-            <ShopBanner />
-            <AllProducts />
-            <Footer />
-          </>
-        }
-      />
-      <Route
-        path="/product/:slug"
-        element={
-          <>
-            <NavComp />
-            <SingleProduct />
-            <Footer />
-          </>
-        }
-      />
-      <Route
-        path="/cart"
-        element={
-          <>
-            {" "}
-            <NavComp /> <Cart /> <Footer />
-          </>
-        }
-      />
-      <Route path="/category/:name" element={<Categories />} />
-      <Route path="*" element={<h2>Page not found</h2>} />
-    </Routes>
-  );
+	return (
+		<>
+			<NavComp />
+			<Routes>
+				<Route
+					path='/'
+					element={
+						<>
+							<Banner />
+							<Products />
+						</>
+					}
+				/>
+				<Route
+					path='/shop'
+					element={
+						<>
+							<ShopBanner bannerTitle={"SHOP"} />
+							<AllProducts />
+						</>
+					}
+				/>
+				<Route path='/product/:slug' element={<SingleProduct />} />
+				<Route path='/cart' element={<Cart />} />
+				<Route path='/category/:name' element={<Categories />} />
+				<Route path='*' element={<h2>Page not found</h2>} />
+			</Routes>
+			<Footer />
+		</>
+	);
 }
 
 export default App;
