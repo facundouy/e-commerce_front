@@ -1,9 +1,12 @@
-import "./login-register.css";
+import { useState } from "react";
+
 import Offcanvas from "react-bootstrap/Offcanvas";
+import "./login-register.css";
 import Login from "./Login.jsx";
 import Register from "./Register.jsx";
 
 function LoginRegister({ show, setShow }) {
+  const [isRegistered, setIsRegistered] = useState(true);
   const handleClose = () => setShow(false);
   return (
     <Offcanvas show={show} onHide={handleClose} placement="end" name="end">
@@ -11,7 +14,11 @@ function LoginRegister({ show, setShow }) {
         <Offcanvas.Title></Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
-        <Register />
+        {isRegistered ? (
+          <Login setIsRegistered={setIsRegistered} />
+        ) : (
+          <Register setIsRegistered={setIsRegistered} />
+        )}
       </Offcanvas.Body>
     </Offcanvas>
   );

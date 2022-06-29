@@ -1,7 +1,7 @@
 import "./login-register.css";
 import { useState } from "react";
 
-function Register() {
+function Register({ setIsRegistered }) {
   const [inputName, setInputName] = useState("");
   const [inputLastName, setInputLastName] = useState("");
   const [inputEmail, setInputEmail] = useState("");
@@ -78,7 +78,14 @@ function Register() {
       </form>
       <button className="button-submit">Register now</button>
       <small>Alredy have an account?</small>
-      <button className="button-signup">Log in.</button>
+      <button
+        onClick={() => {
+          setIsRegistered(true);
+        }}
+        className="button-signup"
+      >
+        Log in.
+      </button>
     </div>
   );
 }
