@@ -1,4 +1,4 @@
-import "./products.css";
+import "./products/products.css";
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
@@ -33,7 +33,7 @@ function SideContainer() {
         <h6 className="mb-3">CATEGORIES</h6>
         {categoriesList.map((item) => {
           return (
-            <ul className="mx-0 px-0">
+            <ul className="mx-0 px-0" key={item._id}>
               <Link
                 to={`/category/${item.name}`}
                 className="text-decoration-none"
