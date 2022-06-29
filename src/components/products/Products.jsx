@@ -2,7 +2,7 @@ import "./products.css";
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
-import SideContainer from "./SideContainer";
+import SideContainer from "../SideContainer";
 
 function Products() {
   const [productList, setProductList] = useState([]);
