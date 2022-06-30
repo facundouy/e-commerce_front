@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import { useParams, Link } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
-import Nav from "../navbar/Nav";
+import SideContainer from "../SideContainer";
 import "./categories.css";
 
 function Categories() {
@@ -21,37 +20,47 @@ function Categories() {
       }
     };
     getProducts();
-  }, []);
+  });
 
   return (
-    <div>
-      <Nav />
-      <div className="banner">
-        <h2>{params.name}</h2>
-      </div>
-      <Container>
-        <Row>
-          {products.map((product) => {
+    <div className="products-container">
+      <ul className="products-list">
+        {products &&
+          products.map((product) => {
             return (
-              <Col xs={12} md={4} className="col" key={product._id}>
+              <div key={product._id} className="card-product">
                 <Link to={`/product/${product.slug}`}>
                   <img
-                    className="product-image"
                     src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
-                    alt={`${product.name}`}
+                    alt="cake cover"
                   />
                 </Link>
 
-                <Link to={`/product/${product.slug}`} className="name">
-                  <h3 className="p-name">{product.name.toUpperCase()}</h3>
-                </Link>
-                <p className="details">{product.category.name}</p>
-                <p className="details mb-3">${product.price}</p>
-              </Col>
+                <div className="product-info">
+                  <Link
+                    className="title-product"
+                    to={`/product/${product.slug}`}
+                  >
+                    <h6 className="title-product">
+                      {product.name.toUpperCase()}
+                    </h6>
+                  </Link>
+                  <Link
+                    className="text-decoration-none text-dark"
+                    to={`category/${product.category.name}`}
+                  >
+                    <span className="product-category">
+                      {product.category.name}
+                    </span>
+                  </Link>
+
+                  <span className="product-price">${product.price}</span>
+                </div>
+              </div>
             );
           })}
-        </Row>
-      </Container>
+      </ul>
+      <SideContainer />
     </div>
   );
 }

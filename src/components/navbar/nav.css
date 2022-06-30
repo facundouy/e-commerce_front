@@ -1,72 +1,72 @@
 .nav-container {
-	background-color: white;
-	padding: 3rem 0;
+  background-color: white;
+  padding: 3rem 0;
 
-	height: 120px;
+  height: 120px;
 }
 
 .logo-container {
-	margin-left: 11rem;
+  margin-left: 11rem;
 }
 
 .logo {
-	font-size: 2.8rem;
+  font-size: 2.8rem;
 }
 
 .nav-container ul {
-	display: flex;
-	list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 .item-nav-bar {
-	color: black;
-	font-family: "Montserrat", serif;
-	font-weight: 500;
-	line-height: 23px;
-	font-size: 13px;
-	letter-spacing: 2.47px;
-	padding: 0 14px;
-	text-decoration: none;
+  color: black;
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+  line-height: 23px;
+  font-size: 13px;
+  letter-spacing: 2.47px;
+  padding: 0 14px;
+  text-decoration: none;
 }
 
 .item-nav-bar:hover {
-	color: #c19d56;
-	text-decoration: none;
+  color: #c19d56;
+  text-decoration: none;
 }
 
 .item-nav-login {
-	color: #c19d56;
-	cursor: pointer;
-	font-family: "Cormorant", serif;
-	font-size: 18px;
-	margin-right: 2rem;
+  color: #c19d56;
+  cursor: pointer;
+  font-family: "Cormorant", serif;
+  font-size: 18px;
+  margin-right: 2rem;
 }
 
 .item-nav-cart {
-	color: #c19d56;
-	font-family: "Cormorant", serif;
-	font-size: 21px;
-	margin-bottom: 2px;
-	margin-right: 2rem;
+  color: #c19d56;
+  font-family: "Cormorant", serif;
+  font-size: 21px;
+  margin-bottom: 2px;
+  margin-right: 2rem;
 }
 
 .nav-link {
-	padding: 0;
-	color: black !important;
+  padding: 0;
+  color: black !important;
 }
 
 .nav-link:hover {
-	color: #c19d56 !important;
+  color: #c19d56 !important;
 }
 
 .container-nav-items {
-	margin-right: 10rem;
+  margin-right: 10rem;
 }
 .dropdown-text {
-	font-family: "Cormorant";
-	font-size: 19px;
-	transition: all 0.3s;
+  font-family: "Cormorant";
+  font-size: 19px;
+  transition: all 0.3s;
 }
 .dropdown-text:hover {
-	color: #c19d56;
+  color: #c19d56;
 }
