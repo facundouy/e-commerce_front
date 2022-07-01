@@ -17,7 +17,6 @@ function SingleProduct() {
   const params = useParams();
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
-  console.log(cart);
   const ratingChanged = (newRating) => {};
 
   function increaseOne() {
