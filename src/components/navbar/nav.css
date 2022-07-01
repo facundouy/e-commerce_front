@@ -70,3 +70,10 @@
 .dropdown-text:hover {
   color: #c19d56;
 }
+
+@media only screen and (max-width: 992px) {
+  .nav-elements {
+    background-color: white;
+    border: solid 1px #d3d4d5;
+  }
+}

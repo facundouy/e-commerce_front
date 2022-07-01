@@ -20,10 +20,7 @@ function NavComp() {
             </Navbar.Brand>
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse
-            id="basic-navbar-nav"
-            className="justify-content-end bg-light"
-          >
+          <Navbar.Collapse id="basic-navbar-nav" className="nav-elements">
             <Nav className="me-auto">
               <Link to="/" className="item-nav-bar">
                 <Nav.Item>HOME</Nav.Item>
