@@ -3,9 +3,23 @@
   margin-bottom: 4rem;
 }
 
+.table tr th {
+  color: #000000;
+  font-family: "Montserrat", cursive;
+  font-size: 18px;
+  letter-spacing: 1.08px;
+  line-height: 23.94px;
+}
+
 .table td {
+  color: #000000;
   font-family: "Cormorant", cursive;
+  font-size: 24px;
   vertical-align: middle;
+}
+
+.table td a {
+  color: #000000;
 }
 
 .image-item-cart {
@@ -25,3 +39,19 @@ span:hover {
 .link:hover {
   color: #dab978;
 }
+
+/* .input-container {
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+
+.buttons-container {
+  width: 1.5rem;
+}
+
+.count-buttons {
+  width: 1.5rem;
+  border: 1px solid #c19d56;
+  background-color: white;
+} */

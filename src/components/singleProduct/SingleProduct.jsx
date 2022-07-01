@@ -9,6 +9,7 @@ import ShopBanner from "../shopBanner/ShopBanner";
 import BeatLoader from "react-spinners/BeatLoader";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../../redux/cartSlice";
+import Counter from "../counter/Counter";
 
 function SingleProduct() {
   const [product, setProduct] = useState(null);
@@ -18,17 +19,6 @@ function SingleProduct() {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
   const ratingChanged = (newRating) => {};
-
-  function increaseOne() {
-    setQuantity(parseInt(quantity) + 1);
-  }
-
-  function decreaseOne() {
-    setQuantity(quantity - 1);
-    if (quantity < 2) {
-      setQuantity(1);
-    }
-  }
 
   useEffect(() => {
     async function getProduct() {
@@ -91,28 +81,7 @@ function SingleProduct() {
                   }}
                   className="count-container"
                 >
-                  <input
-                    className="count"
-                    // type="number"
-                    value={quantity}
-                    onChange={(event) => setQuantity(event.target.value)}
-                  />
-                  <div className="buttons-container">
-                    <button
-                      className="count-buttons"
-                      type="button"
-                      onClick={increaseOne}
-                    >
-                      +
-                    </button>
-                    <button
-                      className="count-buttons"
-                      type="button"
-                      onClick={decreaseOne}
-                    >
-                      -
-                    </button>
-                  </div>
+                  <Counter quantity={quantity} setQuantity={setQuantity} />
                   <button className="add-button">ADD TO CART</button>
                 </form>
               </div>

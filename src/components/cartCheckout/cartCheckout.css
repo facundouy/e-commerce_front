@@ -1,44 +1,48 @@
 .checkout-container {
-	margin-bottom: 6rem;
-	display: flex;
-	flex-direction: column;
-	max-width: fit-content;
-	margin-left: 2rem;
+  margin-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
 }
 
 .checkout-title {
-	margin-bottom: 2rem;
-	font-size: 2.5rem;
-	line-height: 1.1em;
-	letter-spacing: 0.08em;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  line-height: 1.1em;
+  letter-spacing: 0.08em;
 }
 
 .checkout-table {
-	font-family: "Cormorant";
-	font-size: 1.5rem;
-	margin-bottom: 2rem;
+  font-family: "Cormorant";
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .checkout-table-row {
-	border-bottom: 1px solid rgb(56, 52, 52);
+  border-bottom: 1px solid rgb(56, 52, 52);
 }
 
 .checkout-table-cell {
-	padding: 0 1.5rem;
+  padding: 0 1.5rem;
 }
 
 .checkout-btn {
-	background-color: #c19d56;
-	border: solid 1px transparent;
-	color: #fff;
-	outline: #c19d56 solid 1px;
-	outline-offset: 2px;
-	padding: 8px 46px;
-	cursor: pointer;
-	transition: all 0.5s;
+  background-color: #c19d56;
+  border: solid 1px transparent;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2.47px;
+  line-height: 26px;
+  outline: #c19d56 solid 1px;
+  outline-offset: 2px;
+  padding: 8px 46px;
+  transition: all 0.5s;
 }
 
 .checkout-btn:hover {
-	background-color: white;
-	color: #c19d56;
+  background-color: white;
+  color: #c19d56;
 }
