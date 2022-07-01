@@ -2,6 +2,7 @@ import ShopBanner from "../shopBanner/ShopBanner";
 // import SingleProduct from "../singleProduct/SingleProduct";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import Axios from "axios";
 
 import {
   incrementQuantity,
@@ -14,14 +15,16 @@ import CartCheckout from "../cartCheckout/CartCheckout";
 
 function Cart() {
   const cart = useSelector((state) => state.cart);
+  console.log(cart);
   const dispatch = useDispatch();
   const totalPrice = cart.reduce(
     (accumulator, currentValue) =>
       accumulator + currentValue.price * currentValue.quantity,
     0
   );
+
   return (
-    <>
+    <div>
       <ShopBanner bannerTitle={"CART"} />
       <div className="container">
         <Table bordered hover className="table">
@@ -84,9 +87,9 @@ function Cart() {
             })}
           </tbody>
         </Table>
-        <CartCheckout total={totalPrice} />
       </div>
-    </>
+      <CartCheckout total={totalPrice} />
+    </div>
   );
 }
 

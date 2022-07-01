@@ -3,15 +3,35 @@ import "./cartCheckout.css";
 import axios from "axios";
 
 function CartCheckout({ total }) {
-  const items = useSelector((state) => state.cart);
+  const cart = useSelector((state) => state.cart);
   const checkOutHandler = () => {
     const response = async () => {
       await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/product`, {
-        items: items,
+        items: cart,
       });
     };
     console.log(response.data);
   };
+
+  async function createOrder(event) {
+    const productsName = [];
+    for (const product of cart) {
+      productsName.push(product.name);
+    }
+    const productsQuantity = [];
+    for (const product of cart) {
+      productsQuantity.push(product.quantity);
+    }
+    const response = await axios.post(
+      `${process.env.REACT_APP_BACKEND_URL}/create/order`,
+      {
+        productsName: productsName,
+        productsQuantity: productsQuantity,
+      }
+    );
+    console.log(response.data);
+  }
+
   return (
     <div className="checkout-container">
       <h2 className="checkout-title">CART TOTALS</h2>
@@ -30,6 +50,7 @@ function CartCheckout({ total }) {
         className="checkout-btn"
         onClick={() => {
           checkOutHandler();
+          createOrder();
         }}
       >
         PROCEED TO CHECKOUT
