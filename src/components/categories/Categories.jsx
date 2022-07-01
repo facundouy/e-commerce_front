@@ -15,7 +15,7 @@ function Categories() {
           `${process.env.REACT_APP_BACKEND_URL}/api/${params.name}`
         );
         setProducts(response.data);
-        console.log(products);
+        // console.log(products);
       } catch (error) {
         console.log(error);
       }

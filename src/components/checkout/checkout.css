@@ -1,0 +1,30 @@
+.checkout-form {
+  font-family: "Cormorant", cursive;
+  font-size: 21px;
+}
+
+.total-price {
+  font-family: "Cormorant", cursive;
+  font-size: 25px;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.separator:not(:empty)::before {
+  margin-right: 0.8rem;
+}
+
+.separator:not(:empty)::after {
+  margin-left: 0.8rem;
+}

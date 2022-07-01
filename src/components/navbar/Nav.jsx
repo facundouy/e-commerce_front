@@ -1,5 +1,6 @@
 import "./nav.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Axios from "axios";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import { GiCupcake } from "react-icons/gi";
@@ -9,7 +10,20 @@ import LoginRegister from "../loginRegister/LoginRegister";
 
 function NavComp() {
   const [showOffCanvas, setShowOffCanvas] = useState(false);
-
+  const [categories, setCategories] = useState([]);
+  useEffect(() => {
+    const getCategories = async () => {
+      try {
+        const categoriesResponse = await Axios.get(
+          `${process.env.REACT_APP_BACKEND_URL}/api/categories`
+        );
+        setCategories(categoriesResponse.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getCategories();
+  }, []);
   return (
     <>
       <Navbar bg="light" expand="lg" fixed="top" className="nav-container">
@@ -33,18 +47,17 @@ function NavComp() {
                 title="CATEGORIES"
                 id="basic-nav-dropdown"
               >
-                <NavDropdown.Item className="dropdown-text" href="#action/3.1">
-                  Cakes
-                </NavDropdown.Item>
-                <NavDropdown.Item className="dropdown-text" href="#action/3.2">
-                  Truffles
-                </NavDropdown.Item>
-                <NavDropdown.Item className="dropdown-text" href="#action/3.3">
-                  Tarts
-                </NavDropdown.Item>
-                <NavDropdown.Item className="dropdown-text" href="#action/3.4">
-                  Cups
-                </NavDropdown.Item>
+                {categories.map((item) => {
+                  return (
+                    <NavDropdown.Item
+                      className="dropdown-text"
+                      href={`/category/${item.name}`}
+                      key={item._id}
+                    >
+                      {item.name}
+                    </NavDropdown.Item>
+                  );
+                })}
               </NavDropdown>
               <Link to="/shop" className="item-nav-bar">
                 <Nav.Item>SHOP</Nav.Item>

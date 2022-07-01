@@ -31,18 +31,19 @@ function SideContainer() {
           />
         </div>
         <h6 className="mb-3">CATEGORIES</h6>
-        {categoriesList.map((item) => {
-          return (
-            <ul className="mx-0 px-0" key={item._id}>
+        <ul className="mx-0 px-0">
+          {categoriesList.map((item) => {
+            return (
               <Link
                 to={`/category/${item.name}`}
                 className="text-decoration-none"
+                key={item._id}
               >
-                <li className="list-unstyled categories">{item.name}</li>
+                <li className="list-unstyled categories my-2">{item.name}</li>
               </Link>
-            </ul>
-          );
-        })}
+            );
+          })}
+        </ul>
         <div className="image-separator">
           <img
             src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-slide-1-img-1.png"
