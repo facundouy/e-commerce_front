@@ -2,10 +2,8 @@ import ShopBanner from "../shopBanner/ShopBanner";
 // import SingleProduct from "../singleProduct/SingleProduct";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import Axios from "axios";
 import { AiOutlineDelete } from "react-icons/ai";
 import { useState } from "react";
-import Counter from "../counter/Counter";
 
 import {
   incrementQuantity,
