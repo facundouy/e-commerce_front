@@ -1,0 +1,14 @@
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  width: 1.5rem;
+}
+
+.count-buttons {
+  display: flex;
+  align-items: center;
+  width: 1.5rem;
+  height: 28px;
+  border: 1px solid #c19d56;
+  background-color: white;
+}

@@ -57,17 +57,6 @@ input {
   align-items: center;
 }
 
-.buttons-container {
-  width: 1.5rem;
-}
-
-.count-buttons {
-  width: 1.5rem;
-  /* height: 50%; */
-  border: 1px solid #c19d56;
-  background-color: white;
-}
-
 .add-button {
   width: 10rem;
   height: 2.5rem;
