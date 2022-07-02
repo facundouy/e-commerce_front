@@ -11,6 +11,7 @@ import LoginRegister from "../loginRegister/LoginRegister";
 function NavComp() {
   const [showOffCanvas, setShowOffCanvas] = useState(false);
   const [categories, setCategories] = useState([]);
+
   useEffect(() => {
     const getCategories = async () => {
       try {
@@ -19,23 +20,27 @@ function NavComp() {
         );
         setCategories(categoriesResponse.data);
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     };
     getCategories();
   }, []);
+
   return (
     <>
       <Navbar bg="light" expand="lg" fixed="top" className="nav-container">
-        <Container>
+        <Container className="p-0">
           <Link to="/" className="item-nav-bar">
             <Navbar.Brand>
               <GiCupcake className="logo" />
             </Navbar.Brand>
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" className="nav-elements">
-            <Nav className="me-auto">
+          <Navbar.Collapse
+            id="basic-navbar-nav"
+            className="nav-elements justify-content-end"
+          >
+            <Nav>
               <Link to="/" className="item-nav-bar">
                 <Nav.Item>HOME</Nav.Item>
               </Link>
@@ -74,7 +79,7 @@ function NavComp() {
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link to="/cart" className="item-nav-bar">
+                <Link to="/cart" className="item-nav-bar align-middle">
                   <AiOutlineShopping className="item-nav-cart mx-0" />
                 </Link>
               </Nav.Item>
