@@ -21,13 +21,11 @@ const Footer = () => {
             <img
               src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-slide-1-img-1.png"
               alt="Separador"
-              className="separator"
             />
             <p>
               1926. - Year of beggining. There are many variations of passa ges
               of Lorem Ipsum avai lable, but the majority suffered alter.
             </p>
-            <div className="icons-container-footer"></div>
           </div>
         </div>
         <div className="map-container-footer">
