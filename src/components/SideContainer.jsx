@@ -2,6 +2,7 @@ import "./products/products.css";
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
+import InstaGallery from "./InstaGallery";
 
 function SideContainer() {
   const [categoriesList, setCategoriesList] = useState([]);
@@ -53,12 +54,14 @@ function SideContainer() {
       </div>
       <div className="side-instagram">
         <h6>INSTRAGRAM</h6>
-        <div className="image-separator">
-          <img
-            src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-slide-1-img-1.png"
-            alt="Separador"
-          />
-        </div>
+
+        <InstaGallery />
+      </div>
+      <div className="image-separator">
+        <img
+          src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-slide-1-img-1.png"
+          alt="Separador"
+        />
       </div>
     </div>
   );
