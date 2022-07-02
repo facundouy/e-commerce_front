@@ -25,7 +25,7 @@ function Checkout() {
           </form>
         </div>
 
-        <div class="separator my-3"> or </div>
+        <div className="separator my-3"> or </div>
       </div>
     </>
   );

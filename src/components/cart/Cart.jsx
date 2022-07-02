@@ -87,8 +87,8 @@ function Cart() {
             })}
           </tbody>
         </Table>
+        <CartCheckout total={totalPrice} />
       </div>
-      <CartCheckout total={totalPrice} />
     </div>
   );
 }
