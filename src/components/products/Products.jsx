@@ -5,17 +5,17 @@ import { useSelector } from "react-redux";
 
 function Products() {
 	const productList = useSelector((state) => state.product);
-
+	const featured = productList.filter((item) => item.featured === true);
 	return (
 		<div className='products-container'>
 			<ul className='products-list'>
-				{productList.map((product) => {
+				{featured.map((product) => {
 					return (
 						<div key={product._id} className='card-product'>
 							<Link to={`/product/${product.slug}`}>
 								<img
 									src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
-									alt='cake cover'
+									alt='Product Image'
 								/>
 							</Link>
 

@@ -21,16 +21,7 @@ function SideContainer() {
 	}, []);
 	return (
 		<div className='side-container'>
-			<div className='side-price-filter'>
-				<h6>PRICE FILTER</h6>
-			</div>
 			<div className='side-categories'>
-				<div className='image-separator'>
-					<img
-						src='https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-slide-1-img-1.png'
-						alt='Separador'
-					/>
-				</div>
 				<h6 className='mb-3'>CATEGORIES</h6>
 				<div className='image-separator'>
 					<img
