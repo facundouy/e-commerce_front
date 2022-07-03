@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import "./checkout.css";
-import Step1 from "./Step1";
 
 function Checkout() {
   const cart = useSelector((state) => state.cart);
@@ -14,7 +13,6 @@ function Checkout() {
     0
   );
 
-  const [order, setOrder] = useState({});
   const [step1, setStep1] = useState(true);
   const [step2, setStep2] = useState(false);
   const [step3, setStep3] = useState(false);
@@ -34,9 +32,9 @@ function Checkout() {
         </div>
 
         <div class="separator my-3"> or </div> */}
-        {step1 && <Step1 setStep2={setStep2} setOrder={setOrder} />}
-        {/* {step2 && <Step2 setStep1={setStep1} setStep3={setStep3} setOrder={setOrder} />}
-        {step3 && <Step3 setStep2={setStep2} setOrder={setOrder} />} */}
+        {step1 && <Step1 setStep2={setStep2} />}
+        {step2 && <Step2 setStep1={setStep1} setStep3={setStep3} />}
+        {step3 && <Step3 setStep2={setStep2} />}
       </div>
     </>
   );
