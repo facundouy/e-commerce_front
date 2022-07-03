@@ -3,7 +3,6 @@ import ShopBanner from "../shopBanner/ShopBanner";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { AiOutlineDelete } from "react-icons/ai";
-import { useState } from "react";
 
 import {
   incrementQuantity,
