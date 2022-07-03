@@ -34,9 +34,11 @@ function Checkout() {
         </div>
 
         <div class="separator my-3"> or </div> */}
-        {step1 && <Step1 setStep2={setStep2} setOrder={setOrder} />}
-        {/* {step2 && <Step2 setStep1={setStep1} setStep3={setStep3} setOrder={setOrder} />}
-        {step3 && <Step3 setStep2={setStep2} setOrder={setOrder} />} */}
+        {step1 && (
+          <Step1 setStep1={setStep1} setStep2={setStep2} setOrder={setOrder} />
+        )}
+        {/* {step2 && <Step2 setStep1={setStep1} setStep2={setStep2} setStep3={setStep3} setOrder={setOrder} />}
+        {step3 && <Step3 setStep2={setStep2} setStep3={setStep3} setOrder={setOrder} />} */}
       </div>
     </>
   );

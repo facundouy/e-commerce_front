@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import "./checkout.css";
 
-function Step1() {
+function Step1(setStep1, setStep2, setOrder) {
   return (
     <>
       <h1>BILLING DETAILS</h1>
@@ -62,7 +62,7 @@ function Step1() {
           onClick={() => {
             setStep1(false);
             setStep2(true);
-            setOrder;
+            setOrder({});
           }}
         >
           NEXT
