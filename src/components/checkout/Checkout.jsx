@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import "./checkout.css";
 import Step1 from "./Step1";
+import Step2 from "./Step2";
 
 function Checkout() {
   const cart = useSelector((state) => state.cart);
@@ -23,22 +24,18 @@ function Checkout() {
     <>
       <ShopBanner bannerTitle={"CHECKOUT"} />
       <div className="container mb-4">
-        {/* <div className="d-flex flex-column justify-content-right">
-          <div className="total-price">Total: ${totalPrice}</div>
-          <form className="checkout-form" action="">
-            <button type="button" className="checkout-btn mt-3">
-              PAY
-            </button>
-            <div className="mt-2">Pay with your favourite method</div>
-          </form>
-        </div>
-
-        <div class="separator my-3"> or </div> */}
         {step1 && (
           <Step1 setStep1={setStep1} setStep2={setStep2} setOrder={setOrder} />
         )}
-        {/* {step2 && <Step2 setStep1={setStep1} setStep2={setStep2} setStep3={setStep3} setOrder={setOrder} />}
-        {step3 && <Step3 setStep2={setStep2} setStep3={setStep3} setOrder={setOrder} />} */}
+        {step2 && (
+          <Step2
+            setStep1={setStep1}
+            setStep2={setStep2}
+            setStep3={setStep3}
+            setOrder={setOrder}
+          />
+        )}
+        {/* {step3 && <Step3 setStep2={setStep2} setStep3={setStep3} setOrder={setOrder} />} */}
       </div>
     </>
   );
