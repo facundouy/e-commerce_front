@@ -11,7 +11,7 @@ function Step2(setStep1, setStep2, setOrder) {
   const [inputAddress, setInputAddress] = useState("");
   return (
     <>
-      <h1>CULO</h1>
+      <h1>PAYMENT METHOD</h1>
       <div className="container-billing-details">
         <label className="label" htmlFor="">
           First Name

@@ -16,23 +16,19 @@ function Checkout() {
   );
 
   const [order, setOrder] = useState({});
-  const [step1, setStep1] = useState(true);
-  const [step2, setStep2] = useState(false);
-  const [step3, setStep3] = useState(false);
-
+  const [step, setStep] = useState("1");
+  console.log("Step:", step);
   return (
     <>
       <ShopBanner bannerTitle={"CHECKOUT"} />
       <div className="container mb-4">
-        {step1 && (
-          <Step1 setStep1={setStep1} setStep2={setStep2} setOrder={setOrder} />
-        )}
-        {step2 && (
+        {step === "1" && <Step1 setStep={setStep} setOrder={setOrder} />}
+        {step === "2" && (
           <Step2
-            setStep1={setStep1}
-            setStep2={setStep2}
-            setStep3={setStep3}
-            setOrder={setOrder}
+            setStep={setStep}
+            // setStep2={setStep2}
+            // setStep3={setStep3}
+            // setOrder={setOrder}
           />
         )}
         {/* {step3 && <Step3 setStep2={setStep2} setStep3={setStep3} setOrder={setOrder} />} */}

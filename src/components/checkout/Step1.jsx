@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import "./checkout.css";
 
-function Step1(setStep1, setStep2, setOrder) {
+function Step1({ setStep }, setOrder) {
   const [inputFirstName, setInputFirstName] = useState("");
   const [inputLastName, setInputLastName] = useState("");
   const [inputEmail, setInputEmail] = useState("");
@@ -74,13 +74,11 @@ function Step1(setStep1, setStep2, setOrder) {
           placeholder="example@example.com"
           onChange={(event) => setInputEmail(event.target.value)}
         />
-
         <button
           type="button"
           className="checkout-btn mt-3"
           onClick={() => {
-            setStep1(false);
-            setStep2(true);
+            setStep("2");
             // setOrder({});
           }}
         >
