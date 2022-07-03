@@ -24,17 +24,6 @@ function Checkout() {
     <>
       <ShopBanner bannerTitle={"CHECKOUT"} />
       <div className="container mb-4">
-        {/* <div className="d-flex flex-column justify-content-right">
-          <div className="total-price">Total: ${totalPrice}</div>
-          <form className="checkout-form" action="">
-            <button type="button" className="checkout-btn mt-3">
-              PAY
-            </button>
-            <div className="mt-2">Pay with your favourite method</div>
-          </form>
-        </div>
-
-        <div class="separator my-3"> or </div> */}
         {step1 && (
           <Step1 setStep1={setStep1} setStep2={setStep2} setOrder={setOrder} />
         )}

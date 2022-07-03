@@ -81,7 +81,7 @@ function Step1(setStep1, setStep2, setOrder) {
           onClick={() => {
             setStep1(false);
             setStep2(true);
-            setOrder({});
+            // setOrder({});
           }}
         >
           NEXT

@@ -75,7 +75,7 @@ function Step2(setStep1, setStep2, setOrder) {
           onChange={(event) => setInputEmail(event.target.value)}
         />
 
-        <button
+        {/* <button
           type="button"
           className="checkout-btn mt-3"
           onClick={() => {
@@ -85,7 +85,7 @@ function Step2(setStep1, setStep2, setOrder) {
           }}
         >
           NEXT
-        </button>
+        </button> */}
       </div>
     </>
   );
