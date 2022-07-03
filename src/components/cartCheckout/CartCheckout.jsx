@@ -10,23 +10,18 @@ function CartCheckout({ total }) {
         items: cart,
       });
     };
-    console.log(response.data);
+    // console.log(response.data);
   };
 
   async function createOrder(event) {
-    const productsName = [];
-    for (const product of cart) {
-      productsName.push(product.name);
-    }
-    const productsQuantity = [];
-    for (const product of cart) {
-      productsQuantity.push(product.quantity);
-    }
+    const products = [];
+    cart.map((product) => {
+      products.push({ name: product.name, quantity: product.quantity });
+    });
     const response = await axios.post(
       `${process.env.REACT_APP_BACKEND_URL}/create/order`,
       {
-        productsName: productsName,
-        productsQuantity: productsQuantity,
+        products,
       }
     );
     console.log(response.data);
@@ -38,7 +33,7 @@ function CartCheckout({ total }) {
       <table className="checkout-table">
         <tr className="checkout-table-row">
           <td className="checkout-table-cell">Subtotal</td>
-          <td className="checkout-table-cell">${total}</td>
+          <td className="check out-table-cell">${total}</td>
         </tr>
         <tr className="checkout-table-row">
           <td className="checkout-table-cell">Total</td>
