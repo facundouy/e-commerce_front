@@ -2,21 +2,22 @@ import "./login-register.css";
 import { useState } from "react";
 import Axios from "axios";
 import { useDispatch } from "react-redux";
-import {storeToken} from "../../redux/userSlice"
-
+import { storeToken } from "../../redux/userSlice";
 
 function Login({ setIsRegistered }) {
   const [inputEmail, setInputEmail] = useState("");
   const [inputPassword, setInputPassword] = useState("");
-  const dispatch = useDispatch()
-  const handleLogin = async(event) => {
+  const dispatch = useDispatch();
+  const handleLogin = async (event) => {
     event.preventDefault();
-    const response = await Axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/login`, {
-      email: { inputEmail },
-      password: { inputPassword },
-    })
-    console.log(response.data)
-    dispatch(storeToken({token:response.data}))
+    const response = await Axios.post(
+      `${process.env.REACT_APP_BACKEND_URL}/api/login`,
+      {
+        email: { inputEmail },
+        password: { inputPassword },
+      }
+    );
+    dispatch(storeToken({ token: response.data }));
   };
 
   return (
