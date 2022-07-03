@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import "./checkout.css";
 
-function Step1(setStep1, setStep2, setOrder) {
+function Step2(setStep1, setStep2, setOrder) {
   const [inputFirstName, setInputFirstName] = useState("");
   const [inputLastName, setInputLastName] = useState("");
   const [inputEmail, setInputEmail] = useState("");
@@ -11,7 +11,7 @@ function Step1(setStep1, setStep2, setOrder) {
   const [inputAddress, setInputAddress] = useState("");
   return (
     <>
-      <h1>BILLING DETAILS</h1>
+      <h1>CULO</h1>
       <div className="container-billing-details">
         <label className="label" htmlFor="">
           First Name
@@ -91,4 +91,4 @@ function Step1(setStep1, setStep2, setOrder) {
   );
 }
 
-export default Step1;
+export default Step2;
