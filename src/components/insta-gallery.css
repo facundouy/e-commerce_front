@@ -1,31 +1,31 @@
 .insta-feed {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .insta-feed ul {
-  align-items: center;
+	align-items: center;
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 
-  margin: 0;
-  /* margin: 25px -5px 0; */
-  width: 100%;
+	margin: 0;
+	/* margin: 25px -5px 0; */
+	width: 100%;
 }
 
 .insta-feed ul li {
-  list-style: none;
-  padding: 5px;
-  margin: 0;
-  height: 90px;
-  width: 95px;
+	list-style: none;
+	padding: 5px;
+	margin: 0;
+	height: 90px;
+	width: 95px;
 }
 
 .insta-image {
-  margin: 0;
-  height: 100%;
-  width: 100%;
+	margin: 0;
+	height: 100%;
+	width: 100%;
 }

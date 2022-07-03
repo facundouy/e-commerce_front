@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import "./cartCheckout.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function CartCheckout({ total }) {
   const cart = useSelector((state) => state.cart);
@@ -40,16 +41,17 @@ function CartCheckout({ total }) {
           <td className="checkout-table-cell">${total}</td>
         </tr>
       </table>
-
-      <button
-        className="checkout-btn"
-        onClick={() => {
-          checkOutHandler();
-          createOrder();
-        }}
-      >
-        PROCEED TO CHECKOUT
-      </button>
+      <Link to="/checkout">
+        <button
+          className="checkout-btn"
+          onClick={() => {
+            checkOutHandler();
+            createOrder();
+          }}
+        >
+          PROCEED TO CHECKOUT
+        </button>
+      </Link>
     </div>
   );
 }
