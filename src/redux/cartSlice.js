@@ -11,7 +11,6 @@ const cartSlice = createSlice({
 
 			if (!itemInList) {
 				const newProduct = { ...action.payload.product };
-				console.log(newProduct);
 				newProduct.quantity = action.payload.qty;
 				state.push(newProduct);
 			} else {
