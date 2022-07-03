@@ -118,8 +118,10 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-
-	max-width: 80%;
+	background-image: url("https://dolcino.qodeinteractive.com/wp-content/uploads/2018/11/h1-parallax-1-1.jpg");
+	background-position: center center;
+	vertical-align: baseline;
+	max-width: 100%;
 }
 
 .header-container div {

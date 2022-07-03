@@ -1,13 +1,12 @@
 import "./products.css";
 import { Link } from "react-router-dom";
-import SideContainer from "../SideContainer";
 import { useSelector } from "react-redux";
 
 function Products() {
 	const productList = useSelector((state) => state.product);
 	const featured = productList.filter((item) => item.featured === true);
 	return (
-		<>
+		<div className='container d-flex justify-content-center flex-wrap align-items-center'>
 			<div className='header-container'>
 				<div>family tradition</div>
 				<h3>OUR STORY</h3>
@@ -57,9 +56,8 @@ function Products() {
 						);
 					})}
 				</ul>
-				<SideContainer />
 			</div>
-		</>
+		</div>
 	);
 }
 
