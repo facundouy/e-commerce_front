@@ -1,19 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
-import Axios from "axios";
 
 const productSlice = createSlice({
-  name: "product",
-  initialState: [],
-  reducers: {
-    async getProducts() {
-      const response = await Axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/api/products`
-      );
-      console.log(response);
-      return [...response.data];
-    },
-  },
+	name: "product",
+	initialState: [],
+	reducers: {
+		storeProducts(state, action) {
+			return (state = action.payload);
+		},
+	},
 });
 
-export const { getProducts } = productSlice.actions;
+export const { storeProducts } = productSlice.actions;
 export default productSlice.reducer;
