@@ -8,13 +8,24 @@ import BeatLoader from "react-spinners/BeatLoader";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
 import Counter from "../counter/Counter";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function SingleProduct() {
 	const params = useParams();
 	const product = useSelector((state) =>
 		state.product.find((item) => params.slug === item.slug)
 	);
-	console.log(product);
+	const notify = () =>
+		toast(`${product.name} was added to your cart!`, {
+			position: "top-center",
+			autoClose: 5000,
+			hideProgressBar: true,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: false,
+			progress: undefined,
+		});
 	const [isLoading, setIsLoading] = useState(false);
 	const [quantity, setQuantity] = useState(1);
 	const dispatch = useDispatch();
@@ -22,6 +33,17 @@ function SingleProduct() {
 	return product ? (
 		<>
 			<ShopBanner />
+			<ToastContainer
+				position='top-center'
+				autoClose={5000}
+				hideProgressBar
+				newestOnTop
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable={false}
+				pauseOnHover
+			/>
 			<div className='product-container'>
 				{" "}
 				<Container>
@@ -60,7 +82,7 @@ function SingleProduct() {
 											})
 										);
 										setQuantity(1);
-										alert("El producto ha sido agregado al carrito!");
+										notify();
 									}}
 									className='count-container'>
 									<Counter quantity={quantity} setQuantity={setQuantity} />
