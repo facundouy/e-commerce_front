@@ -24,7 +24,6 @@ function Register({ setIsRegistered }) {
       }
     );
     setIsRegistered(true);
-    console.log(response.data);
   };
 
   return (

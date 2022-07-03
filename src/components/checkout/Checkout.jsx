@@ -17,7 +17,7 @@ function Checkout() {
 
   const [order, setOrder] = useState({});
   const [step, setStep] = useState("1");
-  console.log("Step:", step);
+  // console.log("Step:", step);
   return (
     <>
       <ShopBanner bannerTitle={"CHECKOUT"} />
