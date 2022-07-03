@@ -18,8 +18,9 @@ function Products() {
 					/>
 				</div>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi,
-					deleniti!
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+					corrupti quisquam dolorum? Et accusamus, sunt voluptates qui voluptate
+					veniam quam!
 				</p>
 			</div>
 			<div className='products-container'>
