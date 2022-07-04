@@ -42,7 +42,7 @@ function Login({ setIsRegistered }) {
       <div className="login-container">
         <h1 className="title-offcanvas">LOG IN</h1>
         <p className="subtitle-offcanvas">
-          Welcome back to Cakes Shop, please put your login credentials below to
+          Welcome back to Dolcetto, please put your login credentials below to
           start shopping.
         </p>
         <form onSubmit={handleLogin}>
