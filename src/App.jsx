@@ -15,6 +15,7 @@ import Checkout from "./components/checkout/Checkout";
 import { useEffect } from "react";
 import { storeProducts } from "./redux/productSlice";
 import { useDispatch } from "react-redux";
+import UserProfile from "./components/userProfile/UserProfile";
 
 function App() {
 	const dispatch = useDispatch();
@@ -53,6 +54,7 @@ function App() {
 						</>
 					}
 				/>
+				<Route path='/user' element={<UserProfile />} />
 				<Route path='/category/:name' element={<Categories />} />
 				<Route path='/product/:slug' element={<SingleProduct />} />
 				<Route path='/cart' element={<Cart />} />

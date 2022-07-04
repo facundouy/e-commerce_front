@@ -1,7 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import ReactStars from "react-rating-stars-component";
 import "./singleProduct.css";
 import ShopBanner from "../shopBanner/ShopBanner";
 import BeatLoader from "react-spinners/BeatLoader";
@@ -61,13 +60,6 @@ function SingleProduct() {
 							<h1 className='product-name'>{product.name.toUpperCase()}</h1>
 							<div className='price'>${product.price}</div>
 							<div className='rating-container'>
-								{/* <ReactStars
-									count={5}
-									onChange={ratingChanged}
-									size={24}
-									value={5}
-									activeColor='#c19d56'
-								/> */}
 								<small className='pt-1 ms-1'>(Based on 38 reviews)</small>
 							</div>
 							<p className='mt-2'>{product.description}</p>

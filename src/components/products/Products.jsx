@@ -30,7 +30,7 @@ function Products() {
 								<Link to={`/product/${product.slug}`}>
 									<img
 										src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
-										alt='Product Image'
+										alt='Product'
 									/>
 								</Link>
 

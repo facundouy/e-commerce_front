@@ -1,14 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const userSlice = createSlice({
-  name: "user",
-  initialState: {},
-  reducers: {
-    storeToken(state, action) {
-      // console.log(action.payload.token.accesToken)
-      state.token = action.payload.token.accesToken;
-    },
-  },
+	name: "user",
+	initialState: {},
+	reducers: {
+		storeToken(state, action) {
+			if (action.payload.userInfo.accesToken) {
+				state.token = action.payload.userInfo.accesToken;
+				state.user = action.payload.userInfo.user;
+			} else {
+				return state;
+			}
+		},
+	},
 });
 
 export const { storeToken } = userSlice.actions;
