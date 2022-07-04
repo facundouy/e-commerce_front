@@ -25,3 +25,150 @@
 .separator:not(:empty)::after {
   margin-left: 0.8rem;
 }
+
+.steps-icons-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.step-container {
+  position: relative;
+}
+
+.diamond {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #c19d56;
+  color: white;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.selected {
+  border: 5px solid #c19d56;
+  background-color: white;
+  color: #c19d56;
+}
+
+.next {
+  border: 2px solid #c19d56;
+  background-color: white;
+  color: #c19d56;
+}
+
+.completed {
+  opacity: 0.5;
+}
+
+.diamond span {
+  cursor: default;
+  font-family: "Montserrat", serif;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.step-container small {
+  bottom: -3rem;
+  font-size: 1.2rem;
+  left: 50%;
+  position: absolute;
+  transform: translatex(-50%);
+  white-space: nowrap;
+}
+
+.line {
+  background-color: #c19d56;
+  height: 2px;
+  margin: 0 7px;
+  width: 5rem;
+}
+
+.step-title {
+  font-family: "Montserrat", serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1.68px;
+  line-height: 30px;
+  margin-bottom: 1.2rem;
+}
+
+.container-billing-details {
+  font-family: "Cormorant", serif;
+  font-size: 21px;
+}
+
+.payment-method {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-method-label {
+  font-family: "Montserrat", serif;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.payment-method-info {
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+}
+
+.credit-card {
+  border: 1px solid black;
+  border-radius: 3px;
+  height: 1.5rem;
+  margin-left: 4px;
+  width: 2rem;
+}
+
+.credit-card-container {
+  position: relative;
+}
+
+.credit-card-input {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.input-short {
+  border: 1.5px solid #838d9b;
+  color: #262626;
+  font-family: "Montserrat", serif;
+  margin-bottom: 1.5rem;
+  outline: none;
+  padding: 1rem;
+  text-align: left;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.input-short:focus-visible {
+  border: 1.5px solid #c19d56;
+  color: #c19d56;
+}
+
+.card-info-container {
+  display: flex;
+}
+
+.name-on-card-container {
+  margin-right: 3rem;
+  width: 50%;
+}
+
+.expiry-date-container {
+  margin-right: 3rem;
+}
