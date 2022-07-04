@@ -11,35 +11,34 @@ function CartCheckout({ total }) {
       accumulator + currentValue.price * currentValue.quantity,
     0
   );
-  console.log(totalPrice);
   const checkOutHandler = () => {
     const response = async () => {
       await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/product`, {
         items: cart,
       });
     };
-    // console.log(response.data);
   };
 
-  async function createOrder(event) {
-    const products = [];
-    cart.map((product) => {
-      products.push({
-        name: product.name,
-        quantity: product.quantity,
-        price: product.price * product.quantity,
-      });
-    });
-    const response = await axios.post(
-      `${process.env.REACT_APP_BACKEND_URL}/create/order`,
-      {
-        products,
-        totalPrice: totalPrice,
-        user: user.user,
-      }
-    );
-    console.log(response.data);
-  }
+  // async function createOrder(event) {
+  //   const products = [];
+  //   cart.map((product) => {
+  //     products.push({
+  //       name: product.name,
+  //       quantity: product.quantity,
+  //       price: product.price * product.quantity,
+  //     });
+  //   });
+
+  //   const response = await axios.post(
+  //     `${process.env.REACT_APP_BACKEND_URL}/create/order`,
+  //     {
+  //       products,
+  //       totalPrice: totalPrice,
+  //       user: user.user,
+  //     }
+  //   );
+
+  // }
 
   return (
     <div className="checkout-container">
@@ -59,7 +58,6 @@ function CartCheckout({ total }) {
           className="checkout-btn"
           onClick={() => {
             checkOutHandler();
-            createOrder();
           }}
         >
           PROCEED TO CHECKOUT
