@@ -66,13 +66,11 @@
   font-family: "Cormorant";
   font-size: 19px;
   transition: all 0.3s;
+  text-decoration: none;
+  color: black;
 }
 .dropdown-text:hover {
   color: #c19d56;
-}
-
-.user-icon {
-  margin-right: 0;
 }
 
 @media only screen and (max-width: 992px) {

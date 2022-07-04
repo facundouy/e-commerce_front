@@ -14,16 +14,16 @@ const step2states = {
 };
 
 function Checkout() {
-  const cart = useSelector((state) => state.cart);
-  const user = useSelector((state) => state.user);
-  const totalPrice = cart.reduce(
-    (accumulator, currentValue) =>
-      accumulator + currentValue.price * currentValue.quantity,
-    0
-  );
+  const [inputFirstName, setInputFirstName] = useState("");
+  const [inputLastName, setInputLastName] = useState("");
+  const [inputEmail, setInputEmail] = useState("");
+  const [inputPhone, setInputPhone] = useState("");
+  const [inputAddress, setInputAddress] = useState("");
 
-  const [order, setOrder] = useState({});
+  const cart = useSelector((state) => state.cart);
+  
   const [step, setStep] = useState("1");
+
   return (
     <>
       <ShopBanner bannerTitle={"CHECKOUT"} />
@@ -54,9 +54,34 @@ function Checkout() {
             <small>Review order</small>
           </div>
         </div>
-        {step === "1" && <Step1 setStep={setStep} setOrder={setOrder} />}
-        {step === "2" && <Step2 setStep={setStep} setOrder={setOrder} />}
-        {step === "3" && <Step3 setStep={setStep} setOrder={setOrder} />}
+        {step === "1" && (
+          <Step1
+            inputFirstName={inputFirstName}
+            setInputFirstName={setInputFirstName}
+            inputLastName={inputLastName}
+            setInputLastName={setInputLastName}
+            inputEmail={inputEmail}
+            setInputEmail={setInputEmail}
+            inputPhone={inputPhone}
+            setInputPhone={setInputPhone}
+            inputAddress={inputAddress}
+            setStep={setStep}
+    
+            setInputAddress={setInputAddress}
+          />
+        )}
+        {step === "2" && <Step2 setStep={setStep} />}
+        {step === "3" && (
+          <Step3
+            inputFirstName={inputFirstName}
+            inputLastName={inputLastName}
+            inputEmail={inputEmail}
+            inputPhone={inputPhone}
+            inputAddress={inputAddress}
+            setStep={setStep}
+         
+          />
+        )}
       </div>
     </>
   );

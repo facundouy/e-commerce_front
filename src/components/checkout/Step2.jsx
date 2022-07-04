@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./checkout.css";
 
 function Step2({ setStep, setOrder }) {
-  const [paymentMethod, setPaymentMethod] = useState("");
+  const [paymentMethod, setPaymentMethod] = useState("credit");
   const [cardNumber, setCardNumber] = useState("");
   const [nameOnCard, setNameOnCard] = useState("");
   const [expiryDate, setExpiryDate] = useState("");
@@ -18,9 +18,9 @@ function Step2({ setStep, setOrder }) {
           </div>
 
           <div className="payment-method">
-            <div className="credit-card" />
-            <div className="credit-card" />
-            <div className="credit-card" />
+            <div><img className="credit-card" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/556px-Visa_Inc._logo.svg.png" alt="" /></div>
+            <div><img className="credit-card" src="https://upload.wikimedia.org/wikipedia/commons/7/72/MasterCard_early_1990s_logo.png" alt="" /></div>
+            <div><img className="credit-card" src="https://www.estrategiamagazine.com/wp-content/uploads/2018/08/historia-de-american-express.jpeg" alt="" /></div>
           </div>
         </div>
         {paymentMethod === "credit" && (
@@ -77,7 +77,7 @@ function Step2({ setStep, setOrder }) {
                 <label className="label" htmlFor="">
                   Card Verification Number
                 </label>
-                <div className="credit-card-container">
+                <div className="credit-card-container cvv-container">
                   <input
                     type="password"
                     className="input-short input-credit-card"
@@ -101,7 +101,7 @@ function Step2({ setStep, setOrder }) {
         </button>
         <button
           type="button"
-          className="checkout-btn mt-3"
+          className="checkout-btn mt-3 ms-4"
           onClick={() => {
             setStep("3");
             // setOrder({});

@@ -12,6 +12,7 @@ import Cart from "./components/cart/Cart";
 import Categories from "./components/categories/Categories";
 import AllProducts from "./components/allproducts/AllProducts.jsx";
 import Checkout from "./components/checkout/Checkout";
+import ProtectedRoute from "./components/ProtectedRoute";
 import { useEffect } from "react";
 import { storeProducts } from "./redux/productSlice";
 import { useDispatch } from "react-redux";
@@ -54,11 +55,25 @@ function App() {
             </>
           }
         />
-        <Route path="/user" element={<UserProfile />} />
+        <Route
+          path="/user"
+          element={
+            <ProtectedRoute>
+              <UserProfile />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/category/:name" element={<Categories />} />
         <Route path="/product/:slug" element={<SingleProduct />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/checkout" element={<Checkout />} />
+        <Route
+          path="/checkout"
+          element={
+            <ProtectedRoute>
+              <Checkout />
+            </ProtectedRoute>
+          }
+        />
         <Route path="*" element={<h2>Page not found</h2>} />
       </Routes>
       <Footer />

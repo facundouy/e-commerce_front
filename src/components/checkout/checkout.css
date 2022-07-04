@@ -126,11 +126,13 @@
 }
 
 .credit-card {
-  border: 1px solid black;
+  border: 1px solid #838d9b;
   border-radius: 3px;
   height: 1.5rem;
   margin-left: 4px;
   width: 2rem;
+  object-fit: contain;
+  padding: 1px;
 }
 
 .credit-card-container {
@@ -146,7 +148,7 @@
 .input-short {
   border: 1.5px solid #838d9b;
   color: #262626;
-  font-family: "Montserrat", serif;
+  font-family: "Cormorant", serif;
   margin-bottom: 1.5rem;
   outline: none;
   padding: 1rem;
@@ -166,9 +168,33 @@
 
 .name-on-card-container {
   margin-right: 3rem;
-  width: 50%;
+  flex: 2;
 }
 
 .expiry-date-container {
   margin-right: 3rem;
+}
+
+.cvv-container {
+  flex: 1;
+}
+
+.step3-total {
+  color: #000000;
+  font-family: "Montserrat", cursive;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1.08px;
+  line-height: 23.94px;
+  margin-top: 1rem;
+}
+
+.contact-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info-container span:hover {
+  cursor: default;
+  color: #000000;
 }

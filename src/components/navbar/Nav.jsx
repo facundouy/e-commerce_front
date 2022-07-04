@@ -56,12 +56,13 @@ function NavComp() {
               >
                 {categories.map((item) => {
                   return (
-                    <NavDropdown.Item
-                      className="dropdown-text"
-                      href={`/category/${item.name}`}
-                      key={item._id}
-                    >
-                      {item.name}
+                    <NavDropdown.Item key={item._id}>
+                      <Link
+                        to={`/category/${item.name}`}
+                        className="dropdown-text"
+                      >
+                        {item.name}
+                      </Link>
                     </NavDropdown.Item>
                   );
                 })}
