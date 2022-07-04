@@ -70,7 +70,7 @@ function NavComp() {
 								<Nav.Item>CONTACT</Nav.Item>
 							</Link>
 							<Nav.Item>
-								{Object.keys(info.token).length === 0 ? (
+								{info.token === null || Object.keys(info).length === 0 ? (
 									<Link to='#'>
 										<FaRegUser
 											className='item-nav-login mx-0'

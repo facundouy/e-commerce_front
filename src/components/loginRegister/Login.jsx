@@ -24,6 +24,8 @@ function Login({ setIsRegistered }) {
 			}
 		);
 		dispatch(storeToken({ userInfo: response.data }));
+		setInputEmail("");
+		setInputPassword("");
 	};
 
 	return (
@@ -49,10 +51,11 @@ function Login({ setIsRegistered }) {
 					<label htmlFor=''>Email</label>
 					<input
 						className='input'
-						type='text'
+						type='email'
 						value={inputEmail}
 						placeholder='example@example.com'
 						onChange={(event) => setInputEmail(event.target.value)}
+						required
 					/>
 					<label htmlFor=''>Password</label>
 					<input
@@ -61,6 +64,7 @@ function Login({ setIsRegistered }) {
 						value={inputPassword}
 						placeholder='Password'
 						onChange={(event) => setInputPassword(event.target.value)}
+						required
 					/>
 					<button className='button-submit' type='submit'>
 						Log in

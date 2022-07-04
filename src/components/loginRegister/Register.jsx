@@ -21,6 +21,12 @@ function Register({ setIsRegistered }) {
 			password: { inputPassword },
 		});
 		setIsRegistered(true);
+		setInputName("");
+		setInputLastName("");
+		setInputEmail("");
+		setInputPhone("");
+		setInputAddress("");
+		setInputPassword("");
 	};
 
 	return (
@@ -39,6 +45,8 @@ function Register({ setIsRegistered }) {
 					value={inputName}
 					placeholder='Jane'
 					onChange={(event) => setInputName(event.target.value)}
+					required
+					minLength={4}
 				/>
 				<label className='label' htmlFor=''>
 					Last Name
@@ -49,6 +57,8 @@ function Register({ setIsRegistered }) {
 					value={inputLastName}
 					placeholder='Doe'
 					onChange={(event) => setInputLastName(event.target.value)}
+					required
+					minLength={4}
 				/>
 				<label className='label' htmlFor=''>
 					Address
@@ -59,26 +69,31 @@ function Register({ setIsRegistered }) {
 					value={inputAddress}
 					placeholder='Av. Gral. Libertador 0000'
 					onChange={(event) => setInputAddress(event.target.value)}
+					required
+					minLength={4}
 				/>
 				<label className='label' htmlFor=''>
 					Phone number
 				</label>
 				<input
 					className='input'
-					type='number'
+					type='tel'
 					value={inputPhone}
 					placeholder=' 099 000 000'
 					onChange={(event) => setInputPhone(event.target.value)}
+					minLength={9}
 				/>
 				<label className='label' htmlFor=''>
 					Email
 				</label>
 				<input
 					className='input'
-					type='text'
+					type='email'
 					value={inputEmail}
 					placeholder='example@example.com'
 					onChange={(event) => setInputEmail(event.target.value)}
+					required
+					minLength={4}
 				/>
 				<label className='label' htmlFor=''>
 					Password
@@ -89,6 +104,8 @@ function Register({ setIsRegistered }) {
 					value={inputPassword}
 					placeholder='Password'
 					onChange={(event) => setInputPassword(event.target.value)}
+					required
+					minLength={8}
 				/>
 				<button className='button-submit' type='submit'>
 					Register now

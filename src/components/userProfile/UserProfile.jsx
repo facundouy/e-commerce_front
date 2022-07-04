@@ -1,10 +1,14 @@
 import axios from "axios";
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import "./userProfile.css";
+import { logout } from "../../redux/userSlice";
+import { useNavigate } from "react-router-dom";
 
 function UserProfile() {
 	const user = useSelector((state) => state.user);
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
 
 	const config = {
 		headers: {
@@ -28,6 +32,13 @@ function UserProfile() {
 					{user.user.firstname} {user.user.lastname}
 				</h1>
 				<small>{user.user.email}</small>
+				<button
+					onClick={() => {
+						dispatch(logout());
+						navigate("/");
+					}}>
+					Logout
+				</button>
 			</div>
 		</div>
 	);
