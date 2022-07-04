@@ -18,52 +18,52 @@ import { useDispatch } from "react-redux";
 import UserProfile from "./components/userProfile/UserProfile";
 
 function App() {
-	const dispatch = useDispatch();
-	useEffect(() => {
-		const getProducts = async () => {
-			try {
-				const response = await Axios.get(
-					`${process.env.REACT_APP_BACKEND_URL}/api/products`
-				);
-				dispatch(storeProducts(response.data));
-			} catch (error) {
-				console.log(error);
-			}
-		};
-		getProducts();
-	});
-	return (
-		<>
-			<NavComp />
-			<Routes>
-				<Route
-					path='/'
-					element={
-						<>
-							<Banner />
-							<Products />
-						</>
-					}
-				/>
-				<Route
-					path='/shop'
-					element={
-						<>
-							<ShopBanner bannerTitle={"SHOP"} />
-							<AllProducts />
-						</>
-					}
-				/>
-				<Route path='/user' element={<UserProfile />} />
-				<Route path='/category/:name' element={<Categories />} />
-				<Route path='/product/:slug' element={<SingleProduct />} />
-				<Route path='/cart' element={<Cart />} />
-				<Route path='/checkout' element={<Checkout />} />
-				<Route path='*' element={<h2>Page not found</h2>} />
-			</Routes>
-			<Footer />
-		</>
-	);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const response = await Axios.get(
+          `${process.env.REACT_APP_BACKEND_URL}/api/products`
+        );
+        dispatch(storeProducts(response.data));
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getProducts();
+  });
+  return (
+    <>
+      <NavComp />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Banner />
+              <Products />
+            </>
+          }
+        />
+        <Route
+          path="/shop"
+          element={
+            <>
+              <ShopBanner bannerTitle={"SHOP"} />
+              <AllProducts />
+            </>
+          }
+        />
+        <Route path="/user" element={<UserProfile />} />
+        <Route path="/category/:name" element={<Categories />} />
+        <Route path="/product/:slug" element={<SingleProduct />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="*" element={<h2>Page not found</h2>} />
+      </Routes>
+      <Footer />
+    </>
+  );
 }
 
 export default App;

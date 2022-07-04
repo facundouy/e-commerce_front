@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 function CartCheckout({ total }) {
   const cart = useSelector((state) => state.cart);
+  const userToken = useSelector((state) => state.user);
   const totalPrice = cart.reduce(
     (accumulator, currentValue) =>
       accumulator + currentValue.price * currentValue.quantity,
@@ -34,6 +35,7 @@ function CartCheckout({ total }) {
       {
         products,
         totalPrice: totalPrice,
+        user: userToken.user,
       }
     );
     console.log(response.data);
