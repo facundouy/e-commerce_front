@@ -1,91 +1,104 @@
-import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import "./checkout.css";
 
-function Step2(setStep1, setStep2, setOrder) {
-  const [inputFirstName, setInputFirstName] = useState("");
-  const [inputLastName, setInputLastName] = useState("");
-  const [inputEmail, setInputEmail] = useState("");
-  const [inputPhone, setInputPhone] = useState("");
-  const [inputCity, setInputCity] = useState("");
-  const [inputAddress, setInputAddress] = useState("");
+function Step2({ setStep, setOrder }) {
+  const [paymentMethod, setPaymentMethod] = useState("");
+  const [cardNumber, setCardNumber] = useState("");
+
   return (
     <>
-      <h1>PAYMENT METHOD</h1>
+      <h3 className="step-title">PAYMENT METHOD</h3>
       <div className="container-billing-details">
-        <label className="label" htmlFor="">
-          First Name
-        </label>
-        <input
-          className="input"
-          type="text"
-          value={inputFirstName}
-          placeholder="Jane"
-          onChange={(event) => setInputFirstName(event.target.value)}
-        />
+        <div className="payment-method">
+          <div className="payment-method">
+            <input type="radio" onClick={() => setPaymentMethod("credit")} />
+            <label className="payment-method-label">Credit Card</label>
+          </div>
 
-        <label className="label" htmlFor="">
-          Last Name
-        </label>
-        <input
-          className="input"
-          type="text"
-          value={inputLastName}
-          placeholder="Doe"
-          onChange={(event) => setInputLastName(event.target.value)}
-        />
-        <label className="label" htmlFor="">
-          Address
-        </label>
-        <input
-          className="input"
-          type="text"
-          value={inputAddress}
-          placeholder="Av. Gral. Libertador 1234"
-          onChange={(event) => setInputAddress(event.target.value)}
-        />
-        <label className="label" htmlFor="">
-          Address
-        </label>
-        <input
-          className="input"
-          type="text"
-          value={inputAddress}
-          placeholder="Av. Gral. Libertador 0000"
-          onChange={(event) => setInputAddress(event.target.value)}
-        />
-        <label className="label" htmlFor="">
-          Phone number
-        </label>
-        <input
-          className="input"
-          type="number"
-          value={inputPhone}
-          placeholder=" 099 123 456"
-          onChange={(event) => setInputPhone(event.target.value)}
-        />
-        <label className="label" htmlFor="">
-          Email
-        </label>
-        <input
-          className="input"
-          type="text"
-          value={inputEmail}
-          placeholder="example@example.com"
-          onChange={(event) => setInputEmail(event.target.value)}
-        />
+          <div className="payment-method">
+            <div className="credit-card" />
+            <div className="credit-card" />
+            <div className="credit-card" />
+          </div>
+        </div>
+        {paymentMethod === "credit" && (
+          <>
+            <p className="payment-method-info">
+              Safe money transfer using your bank account. Visa, Master Card,
+              American Express.
+            </p>
+            <label className="label" htmlFor="">
+              Card number
+            </label>
+            <div className="credit-card-container">
+              <input
+                placeholder="0000 0000 0000 0000"
+                type="text"
+                className="input input-credit-card"
+                value={cardNumber}
+                onChange={(event) => setCardNumber(event.target.value)}
+              />
+              <div className="credit-card credit-card-input" />
+            </div>
 
-        {/* <button
+            <label className="label" htmlFor="">
+              Name on card
+            </label>
+            <div className="credit-card-container">
+              <input
+                type="text"
+                className="input input-credit-card"
+                value={cardNumber}
+                onChange={(event) => setCardNumber(event.target.value)}
+              />
+            </div>
+
+            <label className="label" htmlFor="">
+              Expiry date
+            </label>
+            <div className="credit-card-container">
+              <input
+                placeholder="MM/YY"
+                type="text"
+                className="input input-credit-card"
+                value={cardNumber}
+                onChange={(event) => setCardNumber(event.target.value)}
+              />
+            </div>
+
+            <label className="label" htmlFor="">
+              CVV Code
+            </label>
+            <div className="credit-card-container">
+              <input
+                type="text"
+                className="input input-credit-card"
+                value={cardNumber}
+                onChange={(event) => setCardNumber(event.target.value)}
+              />
+            </div>
+          </>
+        )}
+        <button
           type="button"
           className="checkout-btn mt-3"
           onClick={() => {
-            setStep1(false);
-            setStep2(true);
-            setOrder({});
+            setStep("1");
+            // setOrder({});
+          }}
+        >
+          PREVIOUS
+        </button>
+        <button
+          type="button"
+          className="checkout-btn mt-3"
+          onClick={() => {
+            setStep("3");
+            // setOrder({});
           }}
         >
           NEXT
-        </button> */}
+        </button>
       </div>
     </>
   );
