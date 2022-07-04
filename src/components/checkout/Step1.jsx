@@ -1,12 +1,32 @@
-import { useState } from "react";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
+
 import "./checkout.css";
 
-function Step1({ setStep, setOrder }) {
-  const [inputFirstName, setInputFirstName] = useState("");
-  const [inputLastName, setInputLastName] = useState("");
-  const [inputEmail, setInputEmail] = useState("");
-  const [inputPhone, setInputPhone] = useState("");
-  const [inputAddress, setInputAddress] = useState("");
+function Step1({
+  setStep,
+  inputFirstName,
+  setInputFirstName,
+  inputLastName,
+  setInputLastName,
+  inputEmail,
+  setInputEmail,
+  inputPhone,
+  setInputPhone,
+  inputAddress,
+  setInputAddress,
+}) {
+  const info = useSelector((state) => state.user);
+  console.log("info: ", info);
+
+  useEffect(() => {
+    setInputFirstName(info.user.firstname);
+    setInputLastName(info.user.lastname);
+    setInputEmail(info.user.email);
+    setInputPhone(info.user.tel);
+    setInputAddress(info.user.address);
+  }, []);
+
   return (
     <>
       <h3 className="step-title">BILLING DETAILS</h3>
@@ -67,7 +87,6 @@ function Step1({ setStep, setOrder }) {
           className="checkout-btn mt-3"
           onClick={() => {
             setStep("2");
-            // setOrder({});
           }}
         >
           NEXT

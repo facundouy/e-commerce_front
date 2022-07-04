@@ -188,3 +188,13 @@
   line-height: 23.94px;
   margin-top: 1rem;
 }
+
+.contact-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info-container span:hover {
+  cursor: default;
+  color: #000000;
+}
