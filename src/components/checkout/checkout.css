@@ -143,3 +143,32 @@
   top: 1rem;
 }
 
+.input-short {
+  border: 1.5px solid #838d9b;
+  color: #262626;
+  font-family: "Montserrat", serif;
+  margin-bottom: 1.5rem;
+  outline: none;
+  padding: 1rem;
+  text-align: left;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.input-short:focus-visible {
+  border: 1.5px solid #c19d56;
+  color: #c19d56;
+}
+
+.card-info-container {
+  display: flex;
+}
+
+.name-on-card-container {
+  margin-right: 3rem;
+  width: 50%;
+}
+
+.expiry-date-container {
+  margin-right: 3rem;
+}

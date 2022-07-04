@@ -4,7 +4,9 @@ import "./checkout.css";
 function Step2({ setStep, setOrder }) {
   const [paymentMethod, setPaymentMethod] = useState("");
   const [cardNumber, setCardNumber] = useState("");
-
+  const [nameOnCard, setNameOnCard] = useState("");
+  const [expiryDate, setExpiryDate] = useState("");
+  const [cvvCode, setCvvCode] = useState("");
   return (
     <>
       <h3 className="step-title">PAYMENT METHOD</h3>
@@ -33,7 +35,7 @@ function Step2({ setStep, setOrder }) {
             <div className="credit-card-container">
               <input
                 placeholder="0000 0000 0000 0000"
-                type="text"
+                type="number"
                 className="input input-credit-card"
                 value={cardNumber}
                 onChange={(event) => setCardNumber(event.target.value)}
@@ -41,41 +43,49 @@ function Step2({ setStep, setOrder }) {
               <div className="credit-card credit-card-input" />
             </div>
 
-            <label className="label" htmlFor="">
-              Name on card
-            </label>
-            <div className="credit-card-container">
-              <input
-                type="text"
-                className="input input-credit-card"
-                value={cardNumber}
-                onChange={(event) => setCardNumber(event.target.value)}
-              />
-            </div>
+            <div className="card-info-container">
+              <div className="name-on-card-container">
+                <label className="label" htmlFor="">
+                  Name on card
+                </label>
+                <div className="credit-card-container">
+                  <input
+                    type="text"
+                    className=" input-credit-card input-short"
+                    value={nameOnCard}
+                    onChange={(event) => setNameOnCard(event.target.value)}
+                  />
+                </div>
+              </div>
 
-            <label className="label" htmlFor="">
-              Expiry date
-            </label>
-            <div className="credit-card-container">
-              <input
-                placeholder="MM/YY"
-                type="text"
-                className="input input-credit-card"
-                value={cardNumber}
-                onChange={(event) => setCardNumber(event.target.value)}
-              />
-            </div>
+              <div className="expiry-date-container">
+                <label className="label" htmlFor="">
+                  Expiry date
+                </label>
+                <div className="credit-card-container">
+                  <input
+                    placeholder="MM/YY"
+                    type="text"
+                    className="input-short input-credit-card"
+                    value={expiryDate}
+                    onChange={(event) => setExpiryDate(event.target.value)}
+                  />
+                </div>
+              </div>
 
-            <label className="label" htmlFor="">
-              CVV Code
-            </label>
-            <div className="credit-card-container">
-              <input
-                type="text"
-                className="input input-credit-card"
-                value={cardNumber}
-                onChange={(event) => setCardNumber(event.target.value)}
-              />
+              <div>
+                <label className="label" htmlFor="">
+                  Card Verification Number
+                </label>
+                <div className="credit-card-container">
+                  <input
+                    type="password"
+                    className="input-short input-credit-card"
+                    value={cvvCode}
+                    onChange={(event) => setCvvCode(event.target.value)}
+                  />
+                </div>
+              </div>
             </div>
           </>
         )}
