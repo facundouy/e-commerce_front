@@ -89,7 +89,7 @@ function NavComp() {
                       className="item-nav-login mx-0 profile-avatar"
                     />
                     <small className="item-nav-login mx-0">
-                      Welcome {info.user.firstname}
+                      Welcome, {info.user.firstname}
                     </small>
                   </Link>
                 )}
