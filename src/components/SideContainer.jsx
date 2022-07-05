@@ -6,18 +6,18 @@ import InstaGallery from "./InstaGallery";
 
 function SideContainer() {
   const [categoriesList, setCategoriesList] = useState([]);
-  const token =
-    "eyJhbGciOiJIUzI1NiJ9.eyBhZG1pbjogdHJ1ZSB9.v74KBM9P78bQZ8T8FDFMCXhABNAuOQAHgtezWL-x4-Y";
+  const config = {
+    headers: {
+      Authorization: "Bearer " + process.env.REACT_APP_ADMIN_TOKEN,
+    },
+  };
+
   useEffect(() => {
     const getCategories = async () => {
       try {
         const categoriesResponse = await Axios.get(
           `${process.env.REACT_APP_BACKEND_URL}/api/categories`,
-          {
-            headers: {
-              Authorization: "Bearer " + token,
-            },
-          }
+          config
         );
         setCategoriesList(categoriesResponse.data);
       } catch (error) {
