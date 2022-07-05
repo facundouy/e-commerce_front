@@ -1,30 +1,11 @@
 import "../products/products.css";
-import { useEffect, useState } from "react";
-import Axios from "axios";
-
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import SideContainer from "../SideContainer";
 
 function AllProducts() {
-  const [productList, setProductList] = useState([]);
-  const [categoriesList, setCategoriesList] = useState([]);
-  useEffect(() => {
-    const getProducts = async () => {
-      try {
-        const productsResponse = await Axios.get(
-          `${process.env.REACT_APP_BACKEND_URL}/api/products`
-        );
-        const categoriesResponse = await Axios.get(
-          `${process.env.REACT_APP_BACKEND_URL}/api/categories`
-        );
-        setProductList(productsResponse.data);
-        setCategoriesList(categoriesResponse.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getProducts();
-  }, []);
+  const productList = useSelector((state) => state.product);
+
   return (
     <div className="products-container">
       <ul className="products-list">

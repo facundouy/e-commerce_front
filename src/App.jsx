@@ -15,18 +15,32 @@ import Checkout from "./components/checkout/Checkout";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { useEffect } from "react";
 import { storeProducts } from "./redux/productSlice";
+import { storeCategories } from "./redux/categorySlice";
 import { useDispatch } from "react-redux";
 import UserProfile from "./components/userProfile/UserProfile";
 
 function App() {
+  const config = {
+    headers: {
+      Authorization: "Bearer " + process.env.REACT_APP_ADMIN_TOKEN,
+    },
+  };
+
   const dispatch = useDispatch();
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const response = await Axios.get(
-          `${process.env.REACT_APP_BACKEND_URL}/api/products`
+        const productsResponse = await Axios.get(
+          `${process.env.REACT_APP_BACKEND_URL}/api/products`,
+          config
         );
-        dispatch(storeProducts(response.data));
+        const categoriesResponse = await Axios.get(
+          `${process.env.REACT_APP_BACKEND_URL}/api/categories`,
+          config
+        );
+
+        dispatch(storeProducts(productsResponse.data));
+        dispatch(storeCategories(categoriesResponse.data));
       } catch (error) {
         console.log(error);
       }

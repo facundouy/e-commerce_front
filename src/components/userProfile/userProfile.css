@@ -3,5 +3,41 @@
 }
 
 .profile-card {
-	text-align: center;
+	background-color: black;
+	width: 40%;
+}
+
+.profile-pic {
+	height: 6rem;
+}
+
+.name {
+	color: #c19d56;
+}
+
+.email {
+	color: #c19d56;
+	font-family: "Cormorant";
+	font-size: 1.3rem;
+}
+
+.address {
+	color: #c19d56;
+	font-family: "Cormorant";
+	font-size: 1.3rem;
+}
+
+.btn-logout {
+	background-color: black;
+	color: white;
+	font-size: 0.813rem;
+	padding: 0.75rem 3.75rem;
+	transition: all 0.4s;
+	border: 1px solid black;
+}
+
+.btn-logout:hover {
+	background-color: #c19d56;
+	color: white;
+	border: 1px solid #c19d56;
 }
