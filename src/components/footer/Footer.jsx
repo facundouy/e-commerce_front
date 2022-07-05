@@ -25,6 +25,12 @@ const Footer = () => {
             <p>Discover a whole new world of crafted sensations.</p>
           </div>
         </div>
+        <div className="contact-container-2">
+          <h5>CONTACT</h5>
+          <p>Av. Gral. Libertador 1234, Montevideo</p>
+          <p>e-mail: hello@dolcetto.com</p>
+          <p>Phone: +598 99 235 711</p>
+        </div>
         <div className="map-container-footer">
           <img src="/map.png" alt="world map" />
         </div>
