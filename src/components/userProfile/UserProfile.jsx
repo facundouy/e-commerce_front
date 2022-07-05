@@ -32,22 +32,39 @@ function UserProfile() {
 	}
 	return (
 		<div className='container d-flex text-white bg-light flex-wrap justify-content-center profile-container'>
-			<div className='row'>
-				<div className='col'>
-					<h1>
-						{user.user.firstname} {user.user.lastname}
-					</h1>
-					<span>{user.user.email}</span>
-				</div>
-
-				<button
+			<div class="container">
+  <div class="row align-items-start">
+    <div class="col">
+      One of three columns
+    </div>
+    <div class="col">
+      One of three columns
+    </div>
+    <div class="col">
+      One of three columns
+    </div>
+  </div>
+  <div class="row align-items-center">
+    <div class="col">
+      One of three columns
+    </div>
+    <div class="col">
+      One of three columns
+    </div>
+    <div class="col">
+      One of three columns
+    </div>
+    <button
 					onClick={() => {
 						dispatch(logout());
 						navigate("/");
 					}}>
 					Logout
 				</button>
-			</div>
+  </div>
+
+			
+			
 		</div>
 	);
 }
