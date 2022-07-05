@@ -1,8 +1,8 @@
 .nav-container {
   background-color: white;
   padding: 3rem 0;
-
   height: 120px;
+  max-width: 100vw;
 }
 
 .logo-container {
