@@ -38,6 +38,7 @@
   color: #c19d56;
   cursor: pointer;
   font-family: "Cormorant", serif;
+  font-weight: 500;
   font-size: 18px;
   margin-right: 2rem;
 }
@@ -45,6 +46,7 @@
 .item-nav-cart {
   color: #c19d56;
   font-family: "Cormorant", serif;
+  font-weight: 500;
   font-size: 21px;
   margin-bottom: 2px;
   margin-right: 2rem;
@@ -64,6 +66,7 @@
 }
 .dropdown-text {
   font-family: "Cormorant";
+  font-weight: 500;
   font-size: 19px;
   transition: all 0.3s;
   text-decoration: none;

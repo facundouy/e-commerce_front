@@ -1,10 +1,12 @@
 .checkout-form {
   font-family: "Cormorant", cursive;
+  font-weight: 500;
   font-size: 21px;
 }
 
 .total-price {
   font-family: "Cormorant", cursive;
+  font-weight: 500;
   font-size: 25px;
 }
 
@@ -105,6 +107,7 @@
 
 .container-billing-details {
   font-family: "Cormorant", serif;
+  font-weight: 500;
   font-size: 21px;
 }
 
@@ -149,6 +152,7 @@
   border: 1.5px solid #838d9b;
   color: #262626;
   font-family: "Cormorant", serif;
+  font-weight: 500;
   margin-bottom: 1.5rem;
   outline: none;
   padding: 1rem;

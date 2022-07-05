@@ -22,8 +22,11 @@ function Products() {
           the passage of four generations, yet our one goal remains the same.
         </p>
       </div>
+      <div className="featured-text">
+        <h2>featured products</h2>
+      </div>
       <div className="products-container">
-        <ul className="products-list">
+        <ul className="products-list p-0">
           {featured.map((product) => {
             return (
               <div key={product._id} className="card-product">
@@ -40,10 +43,10 @@ function Products() {
                     to={`/product/${product.slug}`}
                   >
                     <h6 className="title-product">
-                      {product.name.toUpperCase()}
+                      {product.name /* .toUpperCase() */}
                     </h6>
                   </Link>
-                  <Link
+                  {/* <Link
                     className="text-decoration-none text-dark"
                     to={`category/${product.category.name}`}
                   >
@@ -52,7 +55,7 @@ function Products() {
                     </span>
                   </Link>
 
-                  <span className="product-price">${product.price}</span>
+                  <span className="product-price">${product.price}</span> */}
                 </div>
               </div>
             );

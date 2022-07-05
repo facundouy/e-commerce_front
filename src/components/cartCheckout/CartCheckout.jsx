@@ -46,7 +46,7 @@ function CartCheckout({ total }) {
       <table className="checkout-table">
         <tr className="checkout-table-row">
           <td className="checkout-table-cell">Subtotal</td>
-          <td className="check out-table-cell">${total}</td>
+          <td className="checkout-table-cell">${total}</td>
         </tr>
         <tr className="checkout-table-row">
           <td className="checkout-table-cell">Total</td>
