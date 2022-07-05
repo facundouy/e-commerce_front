@@ -11,22 +11,11 @@ import { useSelector } from "react-redux";
 
 function NavComp() {
   const info = useSelector((state) => state.user);
+  const categories = useSelector((state) => state.category);
   const [showOffCanvas, setShowOffCanvas] = useState(false);
-  const [categories, setCategories] = useState([]);
 
-  useEffect(() => {
-    const getCategories = async () => {
-      try {
-        const categoriesResponse = await Axios.get(
-          `${process.env.REACT_APP_BACKEND_URL}/api/categories`
-        );
-        setCategories(categoriesResponse.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    getCategories();
-  }, []);
+  const token =
+    "eyJhbGciOiJIUzI1NiJ9.eyBhZG1pbjogdHJ1ZSB9.v74KBM9P78bQZ8T8FDFMCXhABNAuOQAHgtezWL-x4-Y";
 
   return (
     <>
