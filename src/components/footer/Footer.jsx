@@ -6,7 +6,7 @@ import "./footer.css";
 const Footer = () => {
   return (
     <>
-      <div className="footer-container">
+      <div id="footer" className="footer-container">
         <div className="contact-container">
           <h5>CONTACT</h5>
           <p>Av. Gral. Libertador 1234, Montevideo</p>

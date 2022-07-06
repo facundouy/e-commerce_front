@@ -5,7 +5,7 @@ import "./banner.css";
 function Banner() {
   return (
     <div className="bg-banner">
-      <div className="title-container">
+      <div id="banner" className="title-container">
         <span>Sweet bites for you</span>
         <h1>DOLCETTO</h1>
         <img
@@ -18,9 +18,12 @@ function Banner() {
           Find your favorite now.
         </p>
         <div className="buttons-banner">
-          <Link to="/" className="a-discover">
+          {/* <Link to="/" className="a-discover">
             Discover
-          </Link>
+          </Link> */}
+          <a href="#featured" className="a-discover">
+            Discover
+          </a>
           <Link to="/shop" className="text-decoration-none">
             <div className="a-shop">Shop now</div>
           </Link>

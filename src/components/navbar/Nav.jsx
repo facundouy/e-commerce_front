@@ -59,9 +59,9 @@ function NavComp() {
               <Link to="/shop" className="item-nav-bar">
                 <Nav.Item>SHOP</Nav.Item>
               </Link>
-              <Link to="/contact" className="item-nav-bar">
+              <a href="#footer" className="item-nav-bar">
                 <Nav.Item>CONTACT</Nav.Item>
-              </Link>
+              </a>
               <Nav.Item>
                 {info.token === null || Object.keys(info).length === 0 ? (
                   <Link to="#">
