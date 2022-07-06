@@ -46,7 +46,7 @@ function Cart() {
                     >
                       <img
                         className="image-item-cart"
-                        src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
+                        src={`https://tkyarzymrutnhhccfvhu.supabase.co/storage/v1/object/public/${product.image}`}
                         alt="imagen"
                       />
                       {product.name}

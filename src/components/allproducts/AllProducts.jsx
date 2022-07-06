@@ -17,7 +17,7 @@ function AllProducts() {
                   <div>
                     {" "}
                     <img
-                      src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
+                      src={`https://tkyarzymrutnhhccfvhu.supabase.co/storage/v1/object/public/${product.image}`}
                       alt="cake cover"
                     />
                   </div>

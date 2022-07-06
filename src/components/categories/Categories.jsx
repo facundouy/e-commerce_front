@@ -25,10 +25,7 @@ function Categories() {
               <div key={product._id} className="card-product">
                 <Link to={`/product/${product.slug}`}>
                   <img
-                    src={
-                      (`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`,
-                      config)
-                    }
+                    src={`https://tkyarzymrutnhhccfvhu.supabase.co/storage/v1/object/public/${product.image}`}
                     alt="cake cover"
                   />
                 </Link>
