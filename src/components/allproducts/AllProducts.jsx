@@ -5,7 +5,6 @@ import SideContainer from "../SideContainer";
 
 function AllProducts() {
   const productList = useSelector((state) => state.product);
-
   return (
     <div className="products-container">
       <ul className="products-list">
@@ -15,9 +14,8 @@ function AllProducts() {
               <div key={product._id} className="card-product">
                 <Link to={`/product/${product.slug}`}>
                   <div>
-                    {" "}
                     <img
-                      src={`${process.env.REACT_APP_BACKEND_URL}/images/${product.image}`}
+                      src={`https://tkyarzymrutnhhccfvhu.supabase.co/storage/v1/object/public/${product.image}`}
                       alt="cake cover"
                     />
                   </div>

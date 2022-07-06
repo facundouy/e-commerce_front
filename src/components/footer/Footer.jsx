@@ -6,7 +6,7 @@ import "./footer.css";
 const Footer = () => {
   return (
     <>
-      <div className="footer-container">
+      <div id="footer" className="footer-container">
         <div className="contact-container">
           <h5>CONTACT</h5>
           <p>Av. Gral. Libertador 1234, Montevideo</p>
@@ -36,8 +36,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        © 2022 Santiago Fantoni, Paulina Irazusta, Facundo Irazusta & Florencia
-        Falco.
+        © 2022 Florencia Falco, Santiago Fantoni, Facundo Irazusta & Paulina
+        Irazusta.
       </div>
     </>
   );

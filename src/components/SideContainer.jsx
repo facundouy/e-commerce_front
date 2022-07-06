@@ -6,18 +6,12 @@ import InstaGallery from "./InstaGallery";
 
 function SideContainer() {
   const [categoriesList, setCategoriesList] = useState([]);
-  const token =
-    "eyJhbGciOiJIUzI1NiJ9.eyBhZG1pbjogdHJ1ZSB9.v74KBM9P78bQZ8T8FDFMCXhABNAuOQAHgtezWL-x4-Y";
+
   useEffect(() => {
     const getCategories = async () => {
       try {
         const categoriesResponse = await Axios.get(
-          `${process.env.REACT_APP_BACKEND_URL}/api/categories`,
-          {
-            headers: {
-              Authorization: "Bearer " + token,
-            },
-          }
+          `${process.env.REACT_APP_BACKEND_URL}/api/categories`
         );
         setCategoriesList(categoriesResponse.data);
       } catch (error) {
@@ -30,6 +24,12 @@ function SideContainer() {
     <div className="side-container">
       <div className="side-categories">
         <h6 className="mb-3">CATEGORIES</h6>
+        <div className="image-separator">
+          <img
+            src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-slide-1-img-1.png"
+            alt="Separador"
+          />
+        </div>
         <ul className="mx-0 px-0">
           {categoriesList.map((item) => {
             return (
@@ -44,16 +44,11 @@ function SideContainer() {
           })}
         </ul>
       </div>
-      <div className="image-separator">
-        <img
-          src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-slide-1-img-1.png"
-          alt="Separador"
-        />
-      </div>
-      <div className="side-instagram">
+
+      {/* <div className="side-instagram">
         <h6>INSTRAGRAM</h6>
         <InstaGallery />
-      </div>
+      </div> */}
     </div>
   );
 }

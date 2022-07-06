@@ -14,9 +14,6 @@ function NavComp() {
   const categories = useSelector((state) => state.category);
   const [showOffCanvas, setShowOffCanvas] = useState(false);
 
-  const token =
-    "eyJhbGciOiJIUzI1NiJ9.eyBhZG1pbjogdHJ1ZSB9.v74KBM9P78bQZ8T8FDFMCXhABNAuOQAHgtezWL-x4-Y";
-
   return (
     <>
       <Navbar bg="light" expand="lg" fixed="top" className="nav-container">
@@ -59,9 +56,9 @@ function NavComp() {
               <Link to="/about" className="item-nav-bar">
                 <Nav.Item>ABOUT</Nav.Item>
               </Link>
-              <Link to="/contact" className="item-nav-bar">
+              <a href="#footer" className="item-nav-bar">
                 <Nav.Item>CONTACT</Nav.Item>
-              </Link>
+              </a>
               <Nav.Item>
                 {info.token === null || Object.keys(info).length === 0 ? (
                   <Link to="#">

@@ -8,10 +8,10 @@ import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 
 function Login({ setIsRegistered }) {
-  const navigate = useNavigate();
   const [inputEmail, setInputEmail] = useState("");
   const [inputPassword, setInputPassword] = useState("");
   const dispatch = useDispatch();
+
   const handleLogin = async (event) => {
     event.preventDefault();
     const response = await Axios.post(
