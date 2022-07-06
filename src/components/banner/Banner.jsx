@@ -18,10 +18,10 @@ function Banner() {
           Find your favorite now.
         </p>
         <div className="buttons-banner">
-          <Link to="/" className="a-discover">
-            Discover
+          <Link to="/" className="text-decoration-none button-container">
+            <div className="a-discover">Discover</div>
           </Link>
-          <Link to="/shop" className="text-decoration-none">
+          <Link to="/shop" className="text-decoration-none button-container">
             <div className="a-shop">Shop now</div>
           </Link>
         </div>

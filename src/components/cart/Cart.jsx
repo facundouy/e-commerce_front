@@ -27,19 +27,22 @@ function Cart() {
       <div className="container">
         <Table className="table">
           <thead>
-            <tr>
-              <th>PRODUCT</th>
-              <th>PRICE</th>
-              <th>QUANTITY</th>
-              <th>SUBTOTAL</th>
-              <th></th>
+            <tr className="table-row table-header">
+              <th className="image-and-name-container">PRODUCT</th>
+              <th className="price-container">PRICE</th>
+              <th className="counter-subtotal-delete-container">QUANTITY</th>
+              <th className="">SUBTOTAL</th>
+            </tr>
+            <tr className="table-row table-header-small">
+              <th>YOUR ORDER</th>
             </tr>
           </thead>
           <tbody>
             {cart.map((product) => {
               return (
-                <tr key={product._id}>
-                  <td>
+                <tr key={product._id} className="table-row">
+                  <td className="image-and-name-container">
+                    {/* IMAGE Y NAME */}
                     <Link
                       to={`/product/${product.slug}`}
                       className="text-decoration-none link"
@@ -52,8 +55,13 @@ function Cart() {
                       {product.name}
                     </Link>
                   </td>
-                  <td>${product.price}</td>
-                  <td>
+                  <td className="price-container">
+                    ${product.price}
+                    {/* PRICE */}
+                  </td>
+                  <td className="counter-subtotal-delete-container">
+                    {" "}
+                    {/* COUNTER */}
                     <div className="count-container">
                       <input
                         value={product.quantity}
@@ -79,8 +87,9 @@ function Cart() {
                       </div>
                     </div>
                   </td>
-                  <td>${product.price * product.quantity}</td>
-                  <td>
+                  <td className="subtotal-delete-container">
+                    {/* SUBTOTAL AND DELETE */}$
+                    {product.price * product.quantity}
                     <span
                       onClick={() => {
                         dispatch(removeFromCart({ product }));
@@ -89,6 +98,7 @@ function Cart() {
                       <AiOutlineDelete />
                     </span>
                   </td>
+                  <div className="row-border"></div>
                 </tr>
               );
             })}
