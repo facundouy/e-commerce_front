@@ -51,7 +51,7 @@ function SingleProduct() {
 							<div className='image-container'>
 								<img
 									className='image'
-									src={`https://tkyarzymrutnhhccfvhu.supabase.co/storage/v1/object/public/${product.image}`}
+									src={`https://tkyarzymrutnhhccfvhu.supabase.co/storage/v1/object/public/images/${product.image}`}
 									alt={product.name}
 								/>
 							</div>

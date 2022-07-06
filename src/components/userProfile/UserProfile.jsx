@@ -12,9 +12,9 @@ function UserProfile() {
 		return <Navigate to='/' />;
 	}
 	return (
-		<div class='container profile-container mb-5'>
-			<div class='row align-items-center'>
-				<div class='col text-center'>
+		<div className='container profile-container mb-5'>
+			<div className='row align-items-center'>
+				<div className='col text-center'>
 					<div className='profile-card'>
 						<h4 className='name mb-3'>
 							{info.user.firstname} {info.user.lastname}
@@ -36,9 +36,9 @@ function UserProfile() {
 						</button>
 					</div>
 				</div>
-				<div class='col sm-col-12'>
+				<div className='col sm-col-12'>
 					<h4>Your product orders</h4>
-					<table class='table'>
+					<table className='table'>
 						<thead>
 							<tr>
 								<th scope='col'>STATUS</th>
