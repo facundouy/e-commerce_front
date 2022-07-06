@@ -6,18 +6,12 @@ import InstaGallery from "./InstaGallery";
 
 function SideContainer() {
   const [categoriesList, setCategoriesList] = useState([]);
-  const config = {
-    headers: {
-      Authorization: "Bearer " + process.env.REACT_APP_ADMIN_TOKEN,
-    },
-  };
 
   useEffect(() => {
     const getCategories = async () => {
       try {
         const categoriesResponse = await Axios.get(
-          `${process.env.REACT_APP_BACKEND_URL}/api/categories`,
-          config
+          `${process.env.REACT_APP_BACKEND_URL}/api/categories`
         );
         setCategoriesList(categoriesResponse.data);
       } catch (error) {

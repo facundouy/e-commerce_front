@@ -10,26 +10,16 @@ function Register({ setIsRegistered }) {
   const [inputAddress, setInputAddress] = useState("");
   const [inputPassword, setInputPassword] = useState("");
 
-  const config = {
-    headers: {
-      Authorization: "Bearer " + process.env.REACT_APP_ADMIN_TOKEN,
-    },
-  };
-
   const handleRegister = async (event) => {
     event.preventDefault();
-    await Axios.post(
-      `${process.env.REACT_APP_BACKEND_URL}/api/user`,
-      {
-        firstname: { inputName },
-        lastname: { inputLastName },
-        email: { inputEmail },
-        tel: { inputPhone },
-        address: { inputAddress },
-        password: { inputPassword },
-      },
-      config
-    );
+    await Axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/user`, {
+      firstname: { inputName },
+      lastname: { inputLastName },
+      email: { inputEmail },
+      tel: { inputPhone },
+      address: { inputAddress },
+      password: { inputPassword },
+    });
     setIsRegistered(true);
     setInputName("");
     setInputLastName("");

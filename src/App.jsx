@@ -21,23 +21,15 @@ import UserProfile from "./components/userProfile/UserProfile";
 import About from "./components/about/About";
 
 function App() {
-  const config = {
-    headers: {
-      Authorization: "Bearer " + process.env.REACT_APP_ADMIN_TOKEN,
-    },
-  };
-
   const dispatch = useDispatch();
   useEffect(() => {
     const getProducts = async () => {
       try {
         const productsResponse = await Axios.get(
-          `${process.env.REACT_APP_BACKEND_URL}/api/products`,
-          config
+          `${process.env.REACT_APP_BACKEND_URL}/api/products`
         );
         const categoriesResponse = await Axios.get(
-          `${process.env.REACT_APP_BACKEND_URL}/api/categories`,
-          config
+          `${process.env.REACT_APP_BACKEND_URL}/api/categories`
         );
 
         dispatch(storeProducts(productsResponse.data));

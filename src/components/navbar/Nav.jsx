@@ -14,9 +14,6 @@ function NavComp() {
   const categories = useSelector((state) => state.category);
   const [showOffCanvas, setShowOffCanvas] = useState(false);
 
-  const token =
-    "eyJhbGciOiJIUzI1NiJ9.eyBhZG1pbjogdHJ1ZSB9.v74KBM9P78bQZ8T8FDFMCXhABNAuOQAHgtezWL-x4-Y";
-
   return (
     <>
       <Navbar bg="light" expand="lg" fixed="top" className="nav-container">

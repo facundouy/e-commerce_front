@@ -22,12 +22,6 @@ function Step3({
     0
   );
 
-  const config = {
-    headers: {
-      Authorization: "Bearer " + process.env.REACT_APP_ADMIN_TOKEN,
-    },
-  };
-
   async function createOrder(event) {
     const products = [];
     cart.map((product) => {
@@ -44,8 +38,7 @@ function Step3({
         products,
         totalPrice: totalPrice,
         user: user.user,
-      },
-      config
+      }
     );
   }
 

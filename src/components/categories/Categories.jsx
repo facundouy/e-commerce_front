@@ -10,11 +10,7 @@ function Categories() {
   const filteredProducts = productList.filter((product) => {
     return product.category.name === params.name;
   });
-  const config = {
-    headers: {
-      Authorization: "Bearer " + process.env.REACT_APP_ADMIN_TOKEN,
-    },
-  };
+
   return (
     <>
       <ShopBanner bannerTitle={`${params.name}`} />

@@ -11,11 +11,7 @@ function Login({ setIsRegistered }) {
   const [inputEmail, setInputEmail] = useState("");
   const [inputPassword, setInputPassword] = useState("");
   const dispatch = useDispatch();
-  const config = {
-    headers: {
-      Authorization: "Bearer " + process.env.REACT_APP_ADMIN_TOKEN,
-    },
-  };
+
   const handleLogin = async (event) => {
     event.preventDefault();
     const response = await Axios.post(
@@ -23,8 +19,7 @@ function Login({ setIsRegistered }) {
       {
         email: { inputEmail },
         password: { inputPassword },
-      },
-      config
+      }
     );
     dispatch(storeToken({ userInfo: response.data }));
     setInputEmail("");
