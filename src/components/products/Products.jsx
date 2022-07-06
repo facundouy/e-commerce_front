@@ -21,6 +21,7 @@ function Products() {
           one single premise: to deliver excelence. A lot has changed through
           the passage of four generations, yet our one goal remains the same.
         </p>
+        <span id="featured"></span>
       </div>
       <div className="featured-text">
         <h2>featured products</h2>
