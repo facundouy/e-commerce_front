@@ -39,44 +39,53 @@ function Login({ setIsRegistered }) {
         draggable={false}
         pauseOnHover
       />
+
       <div className="login-container">
-        <h1 className="title-offcanvas">LOG IN</h1>
-        <p className="subtitle-offcanvas">
-          Welcome back to Dolcetto, please put your login credentials below to
-          start shopping.
-        </p>
-        <form onSubmit={handleLogin}>
-          <label htmlFor="">Email</label>
-          <input
-            className="input"
-            type="email"
-            value={inputEmail}
-            placeholder="example@example.com"
-            onChange={(event) => setInputEmail(event.target.value)}
-            required
-          />
-          <label htmlFor="">Password</label>
-          <input
-            className="input"
-            type="password"
-            value={inputPassword}
-            placeholder="Password"
-            onChange={(event) => setInputPassword(event.target.value)}
-            required
-          />
-          <button className="button-submit" type="submit">
-            Log in
+        <div>
+          <h1 className="title-offcanvas">LOG IN</h1>
+          <p className="subtitle-offcanvas">
+            Welcome back, please enter your credentials to start shopping.
+          </p>
+          <form onSubmit={handleLogin}>
+            <label htmlFor="">Email</label>
+            <input
+              className="input"
+              type="email"
+              value={inputEmail}
+              placeholder="example@example.com"
+              onChange={(event) => setInputEmail(event.target.value)}
+              required
+            />
+            <label htmlFor="">Password</label>
+            <input
+              className="input"
+              type="password"
+              value={inputPassword}
+              placeholder="Password"
+              onChange={(event) => setInputPassword(event.target.value)}
+              required
+            />
+            <button className="button-submit" type="submit">
+              Log in
+            </button>
+          </form>
+          <small>Don't have an account?</small>
+          <button
+            className="button-signup"
+            onClick={() => {
+              setIsRegistered(false);
+            }}
+          >
+            Register now for free.
           </button>
-        </form>
-        <small>Don't have an account?</small>
-        <button
-          className="button-signup"
-          onClick={() => {
-            setIsRegistered(false);
-          }}
+        </div>
+        <a
+          className="admin-button"
+          href="https://admin-dolcetto.vercel.app/"
+          target="_blank"
         >
-          Register now for free.
-        </button>
+          Go to Admin site
+        </a>
       </div>
     </>
   );

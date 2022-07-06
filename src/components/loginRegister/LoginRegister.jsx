@@ -8,7 +8,7 @@ import Register from "./Register.jsx";
 
 function LoginRegister({ show, setShow }) {
 	const usertoken = useSelector((state) => state.user);
-	const [isRegistered, setIsRegistered] = useState(false);
+	const [isRegistered, setIsRegistered] = useState(true);
 	const handleClose = () => setShow(false);
 	return (
 		<>

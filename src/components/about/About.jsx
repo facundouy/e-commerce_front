@@ -35,6 +35,8 @@ const About = () => {
           eligendi moderatius ut vel, in oporteat.
         </p>
       </div>
+
+
       <div className="about-tech-section">
         <span>made it with this</span>
         <h2>TECHNOLOGIES</h2>
@@ -70,7 +72,7 @@ const About = () => {
             MongoDB
           </li>
           <li>
-            <img src="" alt="" />
+            <img src="/m.png" className="icons" alt="mongoose icon" />
             Mongoose
           </li>
           <li>
@@ -88,6 +90,7 @@ const About = () => {
         </ul>
       </div>
       <span>about our</span>
+
 
       <div className="about-team-section">
         <h2>TEAM</h2>
@@ -116,6 +119,7 @@ const About = () => {
           />
         </div>
       </div>
+      
     </div>
   );
 };

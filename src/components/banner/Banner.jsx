@@ -18,9 +18,10 @@ function Banner() {
           Find your favorite now.
         </p>
         <div className="buttons-banner">
-          {/* <Link to="/" className="a-discover">
-            Discover
-          </Link> */}
+          {/* <Link to="/" className="text-decoration-none button-container">
+            <div className="a-discover">Discover</div>
+          </Link>
+          <Link to="/shop" className="text-decoration-none button-container"> */}
           <a href="#featured" className="a-discover">
             Discover
           </a>
