@@ -1,6 +1,7 @@
 .about-cover {
   align-items: center;
   background-image: url("https://dolcino.qodeinteractive.com/wp-content/uploads/2018/11/h1-parallax-5-1.jpg");
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,29 +32,8 @@
 
 .about-cover p {
   font-size: 1.5rem;
-  margin: 1.2rem 0;
+  margin: 1.2rem 0 8rem;
   text-align: center;
-}
-
-.team-photos-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.team-photos-container img {
-  height: 28.2rem;
-  margin-right: 0.5rem;
-  transition: all 0.4s;
-  width: 15.5rem;
-}
-
-.team-photos-container img:hover {
-  height: 28.2rem;
-  margin-right: 0.5rem;
-  object-fit: cover;
-  opacity: 0.4;
-  transition: all 0.4s;
-  width: 15.5rem;
 }
 
 .about-tech-container {
@@ -61,9 +41,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 20px auto 60px auto;
-  padding: 20px 0;
-  width: 80%;
+  /* margin: 0 10rem; */
+  padding: 3rem 10rem;
+  width: 60%;
 }
 
 .about-tech-container li {
@@ -82,8 +62,31 @@
   align-items: center;
 }
 
-.about-tech-container li .icons{
+.about-tech-container li .icons {
   color: #c19d56;
   font-size: 3rem;
   margin-bottom: 1rem;
+}
+
+.team-photos-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.team-photos-container img {
+  height: 28.2rem;
+  margin-right: 0.5rem;
+  transition: all 0.4s;
+  width: 15.5rem;
+}
+
+.team-photos-container img:hover {
+  height: 28.2rem;
+  margin-right: 0.5rem;
+  object-fit: cover;
+  opacity: 0.4;
+  transition: all 0.4s;
+  width: 15.5rem;
 }
