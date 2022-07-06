@@ -18,6 +18,7 @@ import { storeProducts } from "./redux/productSlice";
 import { storeCategories } from "./redux/categorySlice";
 import { useDispatch } from "react-redux";
 import UserProfile from "./components/userProfile/UserProfile";
+import About from "./components/about/About";
 
 function App() {
   const config = {
@@ -57,6 +58,14 @@ function App() {
             <>
               <Banner />
               <Products />
+            </>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <>
+              <About />
             </>
           }
         />
