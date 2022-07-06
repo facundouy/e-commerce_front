@@ -30,13 +30,25 @@
   text-align: center;
 }
 
+.about-parragraphs-container {
+  display: flex;
+  max-width: 80%;
+  padding: 1rem;
+}
+
 .about-cover p {
   font-size: 1.5rem;
   margin: 1.2rem 0 8rem;
-  text-align: center;
+  padding: 0 1rem;
 }
 
-.about-tech-container {
+.about-tech-section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-icons-container {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -45,7 +57,7 @@
   width: 70%;
 }
 
-.about-tech-container li {
+.about-icons-container li {
   list-style: none;
   text-align: center;
   padding: 20px 0;
@@ -61,7 +73,7 @@
   align-items: center;
 }
 
-.about-tech-container li .icons {
+.about-icons-container li .icons {
   color: #c19d56;
   font-size: 3rem;
   margin-bottom: 1rem;
