@@ -18,7 +18,8 @@ const About = () => {
       </div>
       <div className="about-parragraphs-container">
         <p>
-          Dolcetto es el e-commerce de una tienda de postres realizado en las
+          <span>D</span>
+          olcetto es el e-commerce de una tienda de postres realizado en las
           últimas 3 semanas del coding bootcamp de Hack Academy. Para ello se
           trabajó tanto en el Front como en el Backend. uo utinam altera ei, an
           quando tempor signiferumque eum. Euismod deserunt conceptam no vix.
