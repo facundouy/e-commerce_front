@@ -70,7 +70,7 @@ const About = () => {
             MongoDB
           </li>
           <li>
-            <img src="" alt="" />
+            <img src="/m.png" className="icons" alt="mongoose icon" />
             Mongoose
           </li>
           <li>
