@@ -36,8 +36,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        © 2022 Santiago Fantoni, Paulina Irazusta, Facundo Irazusta & Florencia
-        Falco.
+        © 2022 Florencia Falco, Santiago Fantoni, Facundo Irazusta & Paulina
+        Irazusta.
       </div>
     </>
   );
