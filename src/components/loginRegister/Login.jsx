@@ -44,8 +44,7 @@ function Login({ setIsRegistered }) {
         <div>
           <h1 className="title-offcanvas">LOG IN</h1>
           <p className="subtitle-offcanvas">
-            Welcome back to Dolcetto, please put your login credentials below to
-            start shopping.
+            Welcome back, please enter your credentials to start shopping.
           </p>
           <form onSubmit={handleLogin}>
             <label htmlFor="">Email</label>
@@ -80,7 +79,11 @@ function Login({ setIsRegistered }) {
             Register now for free.
           </button>
         </div>
-        <a className="admin-button" href="https://admin-dolcetto.vercel.app/">
+        <a
+          className="admin-button"
+          href="https://admin-dolcetto.vercel.app/"
+          target="_blank"
+        >
           Go to Admin site
         </a>
       </div>
