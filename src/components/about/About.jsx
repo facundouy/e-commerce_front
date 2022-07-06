@@ -24,7 +24,7 @@ const About = () => {
         </p>
 
         <span>made it with this</span>
-        <h2>STACK</h2>
+        <h2>TECHNOLOGIES</h2>
         <div className="image-separator">
           <img
             src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-slide-1-img-1.png"
