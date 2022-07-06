@@ -20,7 +20,7 @@
 }
 
 .about-cover h2 {
-  font-family: "Montserrat";
+  font-family: "Montserrat", serif;
   font-weight: 600;
   font-size: 3.5rem;
   letter-spacing: 0.35rem;
@@ -57,38 +57,33 @@
 }
 
 .about-tech-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   margin: 20px auto 60px auto;
   padding: 20px 0;
+  width: 80%;
 }
 
 .about-tech-container li {
   list-style: none;
   text-align: center;
   padding: 20px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-family: "Montserrat", serif;
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 17.29px;
   letter-spacing: 2px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
+  margin: 0 2.5rem 1rem;
   flex-direction: column;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  font-size: 1.8rem;
+}
+
+.about-tech-container li .icons{
+  color: #c19d56;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }

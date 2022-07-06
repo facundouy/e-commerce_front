@@ -1,14 +1,16 @@
 import React from "react";
 import "./about.css";
 
-import { GiCupcake } from "react-icons/gi";
-
+import { DiReact, DiJavascript1, DiNodejs, DiMongodb } from "react-icons/di";
+import { SiRedux, SiExpress, SiSupabase } from "react-icons/si";
+// import { IoLogoVercel } from "react-icons/io";
+import { AiFillGithub } from "react-icons/ai";
 
 const About = () => {
   return (
     <div>
       <section className="about-cover">
-        <>about our </>
+        <span>about our </span>
         <h2>PROJECT</h2>
         <div className="image-separator">
           <img
@@ -25,27 +27,27 @@ const About = () => {
         <div className="about-tech-container">
           <ul className="about-tech-container">
             <li>
-              <DiReact />
+              <DiReact className="icons" />
               React
             </li>
             <li>
-              <SiRedux />
+              <SiRedux className="icons" />
               Redux
             </li>
             <li>
-              <DiJavascript1 />
+              <DiJavascript1 className="icons" />
               JavaScript
             </li>
             <li>
-              <DiNodejs />
+              <DiNodejs className="icons" />
               Nodejs
             </li>
             <li>
-              <SiExpress />
+              <SiExpress className="icons" />
               Express
             </li>
             <li>
-              <DiMongodb />
+              <DiMongodb className="icons" />
               MongoDB
             </li>
             <li>
@@ -53,15 +55,15 @@ const About = () => {
               Mongoose
             </li>
             <li>
-              <IoLogoVercel />
+              {/* <IoLogoVercel /> */}
               Vercel
             </li>
             <li>
-              <SiSupabase />
+              <SiSupabase className="icons" />
               Supabase
             </li>
             <li>
-              <AiFillGithub />
+              <AiFillGithub className="icons" />
               Github
             </li>
           </ul>
