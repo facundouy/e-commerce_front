@@ -35,6 +35,8 @@ const About = () => {
           eligendi moderatius ut vel, in oporteat.
         </p>
       </div>
+
+
       <div className="about-tech-section">
         <span>made it with this</span>
         <h2>TECHNOLOGIES</h2>
@@ -89,6 +91,7 @@ const About = () => {
       </div>
       <span>about our</span>
 
+
       <div className="about-team-section">
         <h2>TEAM</h2>
         <div className="image-separator">
@@ -116,6 +119,7 @@ const About = () => {
           />
         </div>
       </div>
+      
     </div>
   );
 };
