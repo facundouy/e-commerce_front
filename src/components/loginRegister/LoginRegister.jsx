@@ -1,13 +1,10 @@
 import { useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import "./login-register.css";
 import Login from "./Login.jsx";
 import Register from "./Register.jsx";
 
 function LoginRegister({ show, setShow }) {
-	const usertoken = useSelector((state) => state.user);
 	const [isRegistered, setIsRegistered] = useState(true);
 	const handleClose = () => setShow(false);
 	return (
