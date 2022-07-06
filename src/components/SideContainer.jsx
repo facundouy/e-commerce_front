@@ -30,6 +30,12 @@ function SideContainer() {
     <div className="side-container">
       <div className="side-categories">
         <h6 className="mb-3">CATEGORIES</h6>
+        <div className="image-separator">
+          <img
+            src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-slide-1-img-1.png"
+            alt="Separador"
+          />
+        </div>
         <ul className="mx-0 px-0">
           {categoriesList.map((item) => {
             return (
@@ -44,16 +50,11 @@ function SideContainer() {
           })}
         </ul>
       </div>
-      <div className="image-separator">
-        <img
-          src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-slide-1-img-1.png"
-          alt="Separador"
-        />
-      </div>
-      <div className="side-instagram">
+
+      {/* <div className="side-instagram">
         <h6>INSTRAGRAM</h6>
         <InstaGallery />
-      </div>
+      </div> */}
     </div>
   );
 }
