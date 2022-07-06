@@ -32,8 +32,8 @@ function NavComp() {
               <Link to="/" className="item-nav-bar">
                 <Nav.Item>HOME</Nav.Item>
               </Link>
-              <Link to="/about" className="item-nav-bar">
-                <Nav.Item>ABOUT</Nav.Item>
+              <Link to="/shop" className="item-nav-bar">
+                <Nav.Item>SHOP</Nav.Item>
               </Link>
               <NavDropdown
                 className="item-nav-bar"
@@ -53,8 +53,8 @@ function NavComp() {
                   );
                 })}
               </NavDropdown>
-              <Link to="/shop" className="item-nav-bar">
-                <Nav.Item>SHOP</Nav.Item>
+              <Link to="/about" className="item-nav-bar">
+                <Nav.Item>ABOUT</Nav.Item>
               </Link>
               <a href="#footer" className="item-nav-bar">
                 <Nav.Item>CONTACT</Nav.Item>

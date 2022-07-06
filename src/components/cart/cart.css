@@ -12,6 +12,8 @@
 }
 
 .table td {
+  display: flex;
+  align-items: center;
   color: #000000;
   font-family: "Cormorant", cursive;
   font-weight: 500;
@@ -33,6 +35,33 @@ span:hover {
   cursor: pointer;
 }
 
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.image-and-name-container {
+  width: 260px;
+}
+
+.price-container {
+  width: 45px;
+}
+
+.counter-subtotal-delete-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+
+.subtotal-delete-container {
+  display: flex;
+  justify-content: space-between;
+  width: 7rem;
+}
+
 .link {
   color: #c19d56;
 }
@@ -52,6 +81,28 @@ span:hover {
 .buttons-container button {
   width: 26px;
 }
+
+.row-border {
+  width: 100%;
+  border-top: 1px solid #dee2e6;
+  margin-top: -1px;
+}
+
+@media (max-width: 767px) {
+  .table-header {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .table-header-small {
+    display: none;
+  }
+}
+
+/* td {
+  border-bottom: 1px solid black;
+} */
 
 /* .input-container {
   display: flex;
