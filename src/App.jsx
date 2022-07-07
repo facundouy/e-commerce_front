@@ -19,6 +19,7 @@ import { storeCategories } from "./redux/categorySlice";
 import { useDispatch } from "react-redux";
 import UserProfile from "./components/userProfile/UserProfile";
 import About from "./components/about/About";
+import ThanksScreen from "./components/thanksScreen/ThanksScreen";
 
 function App() {
   const dispatch = useDispatch();
@@ -67,6 +68,14 @@ function App() {
             <>
               <ShopBanner bannerTitle={"SHOP"} />
               <AllProducts />
+            </>
+          }
+        />
+        <Route
+          path="/thanks"
+          element={
+            <>
+              <ThanksScreen />
             </>
           }
         />

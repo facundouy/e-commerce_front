@@ -22,10 +22,13 @@ function Banner() {
             <div className="a-discover">Discover</div>
           </Link>
           <Link to="/shop" className="text-decoration-none button-container"> */}
-          <a href="#featured" className="a-discover">
-            Discover
-          </a>
-          <Link to="/shop" className="text-decoration-none">
+          <div className="button-container">
+            <a href="#featured" className="a-discover text-decoration-none">
+              Discover
+            </a>
+          </div>
+
+          <Link to="/shop" className="text-decoration-none button-container">
             <div className="a-shop">Shop now</div>
           </Link>
         </div>
