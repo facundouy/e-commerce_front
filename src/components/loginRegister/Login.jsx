@@ -66,7 +66,8 @@ function Login({ setIsRegistered }) {
 				<a
 					className='admin-button'
 					href='https://admin-dolcetto.vercel.app/'
-					target='_blank'>
+					target='_blank'
+					rel='noreferrer'>
 					Go to Admin site
 				</a>
 			</div>
