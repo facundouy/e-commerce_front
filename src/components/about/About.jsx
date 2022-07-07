@@ -39,9 +39,6 @@ const About = () => {
       <div className="banner-separator">
         <span></span>
       </div>
-      {/* <div className="about-project-container">
-        <img src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/p9-img-1-1.jpg" alt="" />
-      </div> */}
 
       <div className="about-tech-section">
         <span>made with this</span>
@@ -106,13 +103,10 @@ const About = () => {
           />
         </div>
         <div className="team-photos-container">
-          <img src="/Flo.png" alt="" />
-          <img src="/Santi.png" alt="" />
-          <img
-            src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-team-1-2.jpg"
-            alt=""
-          />
-          <img src="/Pau.png" alt="" />
+          <img src="/Flo.png" alt="profile" />
+          <img src="/Santi.png" alt="profile" />
+          <img src="/Facu.png" alt="profile" />
+          <img src="/Pau.png" alt="profile" />
         </div>
       </div>
     </div>
