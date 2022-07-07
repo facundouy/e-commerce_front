@@ -22,87 +22,87 @@ import About from "./components/about/About";
 import ThanksScreen from "./components/thanksScreen/ThanksScreen";
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    const getProducts = async () => {
-      try {
-        const productsResponse = await Axios.get(
-          `${process.env.REACT_APP_BACKEND_URL}/api/products`
-        );
-        const categoriesResponse = await Axios.get(
-          `${process.env.REACT_APP_BACKEND_URL}/api/categories`
-        );
+	const dispatch = useDispatch();
+	useEffect(() => {
+		const getProducts = async () => {
+			try {
+				const productsResponse = await Axios.get(
+					`${process.env.REACT_APP_BACKEND_URL}/api/products`
+				);
+				const categoriesResponse = await Axios.get(
+					`${process.env.REACT_APP_BACKEND_URL}/api/category`
+				);
 
-        dispatch(storeProducts(productsResponse.data));
-        dispatch(storeCategories(categoriesResponse.data));
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getProducts();
-  });
-  return (
-    <>
-      <NavComp />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Banner />
-              <Products />
-            </>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <>
-              <About />
-            </>
-          }
-        />
-        <Route
-          path="/shop"
-          element={
-            <>
-              <ShopBanner bannerTitle={"SHOP"} />
-              <AllProducts />
-            </>
-          }
-        />
-        <Route
-          path="/thanks"
-          element={
-            <>
-              <ThanksScreen />
-            </>
-          }
-        />
-        <Route
-          path="/user"
-          element={
-            <ProtectedRoute>
-              <UserProfile />
-            </ProtectedRoute>
-          }
-        />
-        <Route path="/category/:name" element={<Categories />} />
-        <Route path="/product/:slug" element={<SingleProduct />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route
-          path="/checkout"
-          element={
-            <ProtectedRoute>
-              <Checkout />
-            </ProtectedRoute>
-          }
-        />
-        <Route path="*" element={<h2>Page not found</h2>} />
-      </Routes>
-      <Footer />
-    </>
-  );
+				dispatch(storeProducts(productsResponse.data));
+				dispatch(storeCategories(categoriesResponse.data));
+			} catch (error) {
+				console.log(error);
+			}
+		};
+		getProducts();
+	});
+	return (
+		<>
+			<NavComp />
+			<Routes>
+				<Route
+					path='/'
+					element={
+						<>
+							<Banner />
+							<Products />
+						</>
+					}
+				/>
+				<Route
+					path='/about'
+					element={
+						<>
+							<About />
+						</>
+					}
+				/>
+				<Route
+					path='/shop'
+					element={
+						<>
+							<ShopBanner bannerTitle={"SHOP"} />
+							<AllProducts />
+						</>
+					}
+				/>
+				<Route
+					path='/thanks'
+					element={
+						<>
+							<ThanksScreen />
+						</>
+					}
+				/>
+				<Route
+					path='/user'
+					element={
+						<ProtectedRoute>
+							<UserProfile />
+						</ProtectedRoute>
+					}
+				/>
+				<Route path='/category/:name' element={<Categories />} />
+				<Route path='/product/:slug' element={<SingleProduct />} />
+				<Route path='/cart' element={<Cart />} />
+				<Route
+					path='/checkout'
+					element={
+						<ProtectedRoute>
+							<Checkout />
+						</ProtectedRoute>
+					}
+				/>
+				<Route path='*' element={<h2>Page not found</h2>} />
+			</Routes>
+			<Footer />
+		</>
+	);
 }
 
 export default App;
