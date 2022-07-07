@@ -4,7 +4,7 @@ import "./shop-banner.css";
 const ShopBanner = ({ bannerTitle }) => {
   return (
     <div className="shop-banner">
-      <h2>{bannerTitle}</h2>
+      <h2  className="container">{bannerTitle}</h2>
     </div>
   );
 };
