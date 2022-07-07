@@ -37,9 +37,28 @@
 }
 
 .about-cover p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
   margin: 1.2rem 0 8rem;
   padding: 0 1rem;
+}
+
+.banner-separator {
+  background-image: url(https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/p9-img-1-1.jpg);
+  /* background-position: 70% 79px;  */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30rem;
+  width: 100%;
+}
+
+.banner-separator span{
+
+position: relative;
+    width: 1100px;
+    margin: 0 auto;
+    z-index: 20;
 }
 
 .about-tech-section {
@@ -100,4 +119,9 @@
   opacity: 0.4;
   transition: all 0.4s;
   width: 15.5rem;
+}
+
+.about-project-container {
+  display: flex;
+  justify-content: space-around;
 }
