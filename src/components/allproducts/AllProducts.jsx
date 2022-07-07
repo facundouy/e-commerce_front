@@ -5,6 +5,8 @@ import SideContainer from "../SideContainer";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { useState } from "react";
 
+import "./all-products.css";
+
 const productsPerPage = 8;
 const firstPage = 0;
 
@@ -61,30 +63,36 @@ function AllProducts() {
                 </div>
               );
             })}
-        <div className="dummy-view" />
-        <div className="dummy-view" />
-      </ul>
-      <div>
+        {/* <div className="dummy-view" />
+        <div className="dummy-view" /> */}
+
+      <ul className="pagination-container">
         <BsChevronLeft
-					onClick={() => {
-						if (currentPage > firstPage) {
-							setCurrentPage((prevPage) => prevPage - 1)
-						}
-					}}
-				/>
-        <ul>
-          {[...Array(numberOfPages).keys()].map((number) => (
-            <li onClick={() => setCurrentPage(number)}>{number + 1}</li>
-          ))}
-        </ul>
-        <BsChevronRight
+          className="pagination-arrow"
           onClick={() => {
-						if (currentPage + 1 < numberOfPages) {
-							setCurrentPage((prevPage) => prevPage + 1)
-						}
-					}}
+            if (currentPage > firstPage) {
+              setCurrentPage((prevPage) => prevPage - 1);
+            }
+          }}
         />
-      </div>
+        {[...Array(numberOfPages).keys()].map((number) => (
+          <li className="pagination-li" onClick={() => setCurrentPage(number)}>
+            {number + 1}
+          </li>
+        ))}
+        <BsChevronRight
+          className="pagination-arrow"
+          onClick={() => {
+            if (currentPage + 1 < numberOfPages) {
+              setCurrentPage((prevPage) => prevPage + 1);
+            }
+          }}
+        />
+      </ul>
+
+      </ul>
+      {/* <div > */}
+      {/* </div> */}
       <SideContainer />
     </div>
   );
