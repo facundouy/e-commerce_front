@@ -45,7 +45,7 @@
 
 .banner-separator {
   background-image: url(https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/p9-img-1-1.jpg);
-  /* background-position: 70% 79px;  */
+  background-position: 70% -260px; 
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;

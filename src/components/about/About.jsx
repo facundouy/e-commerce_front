@@ -106,22 +106,13 @@ const About = () => {
           />
         </div>
         <div className="team-photos-container">
+          <img src="/Flo.png" alt="" />
+          <img src="/Santi.png" alt="" />
           <img
             src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-team-1-2.jpg"
             alt=""
           />
-          <img
-            src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-team-1-2.jpg"
-            alt=""
-          />
-          <img
-            src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-team-1-2.jpg"
-            alt=""
-          />
-          <img
-            src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-team-1-2.jpg"
-            alt=""
-          />
+          <img src="/Pau.png" alt="" />
         </div>
       </div>
     </div>
