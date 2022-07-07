@@ -45,7 +45,7 @@
 
 .banner-separator {
   background-image: url(https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/p9-img-1-1.jpg);
-  background-position: 70% -260px; 
+  background-position: 70% -260px;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -103,6 +103,7 @@
   flex-wrap: wrap;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  justify-content: center;
 }
 
 .team-photos-container img {
@@ -119,6 +120,12 @@
   opacity: 0.4;
   transition: all 0.4s;
   width: 15.5rem;
+}
+
+.team-photos-subcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .about-project-container {

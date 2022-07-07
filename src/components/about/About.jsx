@@ -103,10 +103,14 @@ const About = () => {
           />
         </div>
         <div className="team-photos-container">
-          <img src="/Flo.png" alt="profile" />
-          <img src="/Santi.png" alt="profile" />
-          <img src="/Facu.png" alt="profile" />
-          <img src="/Pau.png" alt="profile" />
+          <div className="team-photos-subcontainer">
+            <img src="/Flo.png" alt="profile photo" />
+            <img src="/Santi.png" alt="profile photo" />
+          </div>
+          <div className="team-photos-subcontainer">
+            <img src="/Facu.png" alt="profile photo" />
+            <img src="/Pau.png" alt="profile photo" />
+          </div>
         </div>
       </div>
     </div>
