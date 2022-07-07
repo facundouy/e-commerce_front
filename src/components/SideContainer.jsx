@@ -2,7 +2,6 @@ import "./products/products.css";
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
-import InstaGallery from "./InstaGallery";
 
 function SideContainer() {
   const [categoriesList, setCategoriesList] = useState([]);
@@ -11,7 +10,7 @@ function SideContainer() {
     const getCategories = async () => {
       try {
         const categoriesResponse = await Axios.get(
-          `${process.env.REACT_APP_BACKEND_URL}/api/categories`
+          `${process.env.REACT_APP_BACKEND_URL}/api/category`
         );
         setCategoriesList(categoriesResponse.data);
       } catch (error) {
@@ -44,11 +43,6 @@ function SideContainer() {
           })}
         </ul>
       </div>
-
-      {/* <div className="side-instagram">
-        <h6>INSTRAGRAM</h6>
-        <InstaGallery />
-      </div> */}
     </div>
   );
 }
