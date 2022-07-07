@@ -44,7 +44,7 @@ const About = () => {
       </div> */}
 
       <div className="about-tech-section">
-        <span>made it with this</span>
+        <span>made with this</span>
         <h2>TECHNOLOGIES</h2>
         <div className="image-separator">
           <img
