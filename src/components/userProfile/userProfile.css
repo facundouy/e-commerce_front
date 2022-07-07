@@ -1,39 +1,43 @@
 .profile-container {
-	margin-top: 10rem;
+  margin-top: 10rem;
 }
 
 .profile-card {
-	background-color: black;
-	width: 40%;
+  background-color: black;
+  width: 40%;
 }
 
 .profile-pic {
-	height: 6rem;
+  height: 6rem;
 }
 
 .name {
-	color: #c19d56;
+  color: #c19d56;
 }
 
 .email {
-	color: #c19d56;
-	font-family: "Cormorant";
-	font-weight: 500;
-	font-size: 1.3rem;
+  color: #c19d56;
+  font-family: "Cormorant";
+  font-weight: 500;
+  font-size: 1.3rem;
 }
 
 .address {
-	color: #c19d56;
-	font-family: "Cormorant";
-	font-weight: 500;
-	font-size: 1.3rem;
+  color: #c19d56;
+  font-family: "Cormorant";
+  font-weight: 500;
+  font-size: 1.3rem;
 }
 
 .btn-logout {
-	background-color: black;
-	color: white;
-	font-size: 0.813rem;
+  background-color: black;
+  color: white;
+  font-size: 0.813rem;
 
-	transition: all 0.4s;
-	border: 1px solid black;
+  transition: all 0.4s;
+  border: 1px solid black;
+}
+
+.order-table {
+  cursor: pointer;
 }
