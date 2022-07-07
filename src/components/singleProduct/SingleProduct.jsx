@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./singleProduct.css";
 import ShopBanner from "../shopBanner/ShopBanner";
-import BeatLoader from "react-spinners/BeatLoader";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
 import Counter from "../counter/Counter";
@@ -25,24 +24,25 @@ function SingleProduct() {
 			draggable: false,
 			progress: undefined,
 		});
-	const [isLoading, setIsLoading] = useState(false);
 	const [quantity, setQuantity] = useState(1);
 	const dispatch = useDispatch();
 
 	return product ? (
 		<>
 			<ShopBanner />
-			<ToastContainer
-				position='top-center'
-				autoClose={5000}
-				hideProgressBar
-				newestOnTop
-				closeOnClick
-				rtl={false}
-				pauseOnFocusLoss
-				draggable={false}
-				pauseOnHover
-			/>
+			<Link to='/cart'>
+				<ToastContainer
+					position='top-center'
+					autoClose={5000}
+					hideProgressBar
+					newestOnTop
+					closeOnClick
+					rtl={false}
+					pauseOnFocusLoss
+					draggable={false}
+					pauseOnHover
+				/>
+			</Link>
 			<div className='product-container'>
 				{" "}
 				<Container>
@@ -51,7 +51,7 @@ function SingleProduct() {
 							<div className='image-container'>
 								<img
 									className='image'
-									src={`https://tkyarzymrutnhhccfvhu.supabase.co/storage/v1/object/public/${product.image}`}
+									src={`https://tkyarzymrutnhhccfvhu.supabase.co/storage/v1/object/public/images/${product.image}`}
 									alt={product.name}
 								/>
 							</div>
@@ -97,7 +97,7 @@ function SingleProduct() {
 			</div>
 		</>
 	) : (
-		<BeatLoader color='#c19d56' loading={isLoading} size={15} />
+		<></>
 	);
 }
 

@@ -35,6 +35,14 @@ const About = () => {
           eligendi moderatius ut vel, in oporteat.
         </p>
       </div>
+
+      <div className="banner-separator">
+        <span></span>
+      </div>
+      {/* <div className="about-project-container">
+        <img src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/p9-img-1-1.jpg" alt="" />
+      </div> */}
+
       <div className="about-tech-section">
         <span>made it with this</span>
         <h2>TECHNOLOGIES</h2>
@@ -87,8 +95,8 @@ const About = () => {
           </li>
         </ul>
       </div>
-      <span>about our</span>
 
+      <span>about our</span>
       <div className="about-team-section">
         <h2>TEAM</h2>
         <div className="image-separator">

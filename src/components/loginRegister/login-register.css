@@ -3,7 +3,12 @@
 }
 
 .login-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
   padding: 0 1.2rem;
+  width: 100%;
 }
 
 .register-container {
@@ -45,18 +50,27 @@
   color: #c19d56;
 }
 
-/* .button-submit {
+.admin-button {
   background-color: black;
-  border: 1px solid black;
+  border: 1px transparent solid;
   color: white;
   font-family: "Montserrat", serif;
-  font-size: 13px;
   letter-spacing: 0.5px;
-  /* margin-bottom: 1rem; */
-/* padding: 12px 54px;
+  outline: 1px black solid;
+  outline-offset: 2px;
+  padding: 12px 54px;
+  text-align: center;
   text-decoration: none;
-  transition: all 0.4s;
-} */
+  transition: all 0.5s;
+  width: 100%;
+}
+
+.admin-button:hover {
+  background-color: #c19d56;
+  color: white;
+  outline: 1px #c19d56 solid;
+  text-decoration: none;
+}
 
 .button-submit {
   background-color: #c19d56;

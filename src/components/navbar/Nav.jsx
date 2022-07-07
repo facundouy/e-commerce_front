@@ -1,6 +1,5 @@
 import "./nav.css";
-import { useEffect, useState } from "react";
-import Axios from "axios";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import { GiCupcake } from "react-icons/gi";
@@ -12,7 +11,12 @@ import { useSelector } from "react-redux";
 function NavComp() {
   const info = useSelector((state) => state.user);
   const categories = useSelector((state) => state.category);
+  const cart = useSelector((state) => state.cart);
   const [showOffCanvas, setShowOffCanvas] = useState(false);
+  const numberOfCartItems = cart.reduce(
+    (accumulator, currentItem) => accumulator + currentItem.quantity,
+    0
+  );
 
   return (
     <>
@@ -83,6 +87,7 @@ function NavComp() {
               <Nav.Item>
                 <Link to="/cart" className="item-nav-bar align-middle">
                   <AiOutlineShopping className="item-nav-cart mx-0" />
+                  <span>{numberOfCartItems}</span>
                 </Link>
               </Nav.Item>
             </Nav>
