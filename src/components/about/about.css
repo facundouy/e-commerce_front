@@ -132,3 +132,21 @@
   display: flex;
   justify-content: space-around;
 }
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 8rem 0;
+  text-align: center;
+}
+
+.number-container span {
+  font-weight: 300;
+  font-size: 9.375rem;
+  margin-bottom: 1rem;
+}
+
+.number-container h5 {
+  font-family: "Montserrat", serif;
+  margin-top: 1.625;
+}

@@ -112,6 +112,25 @@ const About = () => {
             <img src="/Pau.png" alt="profile photo" />
           </div>
         </div>
+
+        <div className="stats-container">
+          <div className="number-container">
+            <span>3</span>
+            <h5>weeks</h5>
+          </div>
+          <div className="number-container">
+            <span>+600</span>
+            <h5>hours</h5>
+          </div>
+          <div className="number-container">
+            <span>4</span>
+            <h5>colaborators</h5>
+          </div>
+          <div className="number-container">
+            <span>250</span>
+            <h5>commits</h5>
+          </div>
+        </div>
       </div>
     </div>
   );
