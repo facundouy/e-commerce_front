@@ -40,21 +40,18 @@ function Step3({
   async function createOrder(event) {
     const products = [];
     cart.map((product) => {
-      products.push({
+      return products.push({
         name: product.name,
         quantity: product.quantity,
         price: product.price * product.quantity,
       });
     });
 
-    const response = await axios.post(
-      `${process.env.REACT_APP_BACKEND_URL}/create/order`,
-      {
-        products,
-        totalPrice: totalPrice,
-        user: user.user,
-      }
-    );
+    await axios.post(`${process.env.REACT_APP_BACKEND_URL}/create/order`, {
+      products,
+      totalPrice: totalPrice,
+      user: user.user,
+    });
     notify();
     async function getUser() {
       const userResponse = await axios.get(
