@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
 import "./checkout.css";
 import axios from "axios";
-
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
 import Table from "react-bootstrap/Table";
 
 function Step3({
@@ -15,6 +16,16 @@ function Step3({
 }) {
 	const cart = useSelector((state) => state.cart);
 	const user = useSelector((state) => state.user);
+	const notify = () =>
+		toast.success("Your order has been sent!", {
+			position: "top-center",
+			autoClose: 4000,
+			hideProgressBar: true,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+		});
 
 	const totalPrice = cart.reduce(
 		(accumulator, currentValue) =>
@@ -40,10 +51,22 @@ function Step3({
 				user: user.user,
 			}
 		);
+		notify();
 	}
 
 	return (
 		<>
+			<ToastContainer
+				position='top-center'
+				autoClose={5000}
+				hideProgressBar
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable={false}
+				pauseOnHover
+			/>
 			<h3 className='step-title'>REVIEW ORDER</h3>
 			<div className='container-billing-details'>
 				<Table className='table'>

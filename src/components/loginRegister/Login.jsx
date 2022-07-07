@@ -1,29 +1,13 @@
 import "./login-register.css";
 import { useState } from "react";
 import Axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { storeToken } from "../../redux/userSlice";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from "react-router-dom";
 
 function Login({ setIsRegistered }) {
 	const [inputEmail, setInputEmail] = useState("");
 	const [inputPassword, setInputPassword] = useState("");
 	const dispatch = useDispatch();
-	const navigate = useNavigate();
-	const token = useSelector((state) => state.user.token);
-	console.log(token);
-	const notify = () =>
-		toast(`Welcome!`, {
-			position: "top-center",
-			autoClose: 5000,
-			hideProgressBar: true,
-			closeOnClick: true,
-			pauseOnHover: true,
-			draggable: false,
-			progress: undefined,
-		});
 
 	const handleLogin = async (event) => {
 		event.preventDefault();
@@ -41,18 +25,6 @@ function Login({ setIsRegistered }) {
 
 	return (
 		<>
-			<ToastContainer
-				position='top-center'
-				autoClose={5000}
-				hideProgressBar
-				newestOnTop
-				closeOnClick
-				rtl={false}
-				pauseOnFocusLoss
-				draggable={false}
-				pauseOnHover
-			/>
-
 			<div className='login-container'>
 				<div>
 					<h1 className='title-offcanvas'>LOG IN</h1>
