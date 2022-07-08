@@ -170,7 +170,7 @@
   transition: all 0.4s;
   color: #c19d56;
   cursor: default;
-  font-family: "Great Vibes", cursive;
+  font-family: "Cormorant", sans-serif;
   font-size: 2rem;
   margin: 0.25rem;
   text-align: center;
@@ -201,9 +201,31 @@
 
 .member-card img:hover ~ .member-name {
   display: block;
-  color: black;
+}
+
+.member-name:hover {
+  display: block;
+}
+
+.member-linkedin:hover ~ .member-name {
+  display: block;
 }
 
 .member-card img:hover ~ .member-linkedin {
   display: block;
+}
+
+.member-linkedin:hover {
+  display: block;
+}
+
+.member-name:hover ~ .member-linkedin {
+  display: block;
+}
+
+.li-icon {
+  color: #c19d56;
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-right: 28px;
 }

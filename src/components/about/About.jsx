@@ -3,6 +3,7 @@ import "./about.css";
 
 import { DiReact, DiJavascript1, DiNodejs, DiMongodb } from "react-icons/di";
 import { SiRedux, SiExpress, SiSupabase, SiVercel } from "react-icons/si";
+import { BsLinkedin } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
 
 const About = () => {
@@ -131,8 +132,11 @@ const About = () => {
             <div className="member-card">
               <img src="/Flo.png" alt="profile" />
               <div className="member-name">Florencia Falco</div>
-              <a className="member-linkedin" href="#">
-                Linkedin
+              <a
+                className="member-linkedin"
+                href="https://www.linkedin.com/in/florencia-falco/#"
+              >
+                <BsLinkedin className="li-icon" />
               </a>
             </div>
             <div className="member-card">
@@ -142,7 +146,7 @@ const About = () => {
                 className="member-linkedin"
                 href="https://www.linkedin.com/in/santiago-fantoni"
               >
-                Linkedin
+                <BsLinkedin className="li-icon" />
               </a>
             </div>
           </div>
@@ -150,16 +154,22 @@ const About = () => {
             <div className="member-card">
               <img src="/Facu.png" alt="profile" />
               <div className="member-name">Facundo Irazusta</div>
-              <a className="member-linkedin" href="#">
-                Linkedin
+              <a
+                className="member-linkedin"
+                href="https://www.linkedin.com/in/facundo-irazusta/"
+              >
+                <BsLinkedin className="li-icon" />
               </a>
             </div>
 
             <div className="member-card">
               <img src="/Pau.png" alt="profile" />
               <div className="member-name">Paulina Irazusta</div>
-              <a className="member-linkedin" href="#">
-                Linkedin
+              <a
+                className="member-linkedin"
+                href="https://www.linkedin.com/in/paulina-irazusta/#"
+              >
+                <BsLinkedin className="li-icon" />
               </a>
             </div>
           </div>
