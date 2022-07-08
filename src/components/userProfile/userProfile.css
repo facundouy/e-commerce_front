@@ -1,22 +1,19 @@
-<<<<<<< Updated upstream
 .user-profile-container {
-	display: flex;
+  display: flex;
 }
-=======
->>>>>>> Stashed changes
 
 .profile-container {
-	margin-top: 10rem;
+  margin-top: 5rem;
 }
 
-.profile-card {
+/* .profile-card {
 	background-color: black;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
-
+} */
+/* 
 .profile-pic {
 	height: 6rem;
 }
@@ -51,89 +48,63 @@
 }
 
 .order-table {
-<<<<<<< Updated upstream
 	cursor: pointer;
-}
+} */
 
 .profile-container img {
-	border: 1px solid #c19d56;
-	border-radius: 50%;
-	height: 60%;
-	object-fit: cover;
-	width: 60%;
-=======
-  cursor: pointer;
-}
-
-.profile-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  /* width: 10%; */
-}
-
-.profile-container img {
-  border: 1px solid #c19d56;
   border-radius: 50%;
-  height: 150px;
+  height: 12rem;
   object-fit: cover;
-  width: 150px;
->>>>>>> Stashed changes
+  width: 12rem;
 }
 
 .profile-container span {
-	align-items: center;
-	font-family: "Montserrat", serif;
-	font-size: 24px;
-	font-weight: 600;
-	letter-spacing: 1.68px;
-	margin: 2rem 0 1rem;
+  align-items: center;
+  font-family: "Montserrat", serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1.68px;
+  margin: 2rem 0 1rem;
 }
 
 .profile-container p {
-	font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .profile-container button {
-	border: none;
-	background-color: white;
-	color: #c19d56;
-	font-family: "Montserrat", serif;
-	font-size: 1rem;
-	font-weight: 500;
-	letter-spacing: 2.47px;
-	line-height: 26px;
-	margin-top: 0.8rem;
-	outline: #c19d56 solid 1px;
-	outline-offset: 2px;
-	padding: 0.5rem 3rem;
-	transition: all 0.5s;
-	width: 80%;
-	text-align: center;
+  border: none;
+  background-color: white;
+  color: #c19d56;
+  font-family: "Montserrat", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 2.47px;
+  line-height: 26px;
+  margin-top: 0.8rem;
+  outline: #c19d56 solid 1px;
+  outline-offset: 2px;
+  padding: 0.5rem 3rem;
+  transition: all 0.5s;
+  width: 80%;
+  text-align: center;
 }
 
 .profile-container button:hover {
-	background-color: #c19d56;
-	color: white;
+  background-color: #c19d56;
+  color: white;
 }
 
-profile-orders-container {
-<<<<<<< Updated upstream
-	display: flex;
-	flex-direction: column;
-	/* width: 60%; */
-=======
+.profile-orders-container {
   display: flex;
   flex-direction: column;
-  width: 90%;
->>>>>>> Stashed changes
+  margin-top: 5rem;
 }
 
 .profile-orders-container h4 {
-	font-family: "Montserrat", serif;
-	font-size: 24px;
-	font-weight: 600;
-	letter-spacing: 1.68px;
+  font-family: "Montserrat", serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1.68px;
+  margin-bottom: 3rem;
+  text-align: left;
 }
