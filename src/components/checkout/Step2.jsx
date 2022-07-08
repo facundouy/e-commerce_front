@@ -13,14 +13,39 @@ function Step2({ setStep, setOrder }) {
       <div className="container-billing-details">
         <div className="payment-method">
           <div className="payment-method">
-            <input type="radio" onClick={() => setPaymentMethod("credit")} />
-            <label className="payment-method-label">Credit Card</label>
+            {" "}
+            <label className="payment-method-label">
+              {" "}
+              <input
+                type="radio"
+                onClick={() => setPaymentMethod("credit")}
+              />{" "}
+              Credit Card
+            </label>
           </div>
 
           <div className="payment-method">
-            <div><img className="credit-card" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/556px-Visa_Inc._logo.svg.png" alt="" /></div>
-            <div><img className="credit-card" src="https://upload.wikimedia.org/wikipedia/commons/7/72/MasterCard_early_1990s_logo.png" alt="" /></div>
-            <div><img className="credit-card" src="https://www.estrategiamagazine.com/wp-content/uploads/2018/08/historia-de-american-express.jpeg" alt="" /></div>
+            <div>
+              <img
+                className="credit-card"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/556px-Visa_Inc._logo.svg.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                className="credit-card"
+                src="https://upload.wikimedia.org/wikipedia/commons/7/72/MasterCard_early_1990s_logo.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                className="credit-card"
+                src="https://www.estrategiamagazine.com/wp-content/uploads/2018/08/historia-de-american-express.jpeg"
+                alt=""
+              />
+            </div>
           </div>
         </div>
         {paymentMethod === "credit" && (

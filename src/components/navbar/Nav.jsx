@@ -47,7 +47,7 @@ function NavComp() {
 										<NavDropdown.Item key={item._id}>
 											<Link
 												to={`/category/${item.name}`}
-												className='dropdown-text'>
+												className='dropdown-text category-dropdown'>
 												{item.name}
 											</Link>
 										</NavDropdown.Item>
@@ -55,7 +55,7 @@ function NavComp() {
 								})}
 							</NavDropdown>
 							<Link to='/about' className='item-nav-bar'>
-								<Nav.Item>ABOUT THIS PROJECT</Nav.Item>
+								<Nav.Item>ABOUT</Nav.Item>
 							</Link>
 							<a href='#footer' className='item-nav-bar'>
 								<Nav.Item>CONTACT</Nav.Item>

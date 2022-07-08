@@ -71,9 +71,14 @@
   transition: all 0.3s;
   text-decoration: none;
   color: black;
+  text-align: left;
 }
 .dropdown-text:hover {
   color: #c19d56;
+}
+
+.category-dropdown {
+  padding-right: 100%;
 }
 
 @media only screen and (max-width: 992px) {
