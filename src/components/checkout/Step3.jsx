@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import Table from "react-bootstrap/Table";
 import { storeOrderUser } from "../../redux/userSlice";
+import { resetCart } from "../../redux/cartSlice";
 import ThanksScreen from "../thanksScreen/ThanksScreen";
 
 function Step3({
@@ -156,6 +157,7 @@ function Step3({
           className="checkout-btn mt-3 ms-4"
           onClick={() => {
             createOrder();
+            dispatch(resetCart());
             navigate("/thanks");
           }}
         >
