@@ -7,7 +7,7 @@ import { useState } from "react";
 
 import "./all-products.css";
 
-const productsPerPage = 8;
+const productsPerPage = 6;
 const firstPage = 0;
 
 function AllProducts() {
@@ -66,30 +66,35 @@ function AllProducts() {
         {/* <div className="dummy-view" />
         <div className="dummy-view" /> */}
 
-      <ul className="pagination-container">
-        <BsChevronLeft
-          className="pagination-arrow"
-          onClick={() => {
-            if (currentPage > firstPage) {
-              setCurrentPage((prevPage) => prevPage - 1);
-            }
-          }}
-        />
-        {[...Array(numberOfPages).keys()].map((number) => (
-          <li className="pagination-li" onClick={() => setCurrentPage(number)}>
-            {number + 1}
-          </li>
-        ))}
-        <BsChevronRight
-          className="pagination-arrow"
-          onClick={() => {
-            if (currentPage + 1 < numberOfPages) {
-              setCurrentPage((prevPage) => prevPage + 1);
-            }
-          }}
-        />
-      </ul>
+        <ul className="pagination-container">
+          {currentPage > firstPage && (
+            <BsChevronLeft
+              className="pagination-arrow"
+              onClick={() => {
+                setCurrentPage((prevPage) => prevPage - 1);
+              }}
+            />
+          )}
+          {[...Array(numberOfPages).keys()].map((number) => (
+            <li
+              className={`pagination-li ${
+                number === currentPage ? "pagination-number-selected" : ""
+              }`}
+              onClick={() => setCurrentPage(number)}
+            >
+              {number + 1}
+            </li>
+          ))}
 
+          {currentPage + 1 < numberOfPages && (
+            <BsChevronRight
+              className="pagination-arrow"
+              onClick={() => {
+                setCurrentPage((prevPage) => prevPage + 1);
+              }}
+            />
+          )}
+        </ul>
       </ul>
       {/* <div > */}
       {/* </div> */}
