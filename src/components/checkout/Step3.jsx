@@ -61,8 +61,6 @@ function Step3({
         ` ${process.env.REACT_APP_BACKEND_URL}/api/user/${user.user._id}`
       );
 
-      console.log("response :", userResponse);
-
       dispatch(storeOrderUser({ token: user.token, user: userResponse.data }));
     }
     getUser();

@@ -43,7 +43,7 @@ function UserProfile() {
               <th>STATUS</th>
               <th>DATE</th>
               <th>TOTAL</th>
-              <div className="row-border" />
+              {/* <div className="row-border" /> */}
             </tr>
           </thead>
           <tbody>
@@ -57,6 +57,7 @@ function UserProfile() {
                   <td>{order.status}</td>
                   <td>{order.date}</td>
                   <td>{order.totalPrice}</td>
+									<div className="row-border" /> 
                 </tr>
               );
             })}
