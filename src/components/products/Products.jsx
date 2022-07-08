@@ -25,7 +25,14 @@ function Products() {
         <span id="featured"></span>
       </div>
       <div className="featured-text">
-        <h2>featured products</h2>
+        <h2>taste our</h2>
+        <h3>PRIME SELECTION</h3>
+        <div className="image-separator">
+          <img
+            src="https://dolcino.qodeinteractive.com/wp-content/uploads/2018/10/h1-slide-1-img-1.png"
+            alt="Separador"
+          />
+        </div>
       </div>
       <div className="products-container">
         <ul className="products-list p-0">
