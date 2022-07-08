@@ -4,14 +4,15 @@
 }
 
 .modal-header {
-  background-color: black;
-  text-shadow: 0 0 0 black;
+  /* background-color: black; */
   color: #c19d56;
+  font-family: "Montserrat", serif;
+  text-shadow: 0 0 0 black;
 }
 
 .modal-header button {
-  background-color: #c19d56 !important;
-  color: black !important;
+  /* background-color: #c19d56 !important; */
+  color: #c19d56 !important;
   font-family: "Cormorant";
   font-weight: 600 !important;
   letter-spacing: 1.5px;
@@ -24,29 +25,32 @@
 }
 
 .modal-body {
-  background-color: black;
+  /* background-color: black; */
   text-shadow: 0 0 0 black;
 }
 
 .modal-body p {
-  color: #c19d56;
+  color: #111111;
+  font-family: "Montserrat", serif;
+  font-weight: 400;
 }
 
 .modal-footer {
-  background-color: black;
   text-shadow: 0 0 0 black;
 }
 
 .modal-btn {
   background-color: #c19d56 !important;
-  color: black !important;
-  font-family: "Cormorant";
-  font-weight: 600 !important;
+  color: white !important;
+  font-family: "Montserrat", serif;
   letter-spacing: 1.5px;
   border-radius: 0 !important;
   border: none !important;
+  width: 90%;
 }
 
 .modal-btn:hover {
-  background-color: #bca77e !important;
+  background-color: white !important;
+  border: 1px solid #c19d56 !important;
+  color: #c19d56 !important;
 }

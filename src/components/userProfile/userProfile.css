@@ -1,62 +1,22 @@
-.user-profile-container {
+.page-profile-container {
+  align-items: center;
   display: flex;
+  margin-top: 8rem;
+  margin-bottom: 7rem;
 }
 
 .profile-container {
-  margin-top: 5rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
 }
-
-/* .profile-card {
-	background-color: black;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-} */
-/* 
-.profile-pic {
-  height: 6rem;
-}
-
-.name {
-  color: #c19d56;
-}
-
-.email {
-  color: #c19d56;
-  font-family: "Cormorant";
-  font-weight: 500;
-  font-size: 1.3rem;
-  width: 100%;
-}
-
-.address {
-  color: #c19d56;
-  font-family: "Cormorant";
-  font-weight: 500;
-  font-size: 1.3rem;
-  width: 100%;
-}
-
-.btn-logout {
-  background-color: black;
-  text-shadow: 0 0 0 black;
-  color: white;
-  font-size: 0.813rem;
-  transition: all 0.4s;
-  border: 1px solid black;
-  margin-bottom: 8px;
-}
-
-.order-table {
-	cursor: pointer;
-} */
 
 .profile-container img {
   border-radius: 50%;
-  height: 12rem;
+  height: 10rem;
   object-fit: cover;
-  width: 12rem;
+  width: 10rem;
 }
 
 .profile-container span {
@@ -98,7 +58,7 @@
 .profile-orders-container {
   display: flex;
   flex-direction: column;
-  margin-top: 5rem;
+  padding: 0 3rem;
 }
 
 .profile-orders-container h4 {

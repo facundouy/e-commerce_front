@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import Table from "react-bootstrap/Table";
 import { storeOrderUser } from "../../redux/userSlice";
+import { resetCart } from "../../redux/cartSlice";
 import ThanksScreen from "../thanksScreen/ThanksScreen";
 
 function Step3({
@@ -59,8 +60,6 @@ function Step3({
       const userResponse = await axios.get(
         ` ${process.env.REACT_APP_BACKEND_URL}/api/user/${user.user._id}`
       );
-
-      console.log("response :", userResponse);
 
       dispatch(storeOrderUser({ token: user.token, user: userResponse.data }));
     }
@@ -156,6 +155,7 @@ function Step3({
           className="checkout-btn mt-3 ms-4"
           onClick={() => {
             createOrder();
+            dispatch(resetCart());
             navigate("/thanks");
           }}
         >

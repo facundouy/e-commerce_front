@@ -11,11 +11,12 @@
 }
 
 .title-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  margin-right: 1.5rem;
   max-width: 46.875rem;
   padding: 0 4rem;
 }
@@ -84,37 +85,41 @@
 }
 
 .buttons-banner {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
   font-family: "Montserrat";
   justify-content: center;
 }
 
 .button-container {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 10rem;
+  /* width: 10rem; */
 }
 
 .a-discover {
   background-color: black;
-  text-shadow: 0 0 0 black;
+  border: 1px solid black;
   color: white;
   font-size: 0.813rem;
   padding: 0.75rem 1.5rem;
+  text-align: center;
+  text-shadow: 0 0 0 black;
   transition: all 0.4s;
-  border: 1px solid black;
+  width: 200px;
 }
 
 .a-shop {
+  background-color: #f0ece9;
   border: 1px solid #c19d56;
   color: #c19d56;
-  background-color: #f0ece9;
   font-size: 0.813rem;
+  margin-left: 1.5rem;
   padding: 0.75rem 1.5rem;
+  text-align: center;
   transition: all 0.4s;
+  width: 200px;
 }
 
 .a-discover:hover {
