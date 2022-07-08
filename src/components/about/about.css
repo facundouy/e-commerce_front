@@ -32,7 +32,6 @@
 
 .about-parragraphs-container {
   display: flex;
-  flex-direction: column;
   max-width: 80%;
   padding: 1rem;
   margin: 1.2rem 0 8rem;
@@ -43,6 +42,7 @@
   font-weight: 500;
   margin: 0.5rem o;
   padding: 0 1rem;
+  width: 50%;
 }
 
 .dolcino-link {

@@ -34,26 +34,27 @@ const About = () => {
             Dolcino
           </a>{" "}
           como referencia de diseño.
-        </p>
-        <p>
+          <br />
           El e-commerce se compone de tres subproyectos: la tienda, el sitio del
           administrador y un servidor back-end que conecta con la base de datos.
           La tienda es una aplicación React provista de una store de Redux donde
           se guardan los productos, el carrito y el ID y el token de acceso del
-          usuario. En la misma se pueden realizar todas las acciones esperables
-          en una tienda de esta naturaleza, y se comunica con el servidor del
-          back-end mediante llamadas AJAX a través de la librería Axios. El
-          sitio del administrador es también una aplicación React con una store
-          de Redux. Desde el mismo se puede hacer CRUD de productos, categorías
-          y administradores, y acceder a todo el registro de la actividad de la
+          usuario.
+        </p>
+        <p>
+          En la misma se pueden realizar todas las acciones esperables en una
+          tienda de esta naturaleza, y se comunica con el servidor del back-end
+          mediante llamadas AJAX a través de la librería Axios. El sitio del
+          administrador es también una aplicación React con una store de Redux.
+          Desde el mismo se puede hacer CRUD de productos, categorías y
+          administradores, y acceder a todo el registro de la actividad de la
           tienda. El servidor está basado en Node.js y se conecta a una base de
           datos MongoDB mediante el ODM Mongoose. En la base de datos se guarda
           la información de los productos, los usuarios, los administradores y
           las órdenes. El sitio se consume como API REST mediante llamadas AJAX.
           El deploy del sitio se hizo mediante Vercel, la base de datos se aloja
           en MongoDB Atlas y las imágenes en Supabase.
-        </p>
-        <p>
+          <br />
           Encontrarás más información sobre nosotros y cómo ponerte en contacto
           al final de esta página.
         </p>
