@@ -19,20 +19,35 @@ const About = () => {
       <div className="about-parragraphs-container">
         <p>
           <span>D</span>
-          olcetto es el e-commerce de una tienda de postres realizado en las
-          últimas 3 semanas del coding bootcamp de Hack Academy. Para ello se
-          trabajó tanto en el Front como en el Backend. uo utinam altera ei, an
-          quando tempor signiferumque eum. Euismod deserunt conceptam no vix.
-          Nonumes inimicus philosophia ei pro, eum in melius verterem
-          abhorreant. Ea case errem est.
+          olcetto es el e-commerce de una posible tienda de postres realizado en
+          las últimas tres semanas del Coding Bootcamp de Hack Academy, un curso
+          de modalidad full-time de más de 600 horas de dedicación a lo largo de
+          tres meses, basado en el ecosistema JavaScript. El desafío que dio
+          lugar al proyecto fue hacer un e-commerce funcional en tres semanas,
+          para el cual optamos por una tienda de postres, motivados
+          especialmente por la amplia disponibilidad de fotografías de calidad,
+          y elegimos el proyecto Dolcino, en la página ALGO, como referencia de
+          diseño.
         </p>
+        <h3>Tecnologías y funcionalidades</h3>
         <p>
-          Sea persius alienum iudicabit in, ex diam diceret legendos usu, cu per
-          scripta virtute. Dicat errem verear te eam, sea graece audire maiorum
-          ex. Mei dicunt epicuri nostrum id, has et labores propriae offendit.
-          An posse periculis persecuti sit, nominavi corrum pit ex per. No has
-          habeo nominavi adversarium, sit at debitis inermis reprehend. Cibo
-          eligendi moderatius ut vel, in oporteat.
+          El proyecto se compone de tres subproyectos: la tienda, el sitio del
+          administrador y un servidor back-end que conecta con la base de datos.
+          La tienda es una aplicación React provista de una store de Redux donde
+          se guardan los productos, el carrito y el ID y el token de acceso del
+          usuario. En la misma se pueden realizar todas las acciones esperables
+          en una tienda de esta naturaleza, y se comunica con el servidor del
+          back-end mediante llamadas AJAX a través de la librería Axios. El
+          sitio del administrador es también una aplicación React con una store
+          de Redux. Desde el mismo se puede hacer CRUD de productos, categorías
+          y administradores, y acceder a todo el registro de la actividad de la
+          tienda. El servidor está basado en Node.js y se conecta a una base de
+          datos MongoDB mediante el ODM Mongoose. En la base de datos se guarda
+          la información de los productos, los usuarios, los administradores y
+          las órdenes. El sitio se consume como API REST mediante llamadas AJAX.
+          El deploy del sitio se hizo mediante Vercel y la base de datos se
+          aloja en Supabase. Encontrarás más información sobre nosotros y cómo
+          ponerte en contacto al final de esta página.
         </p>
       </div>
 
