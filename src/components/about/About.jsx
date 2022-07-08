@@ -114,25 +114,27 @@ const About = () => {
         </div>
 
         <div className="stats-container">
-          <div className="number-container">
-            <span>3</span>
-            <h5>WEEKS</h5>
+          <div className="stats-subcontainer">
+            <div className="number-container">
+              <span>3</span>
+              <h5>WEEKS</h5>
+            </div>
+            <div className="number-container">
+              <span>600+</span>
+              <h5>STAFF-HOURS</h5>
+            </div>
           </div>
-          <div className="number-container">
-            <span>+600</span>
-            <h5>HOURS</h5>
-          </div>
-          <div className="number-container">
-            <span>4</span>
-            <h5>COLABORATORS</h5>
-          </div>
-          <div className="number-container">
-            <span>250</span>
-            <h5>COMMITS</h5>
+          <div className="stats-subcontainer">
+            <div className="number-container">
+              <span>4</span>
+              <h5>COLABORATORS</h5>
+            </div>
+            <div className="number-container">
+              <span>400+</span>
+              <h5>COMMITS</h5>
+            </div>
           </div>
         </div>
-
-      
       </div>
     </div>
   );
