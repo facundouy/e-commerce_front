@@ -27,7 +27,6 @@ function Banner() {
               Discover
             </a>
           </div>
-
           <Link to="/shop" className="text-decoration-none button-container">
             <div className="a-shop">Shop now</div>
           </Link>
