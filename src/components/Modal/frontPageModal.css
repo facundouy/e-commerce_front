@@ -1,49 +1,52 @@
 .modal-content {
-	width: 80%;
-	margin-left: 2rem;
+  width: 80%;
+  margin-left: 2rem;
 }
 
 .modal-header {
-	background-color: black;
-	color: #c19d56;
+  background-color: black;
+  text-shadow: 0 0 0 black;
+  color: #c19d56;
 }
 
 .modal-header button {
-	background-color: #c19d56 !important;
-	color: black !important;
-	font-family: "Cormorant";
-	font-weight: 600 !important;
-	letter-spacing: 1.5px;
-	border-radius: 0 !important;
-	border: none !important;
+  background-color: #c19d56 !important;
+  color: black !important;
+  font-family: "Cormorant";
+  font-weight: 600 !important;
+  letter-spacing: 1.5px;
+  border-radius: 0 !important;
+  border: none !important;
 }
 
 .modal-title {
-	margin-left: 43%;
+  margin-left: 43%;
 }
 
 .modal-body {
-	background-color: black;
+  background-color: black;
+  text-shadow: 0 0 0 black;
 }
 
 .modal-body p {
-	color: #c19d56;
+  color: #c19d56;
 }
 
 .modal-footer {
-	background-color: black;
+  background-color: black;
+  text-shadow: 0 0 0 black;
 }
 
 .modal-btn {
-	background-color: #c19d56 !important;
-	color: black !important;
-	font-family: "Cormorant";
-	font-weight: 600 !important;
-	letter-spacing: 1.5px;
-	border-radius: 0 !important;
-	border: none !important;
+  background-color: #c19d56 !important;
+  color: black !important;
+  font-family: "Cormorant";
+  font-weight: 600 !important;
+  letter-spacing: 1.5px;
+  border-radius: 0 !important;
+  border: none !important;
 }
 
 .modal-btn:hover {
-	background-color: #bca77e !important;
+  background-color: #bca77e !important;
 }

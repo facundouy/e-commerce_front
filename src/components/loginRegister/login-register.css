@@ -52,6 +52,7 @@
 
 .admin-button {
   background-color: black;
+  text-shadow: 0 0 0 black;
   border: 1px transparent solid;
   color: white;
   font-family: "Montserrat", serif;

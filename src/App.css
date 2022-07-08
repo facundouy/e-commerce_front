@@ -1,14 +1,15 @@
 body {
-	font-family: "Montserrat", sans-serif;
-	box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  text-shadow: 0 0 2px white;
 }
 
-*::selection{
-	background-color: #c19d56;
-  color: white;	
+*::selection {
+  background-color: #c19d56;
+  color: white;
 }
 
-input[type=radio] {
-	height: 1rem;
-	width: 1rem;
+input[type="radio"] {
+  height: 1rem;
+  width: 1rem;
 }
