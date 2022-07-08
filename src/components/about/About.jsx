@@ -102,31 +102,41 @@ const About = () => {
 						alt='Separador'
 					/>
 				</div>
-				<div className='team-photos-container'>
-					<div className='team-photos-subcontainer'>
-						<img src='/Flo.png' alt='profile' />
-						<div>
-							<span>Florencia Falco</span>
-							<a href='#'>Linkedin</a>
-						</div>
 
-						<img src='/Santi.png' alt='profile' />
-						<div>
-							<span>Santiago Fantoni</span>
-							<a href='#'>Linkedin</a>
+				<div className='container team-photos-container'>
+					<div className='team-photos-subcontainer'>
+						<div className='member-card'>
+							<img src='/Flo.png' alt='profile' />
+							<div className='member-name'>Florencia Falco</div>
+							<a className='member-linkedin' href='#'>
+								Linkedin
+							</a>
+						</div>
+						<div className='member-card'>
+							<img src='/Santi.png' alt='profile' />
+							<div className='member-name'>Santiago Fantoni</div>
+							<a
+								className='member-linkedin'
+								href='https://www.linkedin.com/in/santiago-fantoni'>
+								Linkedin
+							</a>
 						</div>
 					</div>
 					<div className='team-photos-subcontainer'>
-						<img src='/Facu.png' alt='profile' />
-						<div>
-							<span>Facundo Irazusta</span>
-							<a href='#'>Linkedin</a>
+						<div className='member-card'>
+							<img src='/Facu.png' alt='profile' />
+							<div className='member-name'>Facundo Irazsta</div>
+							<a className='member-linkedin' href='#'>
+								Linkedin
+							</a>
 						</div>
 
-						<img src='/Pau.png' alt='profile' />
-						<div>
-							<span>Paulina Irazusta</span>
-							<a href='#'>Linkedin</a>
+						<div className='member-card'>
+							<img src='/Pau.png' alt='profile' />
+							<div className='member-name'>Paulina Irazusta</div>
+							<a className='member-linkedin' href='#'>
+								Linkedin
+							</a>
 						</div>
 					</div>
 				</div>

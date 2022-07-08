@@ -1,0 +1,39 @@
+.modal-content {
+	width: 80%;
+	margin-left: 2rem;
+}
+
+.modal-header {
+	background-color: black;
+	color: #c19d56;
+}
+
+.modal-title {
+	margin-left: 43%;
+}
+
+.modal-body {
+	background-color: black;
+}
+
+.modal-body p {
+	color: #c19d56;
+}
+
+.modal-footer {
+	background-color: black;
+}
+
+.modal-btn {
+	background-color: #c19d56 !important;
+	color: black !important;
+	font-family: "Cormorant";
+	font-weight: 600 !important;
+	letter-spacing: 1.5px;
+	border-radius: 0 !important;
+	border: none !important;
+}
+
+.modal-btn:hover {
+	background-color: #bca77e !important;
+}
