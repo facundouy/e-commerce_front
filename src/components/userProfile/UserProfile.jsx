@@ -13,6 +13,7 @@ function UserProfile() {
 
 	const [currentOrder, setCurrentOrder] = useState(false);
 
+<<<<<<< Updated upstream
 	if (!info.user) {
 		return <Navigate to='/' />;
 	}
@@ -123,6 +124,65 @@ function UserProfile() {
 		//   </div>
 		// </div>
 	);
+=======
+  if (!info.user) {
+    return <Navigate to="/" />;
+  }
+  return (
+    <div className="container ">
+      <div className="row">
+        <div className="profile-container col ">
+          <img src="profile_default.png" alt="" />
+          <span>
+            {info.user.firstname.toUpperCase()}{" "}
+            {info.user.lastname.toUpperCase()}
+          </span>
+          <p>Email: {info.user.email} </p>
+          <p>Address: {info.user.address} </p>
+          <button
+            onClick={() => {
+              dispatch(logout());
+              navigate("/");
+            }}
+          >
+            LOG OUT
+          </button>
+        </div>
+        <div className="profile-orders-container col ">
+          <h4>YOUR ORDERS</h4>
+          <Table className="table">
+            <thead>
+              <tr>
+                <th>STATUS</th>
+                <th>DATE</th>
+                <th>TOTAL</th>
+              </tr>
+            </thead>
+            <tbody>
+              {info.user.orderList.map((order) => {
+                return (
+                  <tr
+                    key={order._id}
+                    className="table-row order-table"
+                    onClick={() => setCurrentOrder(order)}
+                  >
+                    <td>{order.status}</td>
+                    <td>{order.date}</td>
+                    <td>{order.totalPrice}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </Table>
+          <OrderModal
+            currentOrder={currentOrder}
+            setCurrentOrder={setCurrentOrder}
+          />
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> Stashed changes
 }
 
 export default UserProfile;
