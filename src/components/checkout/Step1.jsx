@@ -23,7 +23,7 @@ function Step1({
 		setInputFirstName(info.user.firstname);
 		setInputLastName(info.user.lastname);
 		setInputEmail(info.user.email);
-		setInputPhone(info.user.tel);
+		setInputPhone(info.user.phone);
 		setInputAddress(info.user.address);
 	}, []);
 

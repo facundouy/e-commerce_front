@@ -3,18 +3,17 @@
 }
 
 .profile-container {
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 
-.profile-card {
-  background-color: black;
-  text-shadow: 0 0 0 black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
+/* .profile-card {
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+} */
+/* 
 .profile-pic {
   height: 6rem;
 }
@@ -50,15 +49,14 @@
 }
 
 .order-table {
-  cursor: pointer;
-}
+	cursor: pointer;
+} */
 
 .profile-container img {
-  border: 1px solid #c19d56;
   border-radius: 50%;
-  height: 60%;
+  height: 12rem;
   object-fit: cover;
-  width: 60%;
+  width: 12rem;
 }
 
 .profile-container span {
@@ -97,10 +95,10 @@
   color: white;
 }
 
-profile-orders-container {
+.profile-orders-container {
   display: flex;
   flex-direction: column;
-  /* width: 60%; */
+  margin-top: 5rem;
 }
 
 .profile-orders-container h4 {
@@ -108,4 +106,6 @@ profile-orders-container {
   font-size: 24px;
   font-weight: 600;
   letter-spacing: 1.68px;
+  margin-bottom: 3rem;
+  text-align: left;
 }
