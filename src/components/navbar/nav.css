@@ -20,6 +20,7 @@
 
 .item-nav-bar {
   color: black;
+  text-shadow: 0 0 0 black;
   font-family: "Montserrat", serif;
   font-weight: 500;
   line-height: 23px;
