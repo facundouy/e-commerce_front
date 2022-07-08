@@ -1,10 +1,14 @@
+.user-profile-container {
+  display: flex;
+}
+
 .profile-container {
   margin-top: 10rem;
 }
 
 .profile-card {
   background-color: black;
-  width: 40%;
+  width: 100%;
 }
 
 .profile-pic {
@@ -33,11 +37,75 @@
   background-color: black;
   color: white;
   font-size: 0.813rem;
-
   transition: all 0.4s;
   border: 1px solid black;
 }
 
 .order-table {
   cursor: pointer;
+}
+
+.profile-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 30%;
+}
+
+.profile-container img {
+  border: 1px solid #c19d56;
+  border-radius: 50%;
+  height: 250px;
+  object-fit: cover;
+  width: 250px;
+}
+
+.profile-container span {
+  align-items: center;
+  font-family: "Montserrat", serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1.68px;
+  margin: 2rem 0 1rem;
+}
+
+.profile-container p {
+  font-size: 1.2rem;
+}
+
+.profile-container button {
+  border: none;
+  background-color: white;
+  color: #c19d56;
+  font-family: "Montserrat", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 2.47px;
+  line-height: 26px;
+  margin-top: 0.8rem;
+  outline: #c19d56 solid 1px;
+  outline-offset: 2px;
+  padding: 0.5rem 3rem;
+  transition: all 0.5s;
+  width: 80%;
+}
+
+.profile-container button:hover {
+  background-color: #c19d56;
+  color: white;
+}
+
+profile-orders-container {
+  display: flex;
+  flex-direction: column;
+  /* width: 60%; */
+}
+
+.profile-orders-container h4 {
+  font-family: "Montserrat", serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1.68px;
 }
