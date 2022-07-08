@@ -55,7 +55,7 @@ function NavComp() {
 								})}
 							</NavDropdown>
 							<Link to='/about' className='item-nav-bar'>
-								<Nav.Item>ABOUT</Nav.Item>
+								<Nav.Item>ABOUT THIS PROJECT</Nav.Item>
 							</Link>
 							<a href='#footer' className='item-nav-bar'>
 								<Nav.Item>CONTACT</Nav.Item>
