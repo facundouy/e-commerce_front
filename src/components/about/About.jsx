@@ -119,12 +119,30 @@ const About = () => {
         </div>
         <div className="team-photos-container">
           <div className="team-photos-subcontainer">
-            <img src="/Flo.png" alt="profile photo" />
-            <img src="/Santi.png" alt="profile photo" />
+            <img src="/Flo.png" alt="profile" />
+            <div>
+              <span>Florencia Falco</span>
+              <a href="#">Linkedin</a>
+            </div>
+
+            <img src="/Santi.png" alt="profile" />
+            <div>
+              <span>Santiago Fantoni</span>
+              <a href="#">Linkedin</a>
+            </div>
           </div>
           <div className="team-photos-subcontainer">
-            <img src="/Facu.png" alt="profile photo" />
-            <img src="/Pau.png" alt="profile photo" />
+            <img src="/Facu.png" alt="profile" />
+            <div>
+              <span>Facundo Irazusta</span>
+              <a href="#">Linkedin</a>
+            </div>
+
+            <img src="/Pau.png" alt="profile" />
+            <div>
+              <span>Paulina Irazusta</span>
+              <a href="#">Linkedin</a>
+            </div>
           </div>
         </div>
 
@@ -135,8 +153,8 @@ const About = () => {
               <h5>WEEKS</h5>
             </div>
             <div className="number-container">
-              <span>600+</span>
-              <h5>STAFF-HOURS</h5>
+              <span>150+</span>
+              <h5>HOURS-PERSON</h5>
             </div>
           </div>
           <div className="stats-subcontainer">
