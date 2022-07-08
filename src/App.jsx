@@ -1,4 +1,5 @@
 import "./App.css";
+import React from "react";
 import Axios from "axios";
 import Banner from "./components/banner/Banner";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -13,15 +14,29 @@ import Categories from "./components/categories/Categories";
 import AllProducts from "./components/allproducts/AllProducts.jsx";
 import Checkout from "./components/checkout/Checkout";
 import ProtectedRoute from "./components/ProtectedRoute";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { storeProducts } from "./redux/productSlice";
 import { storeCategories } from "./redux/categorySlice";
 import { useDispatch } from "react-redux";
 import UserProfile from "./components/userProfile/UserProfile";
 import About from "./components/about/About";
 import ThanksScreen from "./components/thanksScreen/ThanksScreen";
+import FrontPageModal from "./components/Modal/FrontPageModal";
 
 function App() {
+  const [show, setShow] = useState(true);
+
+  const handleShow = () => setShow(true);
+
+  //     <Button variant="primary" onClick={() => setModalShow(true)}>
+  //       Launch vertically centered modal
+  //     </Button>
+
+  //     <MyVerticallyCenteredModal
+  //       show={modalShow}
+  //       onHide={() => setModalShow(false)}
+  //     />
+
   const dispatch = useDispatch();
   useEffect(() => {
     const getProducts = async () => {
@@ -44,6 +59,8 @@ function App() {
   return (
     <>
       <NavComp />
+      <FrontPageModal show={show} setShow={setShow} />
+
       <Routes>
         <Route
           path="/"

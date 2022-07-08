@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import "./checkout.css";
 import axios from "axios";
@@ -5,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import Table from "react-bootstrap/Table";
 import { storeOrderUser } from "../../redux/userSlice";
+import ThanksScreen from "../thanksScreen/ThanksScreen";
 
 function Step3({
   setStep,
@@ -15,9 +17,9 @@ function Step3({
   inputPhone,
   inputAddress,
 }) {
+  const navigate = useNavigate();
   const cart = useSelector((state) => state.cart);
   const user = useSelector((state) => state.user);
-  console.log(user);
   const dispatch = useDispatch();
 
   const notify = () =>
@@ -154,6 +156,7 @@ function Step3({
           className="checkout-btn mt-3 ms-4"
           onClick={() => {
             createOrder();
+            navigate("/thanks");
           }}
         >
           PLACE ORDER
