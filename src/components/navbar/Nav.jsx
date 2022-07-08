@@ -49,7 +49,7 @@ function NavComp() {
                     <NavDropdown.Item key={item._id}>
                       <Link
                         to={`/category/${item.name}`}
-                        className="dropdown-text"
+                        className="dropdown-text category-dropdown"
                       >
                         {item.name}
                       </Link>
