@@ -19,7 +19,7 @@ function UserProfile() {
   return (
     <div className="container page-profile-container">
       <div className="profile-container">
-        <img src="profile_default.png" />
+        <img src="userAvatar.jpg" />
         <span>
           {info.user.firstname.toUpperCase()} {info.user.lastname.toUpperCase()}
         </span>
@@ -37,12 +37,13 @@ function UserProfile() {
 
       <div className="col  profile-orders-container">
         <h4>YOUR ORDERS</h4>
-        <Table className="table d-flex flex-wrap">
+        <Table className="table">
           <thead>
-            <tr className="table-row">
+            <tr className="table-row d-flex justify-content-between ">
               <th>STATUS</th>
               <th>DATE</th>
               <th>TOTAL</th>
+              <div className="row-border" />
             </tr>
           </thead>
           <tbody>
