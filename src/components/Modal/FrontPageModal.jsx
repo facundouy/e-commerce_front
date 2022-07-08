@@ -1,16 +1,11 @@
 import { Modal, Button } from "react-bootstrap";
 import "./frontPageModal.css";
 import axios from "axios";
-import { useState } from "react";
 
 function FrontPageModal({ show, setShow }) {
-	const [loading, setLoading] = useState(null);
 	const handleClose = () => setShow(false);
 	const resetDataBase = async () => {
-		const response = await axios.post(
-			`${process.env.REACT_APP_BACKEND_URL}/reset`
-		);
-		setLoading(response.data);
+		await axios.post(`${process.env.REACT_APP_BACKEND_URL}/reset`);
 	};
 	return (
 		<div>
@@ -35,7 +30,6 @@ function FrontPageModal({ show, setShow }) {
 						className='modal-btn'
 						onClick={() => {
 							resetDataBase();
-							loading ? handleClose() : <span></span>;
 						}}>
 						Reset
 					</Button>

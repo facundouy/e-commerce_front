@@ -8,6 +8,16 @@
 	color: #c19d56;
 }
 
+.modal-header button {
+	background-color: #c19d56 !important;
+	color: black !important;
+	font-family: "Cormorant";
+	font-weight: 600 !important;
+	letter-spacing: 1.5px;
+	border-radius: 0 !important;
+	border: none !important;
+}
+
 .modal-title {
 	margin-left: 43%;
 }
