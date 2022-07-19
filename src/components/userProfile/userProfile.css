@@ -69,3 +69,15 @@
   margin-bottom: 3rem;
   text-align: left;
 }
+
+.pointer {
+  cursor: pointer;
+}
+
+.profile-name {
+  cursor: default;
+}
+
+.profile-name:hover {
+  color: #212529;
+}

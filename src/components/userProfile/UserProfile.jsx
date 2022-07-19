@@ -20,7 +20,7 @@ function UserProfile() {
     <div className="container page-profile-container">
       <div className="profile-container">
         <img src="userAvatar.jpg" />
-        <span>
+        <span className="profile-name">
           {info.user.firstname.toUpperCase()} {info.user.lastname.toUpperCase()}
         </span>
         <p>Email: {info.user.email} </p>
@@ -51,13 +51,13 @@ function UserProfile() {
               return (
                 <tr
                   key={order._id}
-                  className="table-row order-table"
+                  className="table-row order-table pointer"
                   onClick={() => setCurrentOrder(order)}
                 >
                   <td>{order.status}</td>
                   <td>{order.date}</td>
                   <td>{order.totalPrice}</td>
-									<div className="row-border" /> 
+                  <div className="row-border" />
                 </tr>
               );
             })}
