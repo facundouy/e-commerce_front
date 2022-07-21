@@ -8,7 +8,7 @@ function OrderModal({ currentOrder, setCurrentOrder }) {
           <Modal.Title className="modal-title">Details</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Table hover>
+          <Table>
             <thead>
               <tr className="table-row">
                 <th>Product</th>

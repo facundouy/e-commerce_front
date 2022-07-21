@@ -21,6 +21,7 @@
 
 .profile-container span {
   align-items: center;
+  cursor: default;
   font-family: "Montserrat", serif;
   font-size: 24px;
   font-weight: 600;
@@ -72,10 +73,6 @@
 
 .pointer {
   cursor: pointer;
-}
-
-.profile-name {
-  cursor: default;
 }
 
 .profile-name:hover {
