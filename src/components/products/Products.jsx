@@ -1,6 +1,7 @@
 import "./products.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Container, Row, Col } from "react-bootstrap";
 
 function Products() {
   const productList = useSelector((state) => state.product);
@@ -35,31 +36,40 @@ function Products() {
         </div>
       </div>
       <div className="products-container">
-        <ul className="products-list p-0">
-          {featured.map((product) => {
-            return (
-              product.category && (
-                <div key={product._id} className="card-product">
-                  <Link to={`/product/${product.slug}`}>
-                    <img
-                      src={`https://tkyarzymrutnhhccfvhu.supabase.co/storage/v1/object/public/images/${product.image}`}
-                      alt="Product"
-                    />
-                  </Link>
-
-                  <div className="product-info">
-                    <Link
-                      className="title-product"
-                      to={`/product/${product.slug}`}
-                    >
-                      <h6 className="title-product">{product.name}</h6>
+        <Container fluid className="products-list p-0">
+          <Row>
+            {" "}
+            {featured.map((product) => {
+              return (
+                product.category && (
+                  <Col
+                    xs={12}
+                    md={6}
+                    xxl={4}
+                    key={product._id}
+                    className="card-product"
+                  >
+                    <Link to={`/product/${product.slug}`}>
+                      <img
+                        src={`https://tkyarzymrutnhhccfvhu.supabase.co/storage/v1/object/public/images/${product.image}`}
+                        alt="Product"
+                      />
                     </Link>
-                  </div>
-                </div>
-              )
-            );
-          })}
-        </ul>
+
+                    <div className="product-info">
+                      <Link
+                        className="title-product"
+                        to={`/product/${product.slug}`}
+                      >
+                        <h6 className="title-product">{product.name}</h6>
+                      </Link>
+                    </div>
+                  </Col>
+                )
+              );
+            })}
+          </Row>
+        </Container>
       </div>
     </div>
   );

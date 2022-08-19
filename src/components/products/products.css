@@ -1,7 +1,3 @@
-.products-container {
-  display: flex;
-}
-
 .products-list {
   display: flex;
   flex-wrap: wrap;
@@ -11,10 +7,9 @@
 }
 
 .card-product {
-  margin: 0 2rem 2rem;
+  justify-content: center;
   text-align: center;
-  max-width: 15vw;
-  min-width: 200px;
+  max-width: 220px;
 }
 
 .card-product img {
@@ -77,11 +72,15 @@
   width: 30%;
   display: flex;
   flex-direction: column;
-  margin: 5rem 5rem 0 5rem;
-
+  margin: 5rem 2rem 0 0;
   position: sticky;
   top: 10rem;
   height: 430px;
+}
+@media (max-width: 768px) {
+  .side-container {
+    display: none;
+  }
 }
 
 .side-container h6 {
