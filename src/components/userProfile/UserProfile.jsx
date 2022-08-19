@@ -56,7 +56,7 @@ function UserProfile() {
                 >
                   <td>{order.status}</td>
                   <td>{order.date}</td>
-                  <td>{order.totalPrice}</td>
+                  <td>${order.totalPrice}</td>
                   <div className="row-border" />
                 </tr>
               );
